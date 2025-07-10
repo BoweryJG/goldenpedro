@@ -1,0 +1,65 @@
+[build]
+  base = "."
+  command = "./build-all.sh"
+  functions = "frontend/netlify/functions"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_USE_PNPM = "false"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# Subdomain redirects - These handle subdomain routing
+[[redirects]]
+  from = "https://tmj.gregpedromd.com/*"
+  to = "/tmj/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://implants.gregpedromd.com/*"
+  to = "/implants/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://robotic.gregpedromd.com/*"
+  to = "/robotic/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://medspa.gregpedromd.com/*"
+  to = "/medspa/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://aboutface.gregpedromd.com/*"
+  to = "/aboutface/:splat"
+  status = 200
+  force = true
+
+# Path-based routing for subdomains (handled by React Router now)
+# These are kept for backward compatibility but all routing is now handled client-side
+
+# Main domain fallback (must be last)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
