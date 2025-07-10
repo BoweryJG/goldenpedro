@@ -1,6 +1,6 @@
 [build]
   base = "."
-  command = "./build-all.sh"
+  command = "echo 'Using pre-built dist folder'"
   functions = "frontend/netlify/functions"
   publish = "dist"
 
