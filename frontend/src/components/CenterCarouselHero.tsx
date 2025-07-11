@@ -23,46 +23,58 @@ const centers = [
     id: 'tmj' as ProfessionalIconType,
     title: 'TMJ & Orofacial Pain',
     subtitle: 'Expert jaw disorder care',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    gradient: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)', // GOLD
     stats: { label: 'Patients Treated', value: '2,500+' },
     features: ['Custom Oral Appliances', 'Physical Therapy', 'Pain Management'],
     icon: 'tmj' as ProfessionalIconType,
+    theme: 'gold',
+    textColor: '#1A1A1A',
   },
   {
     id: 'implants' as ProfessionalIconType,
     title: 'Dental Implants',
     subtitle: 'Permanent tooth replacement',
-    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    gradient: 'linear-gradient(135deg, #000000 0%, #1A1A1A 100%)', // BLACK
     stats: { label: 'Success Rate', value: '99.2%' },
     features: ['Single & Full Arch', 'Bone Grafting', 'Lifetime Warranty'],
     icon: 'implants' as ProfessionalIconType,
+    theme: 'black',
+    textColor: '#FFFFFF',
+    accentColor: '#FFD700',
   },
   {
     id: 'robotic' as ProfessionalIconType,
     title: 'Robotic Surgery',
     subtitle: 'Precision implant placement',
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    gradient: 'linear-gradient(135deg, #E5E5E5 0%, #A8A8A8 100%)', // SILVER
     stats: { label: 'Healing Time', value: '50% Faster' },
     features: ['Computer Precision', 'Minimally Invasive', 'Yomi Technology'],
     icon: 'robotic' as ProfessionalIconType,
+    theme: 'silver',
+    textColor: '#2B2B2B',
   },
   {
     id: 'medspa' as ProfessionalIconType,
     title: 'MedSpa & Aesthetics',
     subtitle: 'Facial rejuvenation',
-    gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    gradient: 'linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%)', // WHITE
     stats: { label: 'Treatments', value: '10,000+' },
     features: ['EMFACE Technology', 'Facial Contouring', 'Anti-Aging'],
     icon: 'medspa' as ProfessionalIconType,
+    theme: 'white',
+    textColor: '#000000',
+    accentColor: '#FF4500',
   },
   {
     id: 'aboutface' as ProfessionalIconType,
     title: 'AboutFace Aesthetics',
     subtitle: 'Complete smile makeovers',
-    gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    gradient: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)', // GOLD AGAIN
     stats: { label: 'Google Rating', value: '5.0★' },
     features: ['Veneers', 'Teeth Whitening', 'Smile Design'],
     icon: 'aboutface' as ProfessionalIconType,
+    theme: 'gold',
+    textColor: '#1A1A1A',
   },
 ];
 
@@ -355,9 +367,7 @@ const CenterCarouselHero: React.FC = () => {
                   borderRadius: '24px',
                   overflow: 'hidden',
                   position: 'relative',
-                  background: activeIndex === index 
-                    ? 'linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)'
-                    : 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%)',
+                  background: center.gradient,
                   backdropFilter: 'blur(30px) saturate(150%)',
                   WebkitBackdropFilter: 'blur(30px) saturate(150%)',
                   border: '3px solid transparent',
@@ -434,19 +444,7 @@ const CenterCarouselHero: React.FC = () => {
                   },
                 }}
               >
-                {/* Inner content wrapper for proper masking */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    inset: 2,
-                    borderRadius: '22px',
-                    background: activeIndex === index 
-                      ? 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%)'
-                      : 'rgba(255, 255, 255, 0.9)',
-                    overflow: 'hidden',
-                    zIndex: 1,
-                  }}
-                />
+                {/* Inner content wrapper for proper masking - removed for theme colors */}
 
                 {/* Cartier Corner Screws */}
                 <Box sx={{ position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none' }}>
@@ -516,14 +514,10 @@ const CenterCarouselHero: React.FC = () => {
                         fontFamily: 'var(--font-secondary)',
                         fontWeight: 800, 
                         mb: 1, 
-                        background: center.gradient,
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
+                        color: center.textColor || '#000000',
                         fontSize: { xs: '1.75rem', sm: '2.25rem' },
-                        textShadow: 'none',
+                        textShadow: center.theme === 'black' ? '0 2px 4px rgba(0, 0, 0, 0.8)' : 'none',
                         letterSpacing: '-0.02em',
-                        filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))',
                       }}
                     >
                       {center.title}
@@ -532,9 +526,9 @@ const CenterCarouselHero: React.FC = () => {
                     <Typography 
                       variant="body1" 
                       sx={{ 
-                        color: 'rgba(30, 41, 59, 0.8)',
+                        color: center.accentColor || (center.theme === 'black' ? '#FFD700' : center.theme === 'white' ? '#FF4500' : center.textColor),
                         fontSize: { xs: '1rem', sm: '1.125rem' },
-                        textShadow: 'none',
+                        textShadow: center.theme === 'black' ? '0 1px 2px rgba(0, 0, 0, 0.6)' : 'none',
                         fontWeight: 500,
                       }}
                     >
@@ -547,29 +541,32 @@ const CenterCarouselHero: React.FC = () => {
                     sx={{
                       textAlign: 'center',
                       p: 2.5,
-                      borderRadius: '24px', // More rounded
-                      background: `linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%)`,
-                      backdropFilter: 'blur(20px) saturate(180%)',
-                      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                      border: '1px solid transparent',
-                      borderImage: `linear-gradient(135deg, ${center.gradient}40, rgba(255, 255, 255, 0.6)) 1`,
+                      borderRadius: '24px',
+                      background: center.theme === 'white' 
+                        ? 'rgba(0, 0, 0, 0.05)'
+                        : center.theme === 'black'
+                        ? 'rgba(255, 255, 255, 0.1)'
+                        : 'rgba(255, 255, 255, 0.15)',
+                      backdropFilter: 'blur(10px)',
+                      WebkitBackdropFilter: 'blur(10px)',
+                      border: `2px solid ${center.theme === 'black' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)'}`,
                       mb: 3,
-                      boxShadow: `0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9)`,
+                      boxShadow: center.theme === 'gold' 
+                        ? '0 0 20px rgba(255, 215, 0, 0.3)'
+                        : center.theme === 'silver'
+                        ? '0 5px 15px rgba(192, 192, 192, 0.4)'
+                        : center.theme === 'black'
+                        ? '0 10px 30px rgba(0, 0, 0, 0.5)'
+                        : '0 4px 12px rgba(0, 0, 0, 0.1)',
                       position: 'relative',
                       overflow: 'hidden',
-                      '&::before': {
-                        content: '""',
-                        position: 'absolute',
-                        inset: 0,
-                        background: `linear-gradient(135deg, ${center.gradient}08, transparent)`,
-                        borderRadius: '24px',
-                      },
                     }}
                   >
                     <Typography 
                       variant="body2" 
                       sx={{ 
-                        color: 'rgba(30, 41, 59, 0.7)',
+                        color: center.textColor || '#000000',
+                        opacity: 0.7,
                         fontSize: '0.875rem',
                         textTransform: 'uppercase',
                         letterSpacing: '0.1em',
@@ -584,12 +581,9 @@ const CenterCarouselHero: React.FC = () => {
                       sx={{ 
                         fontFamily: 'var(--font-secondary)',
                         fontWeight: 800, 
-                        background: center.gradient,
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
+                        color: center.textColor || '#000000',
                         fontSize: { xs: '1.5rem', sm: '1.75rem' },
-                        filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))',
+                        textShadow: center.theme === 'black' ? '0 2px 4px rgba(0, 0, 0, 0.8)' : 'none',
                       }}
                     >
                       {center.stats.value}
@@ -614,13 +608,13 @@ const CenterCarouselHero: React.FC = () => {
                           display: 'flex',
                           alignItems: 'center',
                           mb: 1,
-                          color: 'rgba(30, 41, 59, 0.8)',
+                          color: center.textColor || '#000000',
                           fontSize: '1rem',
                           fontWeight: 500,
-                          textShadow: 'none',
+                          textShadow: center.theme === 'black' ? '0 1px 2px rgba(0, 0, 0, 0.6)' : 'none',
                         }}
                       >
-                        <Box component="span" sx={{ background: center.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', mr: 1, fontWeight: 800 }}>•</Box> {feature}
+                        <Box component="span" sx={{ color: center.accentColor || center.textColor, mr: 1, fontWeight: 800 }}>•</Box> {feature}
                       </Typography>
                     ))}
                   </Box>
@@ -632,11 +626,11 @@ const CenterCarouselHero: React.FC = () => {
                       variant="contained"
                       endIcon={<ArrowForwardIcon />}
                       sx={{
-                      background: center.gradient,
+                      background: center.theme === 'white' ? '#000000' : center.theme === 'black' ? '#FFFFFF' : 'transparent',
                       backdropFilter: 'blur(10px)',
                       WebkitBackdropFilter: 'blur(10px)',
-                      border: 'none',
-                      color: 'white',
+                      border: center.theme === 'gold' || center.theme === 'silver' ? `2px solid ${center.textColor}` : 'none',
+                      color: center.theme === 'white' ? '#FFFFFF' : center.theme === 'black' ? '#000000' : center.textColor,
                       py: 2,
                       px: 3,
                       fontSize: '1.125rem',
