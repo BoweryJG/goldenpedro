@@ -606,7 +606,7 @@ const ImplantHero: React.FC = () => {
                         <Star
                           key={i}
                           sx={{
-                            color: i < 5 ? '#FFD700' : 'grey.300',
+                            color: i < 5 ? '#D4AF37' : 'grey.300',
                             fontSize: '1.2rem'
                           }}
                         />

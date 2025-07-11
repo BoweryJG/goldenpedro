@@ -219,8 +219,8 @@ const TMJDashboard: React.FC = () => {
               value={metrics.improvementRate}
               max={100}
               label="Improvement %"
-              icon={<TrendingUp sx={{ color: '#9C27B0' }} />}
-              color="#9C27B0"
+              icon={<TrendingUp sx={{ color: '#D4AF37' }} />}
+              color="#D4AF37"
             />
           </motion.div>
         </Grid>

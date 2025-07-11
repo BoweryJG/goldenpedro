@@ -372,7 +372,7 @@ const AestheticGallery: React.FC<AestheticGalleryProps> = ({
                     <Card
                       sx={{
                         height: '100%',
-                        background: 'linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(139, 74, 139, 0.05) 100%)',
+                        background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(249, 227, 184, 0.05) 100%)',
                         border: '1px solid',
                         borderColor: 'primary.light'
                       }}
@@ -442,7 +442,7 @@ const AestheticGallery: React.FC<AestheticGalleryProps> = ({
               mt: 8,
               p: 4,
               textAlign: 'center',
-              background: 'linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(139, 74, 139, 0.1) 100%)'
+              background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(249, 227, 184, 0.1) 100%)'
             }}
           >
             <Typography variant="h4" sx={{ mb: 2, color: 'primary.main' }}>

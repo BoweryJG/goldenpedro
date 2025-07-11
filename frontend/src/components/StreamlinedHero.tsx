@@ -117,7 +117,7 @@ const StreamlinedHero: React.FC<StreamlinedHeroProps> = ({ onNavigate }) => {
                 sx={{
                   py: { xs: 1.5, sm: 2 },
                   px: { xs: 3, sm: 4 },
-                  background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
+                  background: 'linear-gradient(90deg, #FFD700 0%, #8b5cf6 100%)',
                   fontSize: { xs: '1rem', sm: '1.125rem' },
                   fontWeight: 600,
                   boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)',

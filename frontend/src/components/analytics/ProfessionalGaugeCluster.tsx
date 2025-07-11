@@ -164,10 +164,10 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
                 position: 'absolute',
                 width: 2,
                 height: '42%',
-                background: `linear-gradient(to top, ${subdial.color || '#00ff00'}, ${subdial.color || '#00ff00'}80)`,
+                background: `linear-gradient(to top, ${subdial.color || '#D4AF37'}, ${subdial.color || '#D4AF37'}80)`,
                 transformOrigin: 'bottom',
                 bottom: '50%',
-                boxShadow: `0 0 6px ${subdial.color || '#00ff00'}, 0 0 12px ${subdial.color || '#00ff00'}50`,
+                boxShadow: `0 0 6px ${subdial.color || '#D4AF37'}, 0 0 12px ${subdial.color || '#D4AF37'}50`,
               }}
             />
           </motion.div>
@@ -200,12 +200,12 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
               borderRadius: 1,
               px: 2,
               py: 0.75,
-              border: `1px solid ${subdial.color || '#00ff00'}60`,
+              border: `1px solid ${subdial.color || '#D4AF37'}60`,
               minWidth: 60,
               boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
             }}
           >
-            <Typography sx={{ color: subdial.color || '#00ff00', fontSize: 16, fontWeight: 'bold', lineHeight: 1.2 }}>
+            <Typography sx={{ color: subdial.color || '#D4AF37', fontSize: 16, fontWeight: 'bold', lineHeight: 1.2 }}>
               {formattedValue}
             </Typography>
             <Typography sx={{ color: '#aaa', fontSize: 9, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -302,7 +302,7 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
           top: 60,
           left: '50%',
           transform: 'translateX(-50%)',
-          background: '#00ff00',
+          background: '#D4AF37',
           px: 3,
           py: 0.5,
           borderRadius: 1,
@@ -329,8 +329,8 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: '#00ff00',
-            boxShadow: '0 0 8px #00ff00, 0 0 16px #00ff00, inset 0 0 4px rgba(0,0,0,0.3)',
+            background: '#D4AF37',
+            boxShadow: '0 0 8px #D4AF37, 0 0 16px #D4AF37, inset 0 0 4px rgba(0,0,0,0.3)',
             animation: 'ledGlow 2s ease-in-out infinite alternate',
             border: '1px solid rgba(0, 255, 0, 0.3)',
           }}
@@ -340,8 +340,8 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: '#00ff00',
-            boxShadow: '0 0 8px #00ff00, 0 0 16px #00ff00, inset 0 0 4px rgba(0,0,0,0.3)',
+            background: '#D4AF37',
+            boxShadow: '0 0 8px #D4AF37, 0 0 16px #D4AF37, inset 0 0 4px rgba(0,0,0,0.3)',
             animation: 'ledGlow 2s ease-in-out infinite alternate',
             animationDelay: '0.5s',
             border: '1px solid rgba(0, 255, 0, 0.3)',
@@ -365,8 +365,8 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: '#00ff00',
-            boxShadow: '0 0 8px #00ff00, 0 0 16px #00ff00, inset 0 0 4px rgba(0,0,0,0.3)',
+            background: '#D4AF37',
+            boxShadow: '0 0 8px #D4AF37, 0 0 16px #D4AF37, inset 0 0 4px rgba(0,0,0,0.3)',
             animation: 'ledGlow 2s ease-in-out infinite alternate',
             animationDelay: '1s',
             border: '1px solid rgba(0, 255, 0, 0.3)',
@@ -377,8 +377,8 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: '#00ff00',
-            boxShadow: '0 0 8px #00ff00, 0 0 16px #00ff00, inset 0 0 4px rgba(0,0,0,0.3)',
+            background: '#D4AF37',
+            boxShadow: '0 0 8px #D4AF37, 0 0 16px #D4AF37, inset 0 0 4px rgba(0,0,0,0.3)',
             animation: 'ledGlow 2s ease-in-out infinite alternate',
             animationDelay: '1.5s',
             border: '1px solid rgba(0, 255, 0, 0.3)',
@@ -393,7 +393,7 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
           top: 100,
           left: '50%',
           transform: 'translateX(-50%)',
-          color: '#00ff00',
+          color: '#D4AF37',
           fontSize: 24,
           fontFamily: 'monospace',
           fontWeight: 'bold',
@@ -494,7 +494,7 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
           }}
         >
           {personName && (
-            <Typography sx={{ color: '#00ff00', fontSize: 16, mb: 0.5 }}>
+            <Typography sx={{ color: '#D4AF37', fontSize: 16, mb: 0.5 }}>
               {personName}
             </Typography>
           )}
@@ -508,7 +508,7 @@ const ProfessionalGaugeCluster: React.FC<GaugeClusterProps> = ({
                 borderRadius: 1,
               }}
             >
-              <Typography sx={{ color: '#00ff00', fontSize: 20, fontFamily: 'monospace' }}>
+              <Typography sx={{ color: '#D4AF37', fontSize: 20, fontFamily: 'monospace' }}>
                 {bottomDisplay}
               </Typography>
             </Box>

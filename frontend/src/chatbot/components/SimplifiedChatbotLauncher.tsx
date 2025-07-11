@@ -90,11 +90,11 @@ export const SimplifiedChatbotLauncher: React.FC<SimplifiedChatbotLauncherProps>
             sx={{
               width: 72,
               height: 72,
-              background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+              background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
               animation: `${glow} 3s ease-in-out infinite`,
               transition: 'all 0.3s ease',
               '&:hover': {
-                background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #D4AF37 100%)',
                 transform: 'translateY(-2px)',
                 '& .MuiSvgIcon-root': {
                   transform: 'scale(1.1) rotate(10deg)',

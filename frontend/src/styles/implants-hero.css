@@ -16,15 +16,15 @@
 .crystal-facet {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   background: linear-gradient(45deg, 
-    rgba(176, 190, 197, 0.3) 0%, 
-    rgba(255, 23, 68, 0.1) 50%, 
-    rgba(38, 50, 56, 0.2) 100%);
+    rgba(212, 175, 55, 0.3) 0%, 
+    rgba(255, 215, 0, 0.1) 50%, 
+    rgba(184, 134, 11, 0.2) 100%);
   backdrop-filter: blur(10px);
 }
 
 /* Metallic text effects */
 .metallic-text {
-  background: linear-gradient(45deg, #B0BEC5 0%, #CFD8DC 25%, #ECEFF1 50%, #CFD8DC 75%, #B0BEC5 100%);
+  background: linear-gradient(45deg, #D4AF37 0%, #FFD700 25%, #FFFFFF 50%, #FFD700 75%, #D4AF37 100%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -84,11 +84,11 @@
   background: conic-gradient(
     from 0deg at 50% 50%,
     transparent 0deg,
-    rgba(255, 23, 68, 0.1) 60deg,
+    rgba(212, 175, 55, 0.1) 60deg,
     transparent 120deg,
-    rgba(176, 190, 197, 0.1) 180deg,
+    rgba(227, 227, 227, 0.1) 180deg,
     transparent 240deg,
-    rgba(255, 23, 68, 0.1) 300deg,
+    rgba(212, 175, 55, 0.1) 300deg,
     transparent 360deg
   );
   animation: crystal-rotate 10s linear infinite;
@@ -132,8 +132,8 @@
 /* Faceted crystal background pattern */
 .faceted-bg {
   background-image: 
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(176, 190, 197, 0.03) 35px, rgba(176, 190, 197, 0.03) 70px),
-    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 23, 68, 0.02) 35px, rgba(255, 23, 68, 0.02) 70px);
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, 0.03) 35px, rgba(212, 175, 55, 0.03) 70px),
+    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(227, 227, 227, 0.02) 35px, rgba(227, 227, 227, 0.02) 70px);
 }
 
 /* Performance optimizations */
@@ -150,8 +150,8 @@
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .hero-implants {
-    --metallic-silver: #E0E0E0;
-    --electric-crimson: #FF0040;
-    --deep-graphite: #000000;
+    --luxury-gold: #D4AF37;
+    --platinum-silver: #e3e3e3;
+    --deep-black: #000000;
   }
 }

@@ -72,14 +72,14 @@ export const MiniGatewayBar: React.FC = () => {
               variant="outlined"
               size={isMobile ? "small" : "medium"}
               sx={{
-                borderColor: '#7c3aed',
-                color: '#7c3aed',
+                borderColor: '#D4AF37',
+                color: '#D4AF37',
                 borderRadius: 2,
                 minWidth: { xs: 'auto', sm: 140 },
                 fontSize: { xs: '0.75rem', sm: '0.875rem' },
                 px: { xs: 1.5, sm: 2 },
                 '&:hover': {
-                  borderColor: '#7c3aed',
+                  borderColor: '#D4AF37',
                   bgcolor: 'rgba(124, 58, 237, 0.04)',
                 },
               }}

@@ -125,7 +125,7 @@ export const IconicChatbotLauncher: React.FC<IconicChatbotLauncherProps> = ({
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: '#10b981',
+            background: '#D4AF37',
             boxShadow: '0 0 8px rgba(16, 185, 129, 0.4)',
           }}
         />

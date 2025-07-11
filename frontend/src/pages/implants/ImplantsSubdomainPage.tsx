@@ -6,7 +6,7 @@ import ImplantChatbot from '../../components/subdomain-components/implants/Impla
 
 function ImplantsSubdomainPage() {
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+    <Box sx={{ minHeight: '100vh', bgcolor: '#000000' }}>
       <Container maxWidth={false} disableGutters>
         <ImplantHero />
         <ImplantFinancingWizard />

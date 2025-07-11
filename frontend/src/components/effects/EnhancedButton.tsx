@@ -13,7 +13,7 @@ interface EnhancedButtonProps extends ButtonProps {
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({
   children,
-  gradient = 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+  gradient = 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
   glowColor = 'rgba(59, 130, 246, 0.4)',
   shimmer = true,
   pulseAnimation = false,

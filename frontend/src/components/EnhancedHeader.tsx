@@ -116,7 +116,7 @@ const EnhancedHeader = () => {
         {!isTablet && (
           <Box
             sx={{
-              background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+              background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
               color: 'white',
               py: 0.5,
             }}
@@ -191,7 +191,7 @@ const EnhancedHeader = () => {
               >
                 <Box
                   sx={{
-                    background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                    background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                     borderRadius: '50%',
                     p: 1,
                     display: 'flex',
@@ -218,7 +218,7 @@ const EnhancedHeader = () => {
                   transition={{ duration: 0.5 }}
                   sx={{ 
                     fontWeight: 700,
-                    background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                    background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     lineHeight: 1.2,
@@ -310,7 +310,7 @@ const EnhancedHeader = () => {
                     startIcon={<SparkleIcon />}
                     sx={{
                       ml: 2,
-                      background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                      background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                       boxShadow: '0 4px 12px rgba(30, 64, 175, 0.3)',
                       whiteSpace: 'nowrap',
                       '&:hover': {
@@ -374,7 +374,7 @@ const EnhancedHeader = () => {
               variant="h6" 
               fontWeight="700"
               sx={{
-                background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
@@ -415,7 +415,7 @@ const EnhancedHeader = () => {
                         borderRadius: 2,
                         py: 1.5,
                         background: location.pathname === item.path
-                          ? 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)'
+                          ? 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)'
                           : 'rgba(255, 255, 255, 0.8)',
                         color: location.pathname === item.path ? 'white' : 'text.primary',
                         '&:hover': {
@@ -480,7 +480,7 @@ const EnhancedHeader = () => {
               startIcon={<SparkleIcon />}
               sx={{
                 py: 1.5,
-                background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                 boxShadow: '0 4px 12px rgba(30, 64, 175, 0.3)',
                 '&:hover': {
                   background: 'linear-gradient(135deg, #1e3a8a 0%, #6d28d9 100%)',

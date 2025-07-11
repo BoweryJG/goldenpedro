@@ -182,9 +182,9 @@ const MedSpaChatbot: React.FC<MedSpaChatbotProps> = ({ contact }) => {
           color="primary"
           onClick={handleChatOpen}
           sx={{
-            background: 'linear-gradient(45deg, #B8860B 30%, #DAA520 90%)',
+            background: 'linear-gradient(45deg, #D4AF37 30%, #FFD700 90%)',
             '&:hover': {
-              background: 'linear-gradient(45deg, #9A7C0A 30%, #B8860B 90%)',
+              background: 'linear-gradient(45deg, #D4AF37 30%, #FFD700 90%)',
               transform: 'scale(1.1)'
             },
             transition: 'all 0.3s ease-in-out'
@@ -209,8 +209,8 @@ const MedSpaChatbot: React.FC<MedSpaChatbotProps> = ({ contact }) => {
         }}
       >
         <DialogTitle sx={{ 
-          background: 'linear-gradient(45deg, #B8860B 30%, #DAA520 90%)',
-          color: 'white',
+          background: 'linear-gradient(45deg, #D4AF37 30%, #FFD700 90%)',
+          color: '#000000',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center'
@@ -228,7 +228,7 @@ const MedSpaChatbot: React.FC<MedSpaChatbotProps> = ({ contact }) => {
           </Box>
           <IconButton 
             onClick={() => setIsOpen(false)}
-            sx={{ color: 'white' }}
+            sx={{ color: '#000000' }}
           >
             <Close />
           </IconButton>

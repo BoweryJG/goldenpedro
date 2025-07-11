@@ -139,7 +139,7 @@ const MedSpaDashboard: React.FC = () => {
         },
         {
           name: 'Botox',
-          icon: <FaceRetouchingNatural sx={{ color: '#9C27B0' }} />,
+          icon: <FaceRetouchingNatural sx={{ color: '#D4AF37' }} />,
           bookings: 124,
           revenue: 37200,
           growth: 18,

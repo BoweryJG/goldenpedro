@@ -319,7 +319,7 @@ export const GatewaySelection: React.FC = () => {
                 <Box
                   sx={{
                     mb: 3,
-                    color: gateway.id === 'precision' ? '#7c3aed' : 
+                    color: gateway.id === 'precision' ? '#D4AF37' : 
                            gateway.id === 'chat' ? '#0891b2' : '#dc2626',
                   }}
                 >

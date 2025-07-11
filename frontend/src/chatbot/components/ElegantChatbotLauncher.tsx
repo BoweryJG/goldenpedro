@@ -105,7 +105,7 @@ export const ElegantChatbotLauncher: React.FC<ElegantChatbotLauncherProps> = ({
               position: 'relative',
               overflow: 'visible',
               '&:hover': {
-                background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #D4AF37 100%)',
                 transform: 'translateY(-3px)',
                 '&::before': {
                   opacity: 1,

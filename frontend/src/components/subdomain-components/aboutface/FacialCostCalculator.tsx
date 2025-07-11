@@ -101,13 +101,13 @@ const FacialCostCalculator: React.FC = () => {
 
 
   return (
-    <Box sx={{ py: 8, background: 'linear-gradient(135deg, #FEFEFE 0%, #F9F7F4 100%)' }}>
+    <Box sx={{ py: 8, background: 'linear-gradient(135deg, #1a1a1a 0%, #000000 100%)' }}> // Charcoal to black gradient
       <Container maxWidth="xl">
         <Box textAlign="center" mb={6}>
-          <Typography variant="h2" gutterBottom color="primary">
+          <Typography variant="h2" gutterBottom sx={{ color: '#D4AF37' }}> // Gold heading
             Investment Calculator
           </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h6" sx={{ color: '#999999' }}> // Silver text
             Plan your facial aesthetic journey with flexible financing options
           </Typography>
         </Box>
@@ -115,11 +115,11 @@ const FacialCostCalculator: React.FC = () => {
         <Grid container spacing={6}>
           {/* Treatment Selection */}
           <Grid xs={12} lg={6}>
-            <Card sx={{ p: 3, height: '100%' }}>
-              <Typography variant="h5" gutterBottom>
-                <Calculate /> Select Your Treatments
+            <Card sx={{ p: 3, height: '100%', backgroundColor: '#1a1a1a', borderColor: '#999999' }}> // Charcoal card
+              <Typography variant="h5" gutterBottom sx={{ color: '#FFFFFF' }}>
+                <Calculate sx={{ color: '#D4AF37' }} /> Select Your Treatments
               </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+              <Typography variant="body2" sx={{ color: '#999999', mb: 3 }}> // Silver text
                 Choose the facial treatments you're interested in
               </Typography>
 
@@ -135,11 +135,11 @@ const FacialCostCalculator: React.FC = () => {
                       sx={{
                         cursor: 'pointer',
                         border: selectedTreatments.includes(treatment.id) 
-                          ? '2px solid #C8A882' 
-                          : '1px solid #e0e0e0',
+                          ? '2px solid #D4AF37' 
+                          : '1px solid #999999',
                         backgroundColor: selectedTreatments.includes(treatment.id) 
-                          ? 'rgba(200, 168, 130, 0.1)' 
-                          : 'transparent',
+                          ? 'rgba(212, 175, 55, 0.1)' 
+                          : 'rgba(26, 26, 26, 0.8)', // Charcoal background
                         transition: 'all 0.3s ease'
                       }}
                       onClick={() => handleTreatmentToggle(treatment.id)}
@@ -147,18 +147,18 @@ const FacialCostCalculator: React.FC = () => {
                       <CardContent sx={{ p: 2 }}>
                         <Box display="flex" justifyContent="space-between" alignItems="center">
                           <Box>
-                            <Typography variant="h6" fontWeight="bold">
+                            <Typography variant="h6" fontWeight="bold" sx={{ color: '#FFFFFF' }}>
                               {treatment.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" sx={{ color: '#999999' }}> // Silver text
                               {treatment.category}
                             </Typography>
                           </Box>
                           <Box textAlign="right">
-                            <Typography variant="h6" color="primary" fontWeight="bold">
+                            <Typography variant="h6" sx={{ color: '#D4AF37' }} fontWeight="bold"> // Gold price
                               ${treatmentPrices[treatment.id]?.toLocaleString() || treatment.price}
                             </Typography>
-                            <Typography variant="caption" color="text.secondary">
+                            <Typography variant="caption" sx={{ color: '#999999' }}> // Silver text
                               {treatment.duration}
                             </Typography>
                           </Box>
@@ -170,16 +170,16 @@ const FacialCostCalculator: React.FC = () => {
               </Stack>
 
               {/* Package Suggestions */}
-              <Typography variant="h6" sx={{ mt: 4, mb: 2 }}>
-                <Savings /> Money-Saving Packages
+              <Typography variant="h6" sx={{ mt: 4, mb: 2, color: '#FFFFFF' }}>
+                <Savings sx={{ color: '#D4AF37' }} /> Money-Saving Packages
               </Typography>
               <Stack spacing={2}>
                 {facialPackages.map(pkg => (
-                  <Card key={pkg.id} variant="outlined" sx={{ backgroundColor: 'rgba(46, 125, 50, 0.05)' }}>
+                  <Card key={pkg.id} variant="outlined" sx={{ backgroundColor: 'rgba(212, 175, 55, 0.05)', borderColor: '#999999' }}> // Gold tinted background
                     <CardContent sx={{ p: 2 }}>
                       <Box display="flex" justifyContent="space-between" alignItems="center">
                         <Box>
-                          <Typography variant="subtitle1" fontWeight="bold">
+                          <Typography variant="subtitle1" fontWeight="bold" sx={{ color: '#FFFFFF' }}>
                             {pkg.name}
                           </Typography>
                           <Typography variant="body2" color="text.secondary">
@@ -188,10 +188,10 @@ const FacialCostCalculator: React.FC = () => {
                         </Box>
                         <Box textAlign="right">
                           <Stack direction="row" spacing={1} alignItems="center">
-                            <Typography variant="body2" sx={{ textDecoration: 'line-through' }}>
+                            <Typography variant="body2" sx={{ textDecoration: 'line-through', color: '#999999' }}> // Silver strikethrough
                               ${pkg.originalPrice}
                             </Typography>
-                            <Typography variant="h6" color="primary" fontWeight="bold">
+                            <Typography variant="h6" sx={{ color: '#D4AF37' }} fontWeight="bold"> // Gold price
                               ${pkg.packagePrice}
                             </Typography>
                           </Stack>
@@ -213,9 +213,9 @@ const FacialCostCalculator: React.FC = () => {
           <Grid xs={12} lg={6}>
             <Stack spacing={3}>
               {/* Total Cost */}
-              <Card sx={{ p: 4 }}>
-                <Typography variant="h5" gutterBottom>
-                  <AttachMoney /> Investment Summary
+              <Card sx={{ p: 4, backgroundColor: '#1a1a1a', borderColor: '#999999' }}> // Charcoal card
+                <Typography variant="h5" gutterBottom sx={{ color: '#FFFFFF' }}>
+                  <AttachMoney sx={{ color: '#D4AF37' }} /> Investment Summary
                 </Typography>
                 
                 {selectedTreatments.length > 0 ? (
@@ -225,8 +225,8 @@ const FacialCostCalculator: React.FC = () => {
                         const treatment = treatments.find(t => t.id === id)
                         return treatment ? (
                           <Box key={id} display="flex" justifyContent="space-between">
-                            <Typography variant="body1">{treatment.name}</Typography>
-                            <Typography variant="body1" fontWeight="bold">
+                            <Typography variant="body1" sx={{ color: '#FFFFFF' }}>{treatment.name}</Typography>
+                            <Typography variant="body1" fontWeight="bold" sx={{ color: '#D4AF37' }}> // Gold price
                               ${treatmentPrices[id]?.toLocaleString()}
                             </Typography>
                           </Box>
@@ -237,16 +237,16 @@ const FacialCostCalculator: React.FC = () => {
                     <Divider sx={{ my: 2 }} />
                     
                     <Box display="flex" justifyContent="space-between" alignItems="center">
-                      <Typography variant="h5" fontWeight="bold">
+                      <Typography variant="h5" fontWeight="bold" sx={{ color: '#FFFFFF' }}>
                         Total Investment:
                       </Typography>
-                      <Typography variant="h4" color="primary" fontWeight="bold">
+                      <Typography variant="h4" sx={{ color: '#D4AF37' }} fontWeight="bold"> // Gold total
                         ${totalAmount.toLocaleString()}
                       </Typography>
                     </Box>
                   </>
                 ) : (
-                  <Typography variant="body1" color="text.secondary" textAlign="center" sx={{ py: 4 }}>
+                  <Typography variant="body1" sx={{ color: '#999999', py: 4 }} textAlign="center"> // Silver text
                     Select treatments above to see your investment summary
                   </Typography>
                 )}
@@ -259,12 +259,12 @@ const FacialCostCalculator: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Card sx={{ p: 4 }}>
-                    <Typography variant="h5" gutterBottom>
-                      <CreditCard /> Financing Options
+                  <Card sx={{ p: 4, backgroundColor: '#1a1a1a', borderColor: '#999999' }}> // Charcoal card
+                    <Typography variant="h5" gutterBottom sx={{ color: '#FFFFFF' }}>
+                      <CreditCard sx={{ color: '#D4AF37' }} /> Financing Options
                     </Typography>
                     
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+                    <Typography variant="body2" sx={{ color: '#999999', mb: 3 }}> // Silver text
                       Make your investment more manageable with flexible payment plans
                     </Typography>
 
@@ -283,23 +283,23 @@ const FacialCostCalculator: React.FC = () => {
                       </Select>
                     </FormControl>
 
-                    <Box sx={{ p: 3, backgroundColor: 'rgba(200, 168, 130, 0.1)', borderRadius: 2, mb: 3 }}>
+                    <Box sx={{ p: 3, backgroundColor: 'rgba(212, 175, 55, 0.1)', borderRadius: 2, mb: 3 }}> // Gold tinted box
                       <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: '#FFFFFF' }}>
                           Monthly Payment:
                         </Typography>
-                        <Typography variant="h4" color="primary" fontWeight="bold">
+                        <Typography variant="h4" sx={{ color: '#D4AF37' }} fontWeight="bold"> // Gold payment
                           ${monthlyPayment}
                         </Typography>
                       </Box>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" sx={{ color: '#999999' }}> // Silver text
                         Based on {financingTerm} month term at 12.99% APR
                       </Typography>
                     </Box>
 
                     <Stack spacing={2}>
                       {financing.providers.map((provider, index) => (
-                        <Card key={index} variant="outlined">
+                        <Card key={index} variant="outlined" sx={{ backgroundColor: '#1a1a1a', borderColor: '#999999' }}> // Charcoal card
                           <CardContent sx={{ p: 2 }}>
                             <Box display="flex" alignItems="center" mb={2}>
                               <Box
@@ -309,10 +309,10 @@ const FacialCostCalculator: React.FC = () => {
                                 sx={{ height: 30, mr: 2 }}
                               />
                               <Box>
-                                <Typography variant="subtitle1" fontWeight="bold">
+                                <Typography variant="subtitle1" fontWeight="bold" sx={{ color: '#FFFFFF' }}>
                                   {provider.name}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography variant="body2" sx={{ color: '#999999' }}> // Silver text
                                   {provider.description}
                                 </Typography>
                               </Box>

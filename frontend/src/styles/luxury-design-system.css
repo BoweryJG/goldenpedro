@@ -64,6 +64,7 @@ body {
   --luxury-bright-gold: #FFD700;
   --luxury-gold-gradient: linear-gradient(145deg, #f5d76e, #f8c059);
   --luxury-rose-gold: #f9e3b8;
+  --luxury-champagne: #F7E7CE;
   
   /* Subdomain Accent Colors - All within Black/Gold/Gray/White */
   --tmj-primary: var(--luxury-gold);
@@ -78,9 +79,9 @@ body {
   --robotic-secondary: var(--luxury-white);
   --robotic-accent: var(--luxury-bright-gold);
   
-  --medspa-primary: var(--luxury-rose-gold);
-  --medspa-secondary: var(--luxury-white);
-  --medspa-accent: var(--luxury-platinum);
+  --medspa-primary: var(--luxury-gold);
+  --medspa-secondary: var(--luxury-champagne);
+  --medspa-accent: var(--luxury-bright-gold);
   
   --aboutface-primary: var(--luxury-gold);
   --aboutface-secondary: var(--luxury-bright-gold);
@@ -95,7 +96,7 @@ body {
   --gradient-tmj: radial-gradient(circle, #3a3a3a 0%, #1f1f1f 100%);
   --gradient-implants: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #3d3d3d 100%);
   --gradient-robotic: conic-gradient(from 0deg, #0f0f0f, #1e1e1e);
-  --gradient-medspa: linear-gradient(150deg, #121212, #262626);
+  --gradient-medspa: linear-gradient(150deg, #000000, #1a1a1a);
   --gradient-aboutface: linear-gradient(to right, #0c0c0c, #1c1c1c, #2c2c2c);
   
   /* Refined Gradients */
@@ -858,6 +859,200 @@ button,
 .font-loaded h2,
 .font-loaded h3 {
   transition: letter-spacing 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Luxury Effects and Animations */
+
+/* Gold Shimmer Animation */
+@keyframes goldShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--luxury-gold) 0%,
+    var(--luxury-bright-gold) 25%,
+    var(--luxury-rose-gold) 50%,
+    var(--luxury-bright-gold) 75%,
+    var(--luxury-gold) 100%
+  );
+  background-size: 200% auto;
+  animation: goldShimmer 3s linear infinite;
+}
+
+/* Metallic Text Effect */
+.metallic-text {
+  background: linear-gradient(
+    45deg,
+    var(--luxury-gold) 0%,
+    var(--luxury-bright-gold) 45%,
+    var(--luxury-rose-gold) 50%,
+    var(--luxury-bright-gold) 55%,
+    var(--luxury-gold) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Luxury Button Styles */
+.luxury-button {
+  background: linear-gradient(135deg, var(--luxury-gold) 0%, var(--luxury-bright-gold) 100%);
+  color: var(--luxury-black);
+  border: 1px solid var(--luxury-gold);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.4s var(--transition-luxury);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.luxury-button:hover {
+  background: var(--luxury-white);
+  color: var(--luxury-black);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+.luxury-button:hover::before {
+  left: 100%;
+}
+
+/* Luxury Card Style */
+.luxury-card {
+  background: var(--luxury-charcoal);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s var(--transition-luxury);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--luxury-gold), transparent, var(--luxury-gold));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.luxury-card:hover {
+  border-color: var(--luxury-gold);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.luxury-card:hover::before {
+  opacity: 0.3;
+}
+
+/* Navigation Link Effects */
+.nav-link-luxury {
+  color: var(--luxury-platinum);
+  position: relative;
+  transition: color 0.3s var(--transition-smooth);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-link-luxury::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--luxury-gold), var(--luxury-bright-gold));
+  transition: width 0.3s var(--transition-smooth);
+}
+
+.nav-link-luxury:hover {
+  color: var(--luxury-white);
+}
+
+.nav-link-luxury:hover::after {
+  width: 100%;
+}
+
+/* Page Load Animation */
+.page-content {
+  animation: luxuryFadeIn 0.8s ease-out;
+}
+
+@keyframes luxuryFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle Gold Glow */
+.gold-glow {
+  position: relative;
+}
+
+.gold-glow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gold-glow:hover::after {
+  opacity: 1;
+}
+
+/* Luxury Gradient Overlays */
+.gradient-overlay-gold {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-overlay-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 50%,
+    rgba(212, 175, 55, 0.05) 100%
+  );
+  pointer-events: none;
 }
 
 /* Accessibility */

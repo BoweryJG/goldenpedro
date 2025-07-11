@@ -314,7 +314,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
                     ? 'linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%)'
                     : bookingIntent > 50
                     ? 'linear-gradient(90deg, #2196F3 0%, #03A9F4 100%)'
-                    : 'linear-gradient(90deg, #9C27B0 0%, #E91E63 100%)',
+                    : 'linear-gradient(90deg, #D4AF37 0%, #E91E63 100%)',
                 }
               }}
             />

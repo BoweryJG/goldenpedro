@@ -87,7 +87,7 @@ const Header = () => {
             sx={{ 
               flexGrow: 1,
               fontWeight: 700,
-              background: 'linear-gradient(45deg, #1e40af 30%, #7c3aed 90%)',
+              background: 'linear-gradient(45deg, #1a1a1a 30%, #D4AF37 90%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               cursor: 'pointer',

@@ -332,7 +332,7 @@ const YomiChatbot: React.FC = () => {
           right: 0,
           bottom: 0,
           opacity: 0.05,
-          backgroundImage: 'repeating-linear-gradient(45deg, #9C27B0, #9C27B0 10px, transparent 10px, transparent 20px)',
+          backgroundImage: 'repeating-linear-gradient(45deg, #D4AF37, #D4AF37 10px, transparent 10px, transparent 20px)',
         }}
       />
 
@@ -343,7 +343,7 @@ const YomiChatbot: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Box textAlign="center" sx={{ mb: 4 }}>
-            <SmartToy sx={{ fontSize: '3rem', color: 'primary.main', mb: 2 }} />
+            <SmartToy sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
             <Typography
               variant="h2"
               component="h2"
@@ -351,7 +351,7 @@ const YomiChatbot: React.FC = () => {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 700,
                 mb: 2,
-                color: 'primary.main'
+                color: '#D4AF37'
               }}
             >
               Yomi Robotic Assistant
@@ -406,7 +406,7 @@ const YomiChatbot: React.FC = () => {
                         >
                           <Avatar
                             sx={{
-                              bgcolor: message.sender === 'user' ? 'primary.main' : 'secondary.main',
+                              bgcolor: message.sender === 'user' ? '#D4AF37' : '#e3e3e3',
                               mx: 1,
                               width: 32,
                               height: 32
@@ -416,8 +416,8 @@ const YomiChatbot: React.FC = () => {
                           </Avatar>
                           <Box
                             sx={{
-                              bgcolor: message.sender === 'user' ? 'primary.light' : 'grey.100',
-                              color: message.sender === 'user' ? 'white' : 'text.primary',
+                              bgcolor: message.sender === 'user' ? '#1a1a1a' : '#000000',
+                              color: message.sender === 'user' ? '#FFFFFF' : '#FFFFFF',
                               p: 2,
                               borderRadius: 2,
                               maxWidth: '100%'
@@ -428,9 +428,9 @@ const YomiChatbot: React.FC = () => {
                             </Typography>
                             
                             {message.type === 'robotic_assessment' && message.data && (
-                              <Box sx={{ mt: 2, p: 2, bgcolor: 'success.light', borderRadius: 1 }}>
+                              <Box sx={{ mt: 2, p: 2, bgcolor: '#1a1a1a', borderRadius: 1 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                  <CheckCircle sx={{ color: 'success.main', mr: 1 }} />
+                                  <CheckCircle sx={{ color: '#D4AF37', mr: 1 }} />
                                   <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
                                     Robotic Assessment Complete!
                                   </Typography>
@@ -453,13 +453,13 @@ const YomiChatbot: React.FC = () => {
                 {isTyping && (
                   <Fade in={isTyping}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                      <Avatar sx={{ bgcolor: 'secondary.main', mx: 1, width: 32, height: 32 }}>
+                      <Avatar sx={{ bgcolor: '#e3e3e3', mx: 1, width: 32, height: 32 }}>
                         <SmartToy />
                       </Avatar>
-                      <Box sx={{ bgcolor: 'grey.100', p: 2, borderRadius: 2 }}>
+                      <Box sx={{ bgcolor: '#1a1a1a', p: 2, borderRadius: 2 }}>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                          <Memory sx={{ color: 'primary.main', mr: 1, fontSize: '1rem' }} />
-                          <Typography variant="body2" color="text.secondary">
+                          <Memory sx={{ color: '#D4AF37', mr: 1, fontSize: '1rem' }} />
+                          <Typography variant="body2" sx={{ color: '#FFFFFF' }}>
                             Analyzing with robotic precision...
                           </Typography>
                         </Box>
@@ -482,9 +482,8 @@ const YomiChatbot: React.FC = () => {
                         key={index}
                         label={action.text}
                         onClick={() => handleQuickAction(action.action)}
-                        sx={{ cursor: 'pointer' }}
+                        sx={{ cursor: 'pointer', borderColor: '#D4AF37', color: '#D4AF37' }}
                         variant="outlined"
-                        color="primary"
                       />
                     ))}
                   </Box>
@@ -504,7 +503,7 @@ const YomiChatbot: React.FC = () => {
                 <IconButton
                   onClick={handleSendMessage}
                   disabled={!inputMessage.trim() || isTyping}
-                  color="primary"
+                  sx={{ color: '#D4AF37' }}
                 >
                   <Send />
                 </IconButton>
@@ -573,7 +572,7 @@ const YomiChatbot: React.FC = () => {
         <DialogTitle>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <SmartToy sx={{ color: 'primary.main', mr: 1 }} />
+              <SmartToy sx={{ color: '#D4AF37', mr: 1 }} />
               Robotic Surgery Readiness Assessment
             </Box>
             <IconButton onClick={() => setShowReadinessDialog(false)}>
@@ -667,9 +666,8 @@ const YomiChatbot: React.FC = () => {
                     key={concern}
                     label={concern}
                     onClick={() => handleConcernToggle(concern)}
-                    color={readinessData.currentConcerns.includes(concern) ? 'primary' : 'default'}
+                    sx={readinessData.currentConcerns.includes(concern) ? { bgcolor: '#D4AF37', color: '#000000', cursor: 'pointer' } : { borderColor: '#e3e3e3', color: '#e3e3e3', cursor: 'pointer' }}
                     variant={readinessData.currentConcerns.includes(concern) ? 'filled' : 'outlined'}
-                    sx={{ cursor: 'pointer' }}
                   />
                 ))}
               </Box>

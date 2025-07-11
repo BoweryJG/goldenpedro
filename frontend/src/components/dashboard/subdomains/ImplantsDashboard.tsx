@@ -284,7 +284,7 @@ const ImplantsDashboard: React.FC = () => {
               max={6}
               label="Avg Healing"
               sublabel="Months"
-              color="#9C27B0"
+              color="#D4AF37"
             />
           </motion.div>
         </Grid>

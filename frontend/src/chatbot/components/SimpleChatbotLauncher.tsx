@@ -57,7 +57,7 @@ export const SimpleChatbotLauncher: React.FC<SimpleChatbotLauncherProps> = ({
           width: 12,
           height: 12,
           borderRadius: '50%',
-          background: '#10b981',
+          background: '#D4AF37',
           border: '2px solid white',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         }}

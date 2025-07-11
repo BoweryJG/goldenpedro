@@ -84,6 +84,27 @@ const financingProviders = [
 
 const ImplantFinancingWizard: React.FC = () => {
   const { toggleChat, sendMessage } = useChatStore()
+  
+  const textFieldStyle = {
+    bgcolor: '#333333',
+    '& .MuiInputBase-input': {
+      color: '#FFFFFF'
+    },
+    '& .MuiInputLabel-root': {
+      color: '#e3e3e3'
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#999999'
+      },
+      '&:hover fieldset': {
+        borderColor: '#e3e3e3'
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#D4AF37'
+      }
+    }
+  }
   const [activeStep, setActiveStep] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [financingData, setFinancingData] = useState<FinancingData>({
@@ -168,6 +189,7 @@ const ImplantFinancingWizard: React.FC = () => {
                 label="First Name"
                 value={financingData.personalInfo.firstName}
                 onChange={(e) => updateFinancingData('personalInfo', 'firstName', e.target.value)}
+                sx={textFieldStyle}
               />
             </Grid>
             <Grid xs={12} sm={6}>
@@ -176,6 +198,7 @@ const ImplantFinancingWizard: React.FC = () => {
                 label="Last Name"
                 value={financingData.personalInfo.lastName}
                 onChange={(e) => updateFinancingData('personalInfo', 'lastName', e.target.value)}
+                sx={textFieldStyle}
               />
             </Grid>
             <Grid xs={12} sm={6}>
@@ -185,6 +208,7 @@ const ImplantFinancingWizard: React.FC = () => {
                 type="email"
                 value={financingData.personalInfo.email}
                 onChange={(e) => updateFinancingData('personalInfo', 'email', e.target.value)}
+                sx={textFieldStyle}
               />
             </Grid>
             <Grid xs={12} sm={6}>
@@ -193,6 +217,7 @@ const ImplantFinancingWizard: React.FC = () => {
                 label="Phone"
                 value={financingData.personalInfo.phone}
                 onChange={(e) => updateFinancingData('personalInfo', 'phone', e.target.value)}
+                sx={textFieldStyle}
               />
             </Grid>
             <Grid xs={12} sm={6}>
@@ -203,6 +228,7 @@ const ImplantFinancingWizard: React.FC = () => {
                 InputLabelProps={{ shrink: true }}
                 value={financingData.personalInfo.dateOfBirth}
                 onChange={(e) => updateFinancingData('personalInfo', 'dateOfBirth', e.target.value)}
+                sx={textFieldStyle}
               />
             </Grid>
           </Grid>
@@ -226,6 +252,15 @@ const ImplantFinancingWizard: React.FC = () => {
                   { value: 100000, label: '$100K' },
                   { value: 200000, label: '$200K' }
                 ]}
+                sx={{
+                  color: '#D4AF37',
+                  '& .MuiSlider-mark': {
+                    bgcolor: '#999999'
+                  },
+                  '& .MuiSlider-markLabel': {
+                    color: '#e3e3e3'
+                  }
+                }}
               />
             </Grid>
             <Grid xs={12}>
@@ -245,14 +280,24 @@ const ImplantFinancingWizard: React.FC = () => {
                   { value: 740, label: 'Very Good' },
                   { value: 800, label: 'Excellent' }
                 ]}
+                sx={{
+                  color: '#D4AF37',
+                  '& .MuiSlider-mark': {
+                    bgcolor: '#999999'
+                  },
+                  '& .MuiSlider-markLabel': {
+                    color: '#e3e3e3'
+                  }
+                }}
               />
             </Grid>
             <Grid xs={12} sm={6}>
-              <FormControl fullWidth>
+              <FormControl fullWidth sx={textFieldStyle}>
                 <InputLabel>Employment Status</InputLabel>
                 <Select
                   value={financingData.financialInfo.employmentStatus}
                   onChange={(e) => updateFinancingData('financialInfo', 'employmentStatus', e.target.value)}
+                  sx={{ color: '#FFFFFF' }}
                 >
                   <MenuItem value="full-time">Full-time</MenuItem>
                   <MenuItem value="part-time">Part-time</MenuItem>
@@ -271,8 +316,8 @@ const ImplantFinancingWizard: React.FC = () => {
                   value={financingData.financialInfo.hasInsurance}
                   onChange={(e) => updateFinancingData('financialInfo', 'hasInsurance', e.target.value === 'true')}
                 >
-                  <FormControlLabel value={true} control={<Radio />} label="Yes" />
-                  <FormControlLabel value={false} control={<Radio />} label="No" />
+                  <FormControlLabel value={true} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} label="Yes" />
+                  <FormControlLabel value={false} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} label="No" />
                 </RadioGroup>
               </FormControl>
             </Grid>
@@ -293,17 +338,17 @@ const ImplantFinancingWizard: React.FC = () => {
                 >
                   <FormControlLabel 
                     value="single" 
-                    control={<Radio />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
                     label="Single Implant ($3,500 - $5,500)" 
                   />
                   <FormControlLabel 
                     value="multiple" 
-                    control={<Radio />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
                     label="Multiple Implants ($7,000 - $15,000)" 
                   />
                   <FormControlLabel 
                     value="full_mouth" 
-                    control={<Radio />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
                     label="Full Mouth Reconstruction ($25,000 - $45,000)" 
                   />
                 </RadioGroup>
@@ -319,8 +364,10 @@ const ImplantFinancingWizard: React.FC = () => {
                     <Card
                       sx={{
                         cursor: 'pointer',
+                        bgcolor: '#1a1a1a',
+                        color: '#FFFFFF',
                         border: financingData.treatmentInfo.preferredProvider === provider.name ? 2 : 1,
-                        borderColor: financingData.treatmentInfo.preferredProvider === provider.name ? 'primary.main' : 'grey.300'
+                        borderColor: financingData.treatmentInfo.preferredProvider === provider.name ? '#D4AF37' : '#999999'
                       }}
                       onClick={() => updateFinancingData('treatmentInfo', 'preferredProvider', provider.name)}
                     >
@@ -350,32 +397,32 @@ const ImplantFinancingWizard: React.FC = () => {
           <Box textAlign="center">
             {qualificationResults.approved ? (
               <>
-                <CheckCircle sx={{ fontSize: '4rem', color: 'success.main', mb: 2 }} />
-                <Typography variant="h4" gutterBottom color="success.main">
+                <CheckCircle sx={{ fontSize: '4rem', color: '#D4AF37', mb: 2 }} />
+                <Typography variant="h4" gutterBottom sx={{ color: '#D4AF37' }}>
                   Congratulations! You're Pre-Qualified
                 </Typography>
-                <Alert severity="success" sx={{ mb: 3 }}>
+                <Alert severity="success" sx={{ mb: 3, bgcolor: '#D4AF37', color: '#000000' }}>
                   You've been pre-qualified for up to ${qualificationResults.approvedAmount.toLocaleString()} 
                   with {qualificationResults.provider}
                 </Alert>
                 <Grid container spacing={2} sx={{ mb: 3 }}>
                   <Grid xs={6}>
-                    <Card>
+                    <Card sx={{ bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
                       <CardContent>
-                        <AttachMoney sx={{ fontSize: '2rem', color: 'primary.main' }} />
+                        <AttachMoney sx={{ fontSize: '2rem', color: '#D4AF37' }} />
                         <Typography variant="h6">Monthly Payment</Typography>
-                        <Typography variant="h4" color="primary">
+                        <Typography variant="h4" sx={{ color: '#D4AF37' }}>
                           ${qualificationResults.monthlyPayment}
                         </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
                   <Grid xs={6}>
-                    <Card>
+                    <Card sx={{ bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
                       <CardContent>
-                        <TrendingUp sx={{ fontSize: '2rem', color: 'primary.main' }} />
+                        <TrendingUp sx={{ fontSize: '2rem', color: '#D4AF37' }} />
                         <Typography variant="h6">APR</Typography>
-                        <Typography variant="h4" color="primary">
+                        <Typography variant="h4" sx={{ color: '#D4AF37' }}>
                           {qualificationResults.apr}%
                         </Typography>
                       </CardContent>
@@ -398,7 +445,14 @@ const ImplantFinancingWizard: React.FC = () => {
                       sendMessage(`Great news! I've been pre-qualified for dental implant financing up to $${qualificationResults.approvedAmount.toLocaleString()} with monthly payments of $${qualificationResults.monthlyPayment}. I'd like to schedule my consultation to move forward.`)
                     }, 500)
                   }}
-                  sx={{ mr: 2 }}
+                  sx={{ 
+                    mr: 2,
+                    bgcolor: '#D4AF37',
+                    color: '#000000',
+                    '&:hover': {
+                      bgcolor: '#B8860B'
+                    }
+                  }}
                 >
                   Chat with Julie to Schedule
                 </Button>
@@ -406,17 +460,25 @@ const ImplantFinancingWizard: React.FC = () => {
                   variant="outlined"
                   size="large"
                   onClick={() => setActiveStep(0)}
+                  sx={{
+                    borderColor: '#e3e3e3',
+                    color: '#e3e3e3',
+                    '&:hover': {
+                      borderColor: '#999999',
+                      bgcolor: 'rgba(227, 227, 227, 0.1)'
+                    }
+                  }}
                 >
                   Start Over
                 </Button>
               </>
             ) : (
               <>
-                <Psychology sx={{ fontSize: '4rem', color: 'warning.main', mb: 2 }} />
-                <Typography variant="h4" gutterBottom color="warning.main">
+                <Psychology sx={{ fontSize: '4rem', color: '#FFD700', mb: 2 }} />
+                <Typography variant="h4" gutterBottom sx={{ color: '#FFD700' }}>
                   Additional Information Needed
                 </Typography>
-                <Alert severity="info" sx={{ mb: 3 }}>
+                <Alert severity="info" sx={{ mb: 3, bgcolor: '#e3e3e3', color: '#000000' }}>
                   We'd like to discuss additional financing options with you personally.
                 </Alert>
                 <Button
@@ -433,6 +495,13 @@ const ImplantFinancingWizard: React.FC = () => {
                     setTimeout(() => {
                       sendMessage("I went through the implant financing pre-qualification and need some additional assistance with my financing options. Can you help me explore other ways to make dental implants affordable?")
                     }, 500)
+                  }}
+                  sx={{
+                    bgcolor: '#D4AF37',
+                    color: '#000000',
+                    '&:hover': {
+                      bgcolor: '#B8860B'
+                    }
                   }}
                 >
                   Chat with Julie for Help
@@ -452,7 +521,8 @@ const ImplantFinancingWizard: React.FC = () => {
       id="implant-financing-wizard"
       sx={{ 
         py: { xs: 8, md: 12 }, 
-        bgcolor: 'grey.50' 
+        bgcolor: '#000000',
+        color: '#FFFFFF'
       }}
     >
       <Container maxWidth="lg">
@@ -469,7 +539,7 @@ const ImplantFinancingWizard: React.FC = () => {
               fontSize: { xs: '2rem', md: '2.5rem' },
               fontWeight: 700,
               mb: 2,
-              color: 'primary.main'
+              color: '#D4AF37'
             }}
           >
             Financing Pre-Qualification Wizard
@@ -480,7 +550,7 @@ const ImplantFinancingWizard: React.FC = () => {
             align="center"
             sx={{
               fontSize: '1.1rem',
-              color: 'text.secondary',
+              color: '#e3e3e3',
               mb: 6,
               maxWidth: '600px',
               mx: 'auto'
@@ -490,8 +560,25 @@ const ImplantFinancingWizard: React.FC = () => {
             No hard credit check required.
           </Typography>
 
-          <Card sx={{ p: 4 }}>
-            <Stepper activeStep={activeStep} sx={{ mb: 4 }}>
+          <Card sx={{ p: 4, bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+            <Stepper activeStep={activeStep} sx={{ 
+              mb: 4,
+              '& .MuiStepLabel-label': {
+                color: '#e3e3e3'
+              },
+              '& .MuiStepLabel-label.Mui-active': {
+                color: '#D4AF37'
+              },
+              '& .MuiStepIcon-root': {
+                color: '#999999'
+              },
+              '& .MuiStepIcon-root.Mui-active': {
+                color: '#D4AF37'
+              },
+              '& .MuiStepIcon-root.Mui-completed': {
+                color: '#D4AF37'
+              }
+            }}>
               {steps.map((label) => (
                 <Step key={label}>
                   <StepLabel>{label}</StepLabel>
@@ -526,6 +613,18 @@ const ImplantFinancingWizard: React.FC = () => {
                   onClick={handleBack}
                   disabled={activeStep === 0}
                   variant="outlined"
+                  sx={{
+                    borderColor: '#e3e3e3',
+                    color: '#e3e3e3',
+                    '&:hover': {
+                      borderColor: '#999999',
+                      bgcolor: 'rgba(227, 227, 227, 0.1)'
+                    },
+                    '&:disabled': {
+                      borderColor: '#666666',
+                      color: '#666666'
+                    }
+                  }}
                 >
                   Back
                 </Button>
@@ -536,6 +635,17 @@ const ImplantFinancingWizard: React.FC = () => {
                     (activeStep === 0 && !financingData.personalInfo.firstName) ||
                     (activeStep === 1 && !financingData.financialInfo.employmentStatus)
                   }
+                  sx={{
+                    bgcolor: '#D4AF37',
+                    color: '#000000',
+                    '&:hover': {
+                      bgcolor: '#B8860B'
+                    },
+                    '&:disabled': {
+                      bgcolor: '#666666',
+                      color: '#999999'
+                    }
+                  }}
                 >
                   {activeStep === steps.length - 2 ? 'Get Pre-Qualified' : 'Next'}
                 </Button>

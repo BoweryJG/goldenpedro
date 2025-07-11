@@ -261,7 +261,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Paper sx={{ mt: 4, p: 3, bgcolor: 'primary.light', color: 'white' }}>
+                <Paper sx={{ mt: 4, p: 3, bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
                   <Typography variant="h6" sx={{ mb: 2 }}>
                     Selected Treatments ({selectedTreatments.length})
                   </Typography>
@@ -273,7 +273,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                           key={treatmentId}
                           label={treatment.name}
                           onDelete={() => handleTreatmentToggle(treatmentId)}
-                          sx={{ bgcolor: 'white', color: 'primary.main' }}
+                          sx={{ bgcolor: '#FFFFFF', color: '#D4AF37' }}
                         />
                       ) : null
                     })}
@@ -283,9 +283,9 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                     size="large"
                     onClick={findBestPackage}
                     sx={{
-                      bgcolor: 'white',
-                      color: 'primary.main',
-                      '&:hover': { bgcolor: 'grey.100' }
+                      bgcolor: '#FFD700',
+                      color: '#000000',
+                      '&:hover': { bgcolor: '#D4AF37' }
                     }}
                   >
                     Find Best Package Deal

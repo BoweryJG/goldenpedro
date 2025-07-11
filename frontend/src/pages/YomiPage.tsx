@@ -101,7 +101,7 @@ const YomiPage = () => {
         ref={heroRef}
         sx={{
           minHeight: '70vh',
-          background: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)',
+          background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)',
           color: 'white',
           display: 'flex',
           alignItems: 'center',
@@ -146,12 +146,12 @@ const YomiPage = () => {
                     size="large"
                     onClick={() => navigate('/contact')}
                     sx={{
-                      bgcolor: 'white',
-                      color: 'primary.main',
+                      bgcolor: '#FFFFFF',
+                      color: '#000000',
                       py: 1.5,
                       px: 4,
                       '&:hover': {
-                        bgcolor: 'grey.100',
+                        bgcolor: '#e3e3e3',
                       },
                     }}
                   >
@@ -161,13 +161,13 @@ const YomiPage = () => {
                     variant="outlined"
                     size="large"
                     sx={{
-                      borderColor: 'white',
-                      color: 'white',
+                      borderColor: '#e3e3e3',
+                      color: '#FFFFFF',
                       py: 1.5,
                       px: 4,
                       '&:hover': {
-                        borderColor: 'white',
-                        bgcolor: 'rgba(255,255,255,0.1)',
+                        borderColor: '#e3e3e3',
+                        bgcolor: 'rgba(227,227,227,0.1)',
                       },
                     }}
                   >
@@ -245,7 +245,7 @@ const YomiPage = () => {
                   >
                     <Box
                       sx={{
-                        color: 'primary.main',
+                        color: '#D4AF37',
                         mb: 2,
                         '& svg': { fontSize: 48 },
                       }}
@@ -292,8 +292,8 @@ const YomiPage = () => {
                         width: 80,
                         height: 80,
                         borderRadius: '50%',
-                        bgcolor: 'primary.main',
-                        color: 'white',
+                        bgcolor: '#D4AF37',
+                        color: '#000000',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -353,7 +353,7 @@ const YomiPage = () => {
       <Box
         sx={{
           py: 8,
-          background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+          background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)',
           color: 'white',
           textAlign: 'center',
         }}
@@ -371,13 +371,13 @@ const YomiPage = () => {
             startIcon={<CalendarTodayIcon />}
             onClick={() => navigate('/contact')}
             sx={{
-              bgcolor: 'white',
-              color: 'primary.main',
+              bgcolor: '#D4AF37',
+              color: '#000000',
               py: 2,
               px: 5,
               fontSize: '1.1rem',
               '&:hover': {
-                bgcolor: 'grey.100',
+                bgcolor: '#B8860B',
               },
             }}
           >

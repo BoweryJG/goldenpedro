@@ -63,7 +63,7 @@ export const EnhancedChatbot: React.FC = () => {
                       position: 'absolute',
                       inset: -12,
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                      background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
                       opacity: 0.3,
                       filter: 'blur(20px)',
                     }}
@@ -84,7 +84,7 @@ export const EnhancedChatbot: React.FC = () => {
                       position: 'absolute',
                       inset: -3,
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #10b981)',
+                      background: 'linear-gradient(135deg, #FFD700, #8b5cf6, #ec4899, #D4AF37)',
                       padding: 3,
                     }}
                     animate={{
@@ -140,7 +140,7 @@ export const EnhancedChatbot: React.FC = () => {
                         sx={{
                           width: 64,
                           height: 64,
-                          background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                          background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
                           boxShadow: '0 8px 32px rgba(59, 130, 246, 0.5)',
                           position: 'relative',
                           overflow: 'hidden',
@@ -242,7 +242,7 @@ export const EnhancedChatbot: React.FC = () => {
             <AnimatedGradientBorder
               borderRadius={16}
               borderWidth={3}
-              colors={['#3b82f6', '#8b5cf6', '#ec4899', '#10b981']}
+              colors={['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37']}
               animationDuration={4}
             >
               <Box

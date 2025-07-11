@@ -28,9 +28,9 @@ interface EnhancedUnifiedHeroProps {
 
 const EnhancedUnifiedHero: React.FC<EnhancedUnifiedHeroProps> = ({ onNavigate }) => {
   const highlights = [
-    { text: '50% Faster Healing', icon: <TimerIcon />, gradient: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)' },
+    { text: '50% Faster Healing', icon: <TimerIcon />, gradient: 'linear-gradient(135deg, #FFD700 0%, #60a5fa 100%)' },
     { text: 'Robot-Assisted Surgery', icon: <RobotIcon />, gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)' },
-    { text: 'Same-Day Consultations', icon: <CalendarIcon />, gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)' },
+    { text: 'Same-Day Consultations', icon: <CalendarIcon />, gradient: 'linear-gradient(135deg, #D4AF37 0%, #34d399 100%)' },
   ];
 
   return (
@@ -46,14 +46,14 @@ const EnhancedUnifiedHero: React.FC<EnhancedUnifiedHeroProps> = ({ onNavigate })
     >
       {/* Layered background effects */}
       <GradientMesh 
-        colors={['#1e40af', '#7c3aed', '#ec4899', '#06b6d4']}
+        colors={['#1a1a1a', '#D4AF37', '#ec4899', '#06b6d4']}
         opacity={0.15}
         animate={true}
       />
       
       <ParticlesBackground 
         count={40}
-        colors={['#3b82f6', '#8b5cf6', '#ec4899', '#10b981']}
+        colors={['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37']}
         opacity={0.4}
       />
       
@@ -117,7 +117,7 @@ const EnhancedUnifiedHero: React.FC<EnhancedUnifiedHeroProps> = ({ onNavigate })
           >
             <AnimatedGradientBorder
               borderRadius={24}
-              colors={['#3b82f6', '#8b5cf6', '#ec4899', '#10b981']}
+              colors={['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37']}
               borderWidth={2}
             >
               <Chip
@@ -286,7 +286,7 @@ const EnhancedUnifiedHero: React.FC<EnhancedUnifiedHeroProps> = ({ onNavigate })
                   sx={{
                     py: { xs: 2, sm: 2.5 },
                     px: { xs: 5, sm: 6 },
-                    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                    background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
                     fontSize: { xs: '1.1rem', sm: '1.25rem' },
                     fontWeight: 700,
                     borderRadius: 3,

@@ -13,7 +13,7 @@ interface SoftAnimatedIconProps {
 
 const SoftAnimatedIcon: React.FC<SoftAnimatedIconProps> = ({
   icon,
-  gradient = 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+  gradient = 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
   glowColor = 'rgba(139, 92, 246, 0.3)',
   size = 40,
   animate = true,

@@ -275,20 +275,20 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                   </Box>
 
                   {/* Financing Options */}
-                  <Paper sx={{ p: 2, bgcolor: 'primary.light', color: 'white', mb: 3 }}>
+                  <Paper sx={{ p: 2, bgcolor: '#1a1a1a', color: '#FFFFFF', mb: 3 }}>
                     <Typography variant="h6" sx={{ mb: 2 }}>
                       <CreditCard sx={{ mr: 1 }} />
                       Financing Options
                     </Typography>
 
                     <FormControl fullWidth sx={{ mb: 2 }}>
-                      <InputLabel sx={{ color: 'white' }}>Financing Provider</InputLabel>
+                      <InputLabel sx={{ color: '#FFFFFF' }}>Financing Provider</InputLabel>
                       <Select
                         value={selectedFinancing}
                         onChange={(e) => setSelectedFinancing(e.target.value)}
                         sx={{ 
-                          color: 'white',
-                          '& .MuiOutlinedInput-notchedOutline': { borderColor: 'white' }
+                          color: '#FFFFFF',
+                          '& .MuiOutlinedInput-notchedOutline': { borderColor: '#FFFFFF' }
                         }}
                       >
                         {financing.options.map((option, index) => (
@@ -315,10 +315,10 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                         { value: 36, label: '36mo' }
                       ]}
                       sx={{ 
-                        color: 'white',
-                        '& .MuiSlider-thumb': { bgcolor: 'white' },
-                        '& .MuiSlider-track': { bgcolor: 'white' },
-                        '& .MuiSlider-rail': { bgcolor: 'rgba(255,255,255,0.3)' }
+                        color: '#FFD700',
+                        '& .MuiSlider-thumb': { bgcolor: '#FFD700' },
+                        '& .MuiSlider-track': { bgcolor: '#FFD700' },
+                        '& .MuiSlider-rail': { bgcolor: 'rgba(255,215,0,0.3)' }
                       }}
                     />
 

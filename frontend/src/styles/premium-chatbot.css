@@ -162,7 +162,7 @@
 }
 
 /* Glow effects */
-.glow-purple {
+.glow-gold {
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.4),
               0 0 40px rgba(102, 126, 234, 0.2),
               0 0 60px rgba(102, 126, 234, 0.1);

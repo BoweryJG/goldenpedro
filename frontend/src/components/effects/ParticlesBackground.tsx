@@ -22,7 +22,7 @@ interface ParticlesBackgroundProps {
 
 const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
   count = 50,
-  colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#10b981'],
+  colors = ['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37'],
   minSize = 2,
   maxSize = 6,
   opacity = 0.6,

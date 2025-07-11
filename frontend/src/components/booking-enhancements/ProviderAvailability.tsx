@@ -54,7 +54,7 @@ interface ProviderAvailabilityProps {
 const timeOffTypes = [
   { value: 'vacation', label: 'Vacation', icon: Plane, color: 'bg-blue-100 text-blue-700' },
   { value: 'sick', label: 'Sick Leave', icon: AlertCircle, color: 'bg-red-100 text-red-700' },
-  { value: 'personal', label: 'Personal', icon: Clock, color: 'bg-purple-100 text-purple-700' },
+  { value: 'personal', label: 'Personal', icon: Clock, color: 'bg-yellow-100 text-yellow-700' },
   { value: 'conference', label: 'Conference', icon: Users, color: 'bg-green-100 text-green-700' },
   { value: 'other', label: 'Other', icon: Coffee, color: 'bg-gray-100 text-gray-700' },
 ];

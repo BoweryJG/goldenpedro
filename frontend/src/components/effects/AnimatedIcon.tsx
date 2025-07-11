@@ -14,7 +14,7 @@ interface AnimatedIconProps {
 
 const AnimatedIcon: React.FC<AnimatedIconProps> = ({
   icon,
-  gradient = 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+  gradient = 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
   pulseColor = 'rgba(59, 130, 246, 0.4)',
   glowColor = 'rgba(139, 92, 246, 0.6)',
   size = 40,

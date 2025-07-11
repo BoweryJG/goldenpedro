@@ -509,7 +509,7 @@ export const CalendarEvent: React.FC<{ appointment: any }> = ({ appointment }) =
         
         <button
           onClick={() => handleAddToCalendar('yahoo')}
-          className="flex items-center justify-center space-x-2 px-4 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
+          className="flex items-center justify-center space-x-2 px-4 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600"
         >
           <span>📊</span>
           <span>Yahoo Calendar</span>

@@ -438,7 +438,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                           ? 'linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%)'
                           : bookingIntent > 50
                           ? 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'
-                          : 'linear-gradient(90deg, #9C27B0 0%, #E91E63 100%)',
+                          : 'linear-gradient(90deg, #D4AF37 0%, #E91E63 100%)',
                         boxShadow: '0 2px 8px rgba(102, 126, 234, 0.3)',
                       }
                     }}

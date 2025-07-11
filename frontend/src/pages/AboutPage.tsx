@@ -71,7 +71,7 @@ const AboutPage = () => {
         ref={heroRef}
         sx={{
           py: 10,
-          background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+          background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
           color: 'white',
         }}
       >

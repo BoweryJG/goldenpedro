@@ -8,7 +8,7 @@ interface GradientMeshProps {
 }
 
 const GradientMesh: React.FC<GradientMeshProps> = ({ 
-  colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#10b981'],
+  colors = ['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37'],
   opacity = 0.3,
   animate = true 
 }) => {

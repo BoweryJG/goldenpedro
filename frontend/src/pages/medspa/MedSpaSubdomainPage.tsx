@@ -9,7 +9,7 @@ import medspaContent from '../../data/subdomain-content/medspa/medspaContent.jso
 
 function MedSpaSubdomainPage() {
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+    <Box sx={{ minHeight: '100vh', bgcolor: '#000000' }}>
       {/* Hero Section */}
       <MedSpaHero content={medspaContent.hero} doctor={medspaContent.doctor} />
       
@@ -29,7 +29,7 @@ function MedSpaSubdomainPage() {
       </Container>
 
       {/* Aesthetic Gallery Section */}
-      <Box sx={{ bgcolor: 'grey.50', py: 8 }}>
+      <Box sx={{ bgcolor: '#1a1a1a', py: 8 }}>
         <Container maxWidth="lg">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

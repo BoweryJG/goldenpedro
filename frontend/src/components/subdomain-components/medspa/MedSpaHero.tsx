@@ -329,7 +329,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     background: 'linear-gradient(145deg, #f5d76e, #f8c059)', // Luxury gold gradient
                     color: '#000000', // Black text on gold button
                     border: '1px solid rgba(255, 255, 255, 0.3)',
-                    boxShadow: '0 8px 32px rgba(212, 175, 55, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5)',
+                    boxShadow: '0 8px 32px rgba(255, 215, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5)',
                     position: 'relative',
                     overflow: 'hidden',
                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -345,8 +345,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     },
                     '&:hover': {
                       transform: 'translateY(-3px) scale(1.02)',
-                      boxShadow: '0 12px 48px rgba(212, 175, 55, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.6)',
-                      background: 'linear-gradient(145deg, #f8c059, #f5d76e)', // Reverse gold gradient on hover
+                      boxShadow: '0 12px 48px rgba(255, 215, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.6)',
+                      background: 'linear-gradient(145deg, #D4AF37, #FFD700)', // Reverse gold gradient on hover
                       '&::before': {
                         left: '100%'
                       }

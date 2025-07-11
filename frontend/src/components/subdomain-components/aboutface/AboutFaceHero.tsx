@@ -65,7 +65,7 @@ const glowPulse = keyframes`
 // Styled components
 const StyledHeroSection = styled(Box)(({ theme }) => ({
   position: 'relative',
-  background: 'linear-gradient(135deg, #e3e3e3 0%, #ffffff 50%, #e3e3e3 100%)', // Platinum to white gradient
+  background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)', // Black to charcoal gradient
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
@@ -100,7 +100,7 @@ const SunburstRay = styled(Box)(({ rotation }: { rotation: number }) => ({
   left: '50%',
   width: '200%',
   height: '2px',
-  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%)',
+  background: 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.8) 50%, transparent 100%)', // Gold ray
   transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
   transformOrigin: 'center'
 }))
@@ -113,7 +113,7 @@ const FacialContourOverlay = styled(Box)({
   width: '400px',
   height: '500px',
   opacity: 0.1,
-  background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cpath d='M200 50 Q150 100 150 200 T200 400 Q250 300 250 200 T200 50' stroke='white' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E") no-repeat center`,
+  background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cpath d='M200 50 Q150 100 150 200 T200 400 Q250 300 250 200 T200 50' stroke='%23D4AF37' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E") no-repeat center`, // Gold contour
   backgroundSize: 'contain',
   pointerEvents: 'none'
 })
@@ -122,15 +122,15 @@ const WarmParticle = styled(Box)(({ delay }: { delay: number }) => ({
   position: 'absolute',
   width: '6px',
   height: '6px',
-  background: 'radial-gradient(circle, #D4AF37 0%, #ffffff 100%)', // Luxury gold to white
+  background: 'radial-gradient(circle, #D4AF37 0%, #FFD700 100%)', // Luxury gold gradient
   borderRadius: '50%',
-  boxShadow: '0 0 10px rgba(255, 255, 255, 0.8)',
+  boxShadow: '0 0 10px rgba(212, 175, 55, 0.8)', // Gold shadow
   animation: `${particleFloat} 8s ease-out infinite`,
   animationDelay: `${delay}s`
 }))
 
 const GlowButton = styled(Button)(({ theme }) => ({
-  background: 'linear-gradient(145deg, #f5d76e, #f8c059)', // Luxury gold gradient
+  background: 'linear-gradient(145deg, #D4AF37, #FFD700)', // Luxury gold gradient
   color: '#000000', // Deep black text
   fontWeight: 600,
   padding: '12px 32px',
@@ -138,7 +138,7 @@ const GlowButton = styled(Button)(({ theme }) => ({
   animation: `${glowPulse} 3s ease-in-out infinite`,
   transition: 'all 0.3s ease',
   '&:hover': {
-    background: 'linear-gradient(145deg, #f8c059, #f5d76e)', // Reverse gold gradient
+    background: 'linear-gradient(145deg, #FFD700, #D4AF37)', // Reverse gold gradient
     transform: 'translateY(-2px)',
     boxShadow: '0 10px 30px rgba(212, 175, 55, 0.4)'
   }
@@ -223,8 +223,8 @@ const AboutFaceHero: React.FC = () => {
                   label="Premium Facial Aesthetics"
                   sx={{
                     mb: 2,
-                    background: 'rgba(255, 255, 255, 0.95)', // White overlay
-                    color: '#000000', // Deep black text
+                    background: 'rgba(26, 26, 26, 0.95)', // Charcoal overlay
+                    color: '#FFFFFF', // White text
                     fontWeight: 600,
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(212, 175, 55, 0.3)',
@@ -238,11 +238,11 @@ const AboutFaceHero: React.FC = () => {
                   component="h1"
                   gutterBottom
                   sx={{
-                    color: '#000000', // Black text on platinum/white background
+                    color: '#FFFFFF', // White text on black/charcoal background
                     mb: 2,
                     fontSize: { xs: '3rem', md: '4rem' },
                     fontWeight: 700,
-                    textShadow: '2px 4px 8px rgba(0,0,0,0.1)',
+                    textShadow: '2px 4px 8px rgba(0,0,0,0.3)',
                     letterSpacing: '0.03em'
                   }}
                 >
@@ -253,7 +253,7 @@ const AboutFaceHero: React.FC = () => {
                   component="h2"
                   gutterBottom
                   sx={{
-                    color: '#1a1a1a', // Charcoal for subheading
+                    color: '#e3e3e3', // Platinum for subheading
                     fontWeight: 400,
                     mb: 3,
                     fontSize: { xs: '1.5rem', md: '2rem' },
@@ -265,7 +265,7 @@ const AboutFaceHero: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: '#1a1a1a', // Charcoal for body text
+                    color: '#999999', // Silver for body text
                     mb: 4,
                     fontSize: '1.2rem',
                     lineHeight: 1.8,
@@ -294,7 +294,7 @@ const AboutFaceHero: React.FC = () => {
                     px: 4,
                     py: 1.5,
                     borderColor: '#D4AF37', // Gold border
-                    color: '#000000', // Black text on platinum/white background
+                    color: '#FFFFFF', // White text
                     backdropFilter: 'blur(10px)',
                     background: 'rgba(212, 175, 55, 0.1)', // Gold overlay
                     transition: 'all 0.3s ease',
@@ -325,14 +325,14 @@ const AboutFaceHero: React.FC = () => {
                       <Box
                         textAlign="center"
                         sx={{
-                          background: 'rgba(255, 255, 255, 0.95)', // White overlay
+                          background: 'rgba(26, 26, 26, 0.95)', // Charcoal overlay
                           backdropFilter: 'blur(10px)',
                           borderRadius: 2,
                           p: 2,
-                          border: '1px solid rgba(255, 255, 255, 0.2)',
+                          border: '1px solid rgba(212, 175, 55, 0.2)', // Gold border
                           transition: 'all 0.3s ease',
                           '&:hover': {
-                            background: 'rgba(255, 255, 255, 0.25)',
+                            background: 'rgba(26, 26, 26, 0.5)', // Charcoal hover
                             transform: 'translateY(-4px)'
                           }
                         }}
@@ -340,7 +340,7 @@ const AboutFaceHero: React.FC = () => {
                         <ElegantTypography
                           variant="h4"
                           sx={{
-                            color: '#000000', // Black text on platinum/white background
+                            color: '#FFFFFF', // White text
                             fontWeight: 'bold',
                             textShadow: '0 2px 4px rgba(0,0,0,0.1)'
                           }}
@@ -349,7 +349,7 @@ const AboutFaceHero: React.FC = () => {
                         </ElegantTypography>
                         <Typography
                           variant="body2"
-                          sx={{ color: 'rgba(255, 255, 255, 0.9)' }}
+                          sx={{ color: '#999999' }} // Silver text
                         >
                           {stat.label}
                         </Typography>
@@ -374,7 +374,7 @@ const AboutFaceHero: React.FC = () => {
                   <Card
                     elevation={0}
                     sx={{
-                      background: 'rgba(255, 255, 255, 0.98)', // Pure white card
+                      background: 'rgba(26, 26, 26, 0.98)', // Charcoal card
                       backdropFilter: 'blur(20px)',
                       borderRadius: 3,
                       border: '1px solid rgba(212, 175, 55, 0.3)',
@@ -403,7 +403,7 @@ const AboutFaceHero: React.FC = () => {
                             variant="h5"
                             sx={{
                               fontWeight: 'bold',
-                              color: '#000000', // Deep black text
+                              color: '#FFFFFF', // White text
                               mb: 0.5
                             }}
                           >
@@ -411,7 +411,7 @@ const AboutFaceHero: React.FC = () => {
                           </ElegantTypography>
                           <Typography
                             variant="body1"
-                            sx={{ color: '#1a1a1a', fontWeight: 500 }} // Charcoal
+                            sx={{ color: '#e3e3e3', fontWeight: 500 }} // Platinum
                           >
                             {doctor.title}
                           </Typography>
@@ -430,7 +430,7 @@ const AboutFaceHero: React.FC = () => {
                             />
                             <Typography
                               variant="body2"
-                              sx={{ color: '#1a1a1a' }} // Charcoal
+                              sx={{ color: '#999999' }} // Silver
                             >
                               {credential}
                             </Typography>

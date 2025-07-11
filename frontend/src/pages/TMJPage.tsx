@@ -94,7 +94,7 @@ const TMJPage = () => {
         ref={heroRef}
         sx={{
           minHeight: '70vh',
-          background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+          background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)',
           color: 'white',
           display: 'flex',
           alignItems: 'center',
@@ -130,7 +130,7 @@ const TMJPage = () => {
                     onClick={() => navigate('/contact')}
                     sx={{
                       bgcolor: 'white',
-                      color: 'success.main',
+                      color: '#000000',
                       py: 1.5,
                       px: 4,
                       '&:hover': {
@@ -245,13 +245,13 @@ const TMJPage = () => {
                       borderRadius: 2,
                       bgcolor: 'grey.50',
                       '&:hover': {
-                        bgcolor: 'primary.50',
+                        bgcolor: 'rgba(212, 175, 55, 0.1)',
                         transform: 'translateX(8px)',
                         transition: 'all 0.3s',
                       },
                     }}
                   >
-                    <CheckCircleIcon sx={{ color: 'success.main', mr: 2 }} />
+                    <CheckCircleIcon sx={{ color: '#D4AF37', mr: 2 }} />
                     <Typography>{symptom}</Typography>
                   </Box>
                 </motion.div>
@@ -295,7 +295,7 @@ const TMJPage = () => {
                   >
                     <Box
                       sx={{
-                        color: 'success.main',
+                        color: '#D4AF37',
                         mb: 2,
                         '& svg': { fontSize: 48 },
                       }}
@@ -348,7 +348,7 @@ const TMJPage = () => {
                     />
                     <CardContent>
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <Avatar sx={{ bgcolor: 'success.main', mr: 2 }}>
+                        <Avatar sx={{ bgcolor: '#D4AF37', mr: 2 }}>
                           {testimonial.name[0]}
                         </Avatar>
                         <Box>
@@ -377,7 +377,7 @@ const TMJPage = () => {
       <Box
         sx={{
           py: 8,
-          background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
+          background: 'linear-gradient(135deg, #B8860B 0%, #D4AF37 100%)',
           color: 'white',
           textAlign: 'center',
         }}
@@ -400,7 +400,7 @@ const TMJPage = () => {
               onClick={() => navigate('/contact')}
               sx={{
                 bgcolor: 'white',
-                color: 'success.main',
+                color: '#000000',
                 py: 2,
                 px: 5,
                 fontSize: '1.1rem',

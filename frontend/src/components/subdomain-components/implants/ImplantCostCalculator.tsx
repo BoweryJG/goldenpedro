@@ -192,7 +192,8 @@ const ImplantCostCalculator: React.FC = () => {
       id="implant-cost-calculator"
       sx={{ 
         py: { xs: 8, md: 12 }, 
-        bgcolor: 'background.default' 
+        bgcolor: '#1a1a1a',
+        color: '#FFFFFF'
       }}
     >
       <Container maxWidth="lg">
@@ -202,7 +203,7 @@ const ImplantCostCalculator: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Box textAlign="center" sx={{ mb: 6 }}>
-            <Calculate sx={{ fontSize: '3rem', color: 'primary.main', mb: 2 }} />
+            <Calculate sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
             <Typography
               variant="h2"
               component="h2"
@@ -210,7 +211,7 @@ const ImplantCostCalculator: React.FC = () => {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 700,
                 mb: 2,
-                color: 'primary.main'
+                color: '#D4AF37'
               }}
             >
               Implant Cost Calculator
@@ -231,8 +232,8 @@ const ImplantCostCalculator: React.FC = () => {
           <Grid container spacing={4}>
             {/* Calculator Controls */}
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ p: 3, height: 'fit-content' }}>
-                <Typography variant="h5" gutterBottom color="primary">
+              <Card sx={{ p: 3, height: 'fit-content', bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+                <Typography variant="h5" gutterBottom sx={{ color: '#D4AF37' }}>
                   Treatment Details
                 </Typography>
                 
@@ -279,7 +280,7 @@ const ImplantCostCalculator: React.FC = () => {
                   Additional Services
                 </Typography>
                 {bonusServices.map((service) => (
-                  <Accordion key={service.name} sx={{ mb: 1 }}>
+                  <Accordion key={service.name} sx={{ mb: 1, bgcolor: '#333333', color: '#FFFFFF' }}>
                     <AccordionSummary expandIcon={<ExpandMore />}>
                       <FormControlLabel
                         control={
@@ -310,13 +311,13 @@ const ImplantCostCalculator: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Card sx={{ mb: 3 }}>
+                  <Card sx={{ mb: 3, bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
                     <CardContent>
-                      <Typography variant="h5" gutterBottom color="primary">
+                      <Typography variant="h5" gutterBottom sx={{ color: '#D4AF37' }}>
                         Cost Breakdown
                       </Typography>
                       
-                      <TableContainer component={Paper} variant="outlined">
+                      <TableContainer component={Paper} variant="outlined" sx={{ bgcolor: '#1a1a1a', '& .MuiTableCell-root': { color: '#FFFFFF' } }}>
                         <Table>
                           <TableHead>
                             <TableRow>
@@ -353,11 +354,11 @@ const ImplantCostCalculator: React.FC = () => {
                                 </TableCell>
                               </TableRow>
                             )}
-                            <TableRow sx={{ bgcolor: 'primary.light' }}>
-                              <TableCell sx={{ fontWeight: 'bold', color: 'white' }}>
+                            <TableRow sx={{ bgcolor: '#D4AF37' }}>
+                              <TableCell sx={{ fontWeight: 'bold', color: '#000000' }}>
                                 Total Estimated Cost
                               </TableCell>
-                              <TableCell align="right" sx={{ fontWeight: 'bold', color: 'white' }}>
+                              <TableCell align="right" sx={{ fontWeight: 'bold', color: '#000000' }}>
                                 {implantApiUtils.formatCurrency(costBreakdown.total)}
                               </TableCell>
                             </TableRow>
@@ -368,29 +369,29 @@ const ImplantCostCalculator: React.FC = () => {
                   </Card>
 
                   {/* Financing Options */}
-                  <Card>
+                  <Card sx={{ bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
                     <CardContent>
-                      <Typography variant="h5" gutterBottom color="primary">
+                      <Typography variant="h5" gutterBottom sx={{ color: '#D4AF37' }}>
                         Financing Options
                       </Typography>
                       
-                      <Alert severity="info" sx={{ mb: 3 }}>
+                      <Alert severity="info" sx={{ mb: 3, bgcolor: '#e3e3e3', color: '#000000', '& .MuiAlert-icon': { color: '#D4AF37' } }}>
                         <strong>Good news!</strong> Most patients qualify for financing with low monthly payments.
                       </Alert>
 
                       <Grid container spacing={2}>
                         {financingOptions.map((option) => (
                           <Grid size={{ xs: 12, sm: 6 }} key={option.provider}>
-                            <Card variant="outlined" sx={{ height: '100%' }}>
+                            <Card variant="outlined" sx={{ height: '100%', bgcolor: '#1a1a1a', color: '#FFFFFF', borderColor: '#999999' }}>
                               <CardContent>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                  <CreditCard sx={{ color: 'primary.main', mr: 1 }} />
-                                  <Typography variant="h6" color="primary">
+                                  <CreditCard sx={{ color: '#D4AF37', mr: 1 }} />
+                                  <Typography variant="h6" sx={{ color: '#D4AF37' }}>
                                     {option.provider}
                                   </Typography>
                                 </Box>
                                 
-                                <Typography variant="h4" color="success.main" gutterBottom>
+                                <Typography variant="h4" sx={{ color: '#D4AF37' }} gutterBottom>
                                   {implantApiUtils.formatCurrency(option.monthlyPayment)}/mo
                                 </Typography>
                                 
@@ -401,9 +402,12 @@ const ImplantCostCalculator: React.FC = () => {
                                 {option.apr === 0 && (
                                   <Chip 
                                     label="0% Interest" 
-                                    color="success" 
                                     size="small" 
-                                    sx={{ mb: 1 }}
+                                    sx={{ 
+                                      mb: 1,
+                                      bgcolor: '#D4AF37',
+                                      color: '#000000'
+                                    }}
                                   />
                                 )}
                                 
@@ -426,7 +430,12 @@ const ImplantCostCalculator: React.FC = () => {
                             mr: 2,
                             py: 1.5,
                             px: 4,
-                            fontSize: '1.1rem'
+                            fontSize: '1.1rem',
+                            bgcolor: '#D4AF37',
+                            color: '#000000',
+                            '&:hover': {
+                              bgcolor: '#B8860B'
+                            }
                           }}
                         >
                           Chat with Julie to Schedule
@@ -443,7 +452,13 @@ const ImplantCostCalculator: React.FC = () => {
                           sx={{
                             py: 1.5,
                             px: 4,
-                            fontSize: '1.1rem'
+                            fontSize: '1.1rem',
+                            borderColor: '#e3e3e3',
+                            color: '#000000',
+                            '&:hover': {
+                              borderColor: '#999999',
+                              bgcolor: 'rgba(227, 227, 227, 0.1)'
+                            }
                           }}
                         >
                           Get Pre-Qualified

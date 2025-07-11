@@ -5,7 +5,7 @@
   --panerai-gradient-medium: radial-gradient(circle at 30% 30%, #2a2d3a, #1a1d2a);
   
   /* Accent Colors */
-  --panerai-green: #00ff00;
+  --panerai-green: #D4AF37;
   --panerai-green-glow: rgba(0, 255, 0, 0.3);
   --panerai-green-soft: rgba(0, 255, 0, 0.1);
   
@@ -37,7 +37,7 @@
 }
 
 .panerai-card:hover {
-  border: 1px solid #00ff00 !important;
+  border: 1px solid #D4AF37 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.3) !important;
 }
 
@@ -51,9 +51,9 @@
 }
 
 .panerai-cta:hover {
-  border-color: #00ff00;
+  border-color: #D4AF37;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-  color: #00ff00;
+  color: #D4AF37;
 }
 
 .panerai-cta:hover::before {
@@ -68,7 +68,7 @@
 }
 
 .panerai-statistic {
-  color: #00ff00 !important;
+  color: #D4AF37 !important;
   text-shadow: 0 0 10px rgba(0, 255, 0, 0.3) !important;
   font-family: 'Courier New', monospace !important;
 }

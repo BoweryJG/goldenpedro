@@ -293,7 +293,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ onNavigate }) => {
                   sx={{
                     py: 2,
                     px: 4,
-                    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                    background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
                     fontSize: '1.1rem',
                     fontWeight: 600,
                     boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)',
@@ -384,7 +384,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ onNavigate }) => {
                     height: '100%',
                     borderRadius: 4,
                     overflow: 'hidden',
-                    background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)',
+                    background: 'linear-gradient(135deg, #1a1a1a 0%, #D4AF37 100%)',
                     position: 'relative',
                     transform: 'perspective(1000px) rotateY(10deg)',
                     transition: 'transform 0.3s ease',
@@ -468,7 +468,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ onNavigate }) => {
                       variant="h3"
                       sx={{
                         fontWeight: 800,
-                        background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                        background: 'linear-gradient(135deg, #FFD700 0%, #8b5cf6 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                       }}

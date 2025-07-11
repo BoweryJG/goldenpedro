@@ -103,7 +103,7 @@ const EmfacePage = () => {
         ref={heroRef}
         sx={{
           minHeight: '70vh',
-          background: 'linear-gradient(135deg, #e879f9 0%, #c026d3 100%)',
+          background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
           color: 'white',
           display: 'flex',
           alignItems: 'center',
@@ -153,7 +153,7 @@ const EmfacePage = () => {
                       py: 1.5,
                       px: 4,
                       '&:hover': {
-                        bgcolor: 'grey.100',
+                        bgcolor: '#1a1a1a',
                       },
                     }}
                   >
@@ -474,7 +474,7 @@ const EmfacePage = () => {
       <Box
         sx={{
           py: 8,
-          background: 'linear-gradient(135deg, #c026d3 0%, #e879f9 100%)',
+          background: 'linear-gradient(135deg, #1a1a1a 0%, #000000 100%)',
           color: 'white',
           textAlign: 'center',
         }}
@@ -503,7 +503,7 @@ const EmfacePage = () => {
                 px: 5,
                 fontSize: '1.1rem',
                 '&:hover': {
-                  bgcolor: 'grey.100',
+                  bgcolor: '#D4AF37',
                 },
               }}
             >

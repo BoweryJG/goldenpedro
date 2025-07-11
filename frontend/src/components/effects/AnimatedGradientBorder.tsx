@@ -14,7 +14,7 @@ const AnimatedGradientBorder: React.FC<AnimatedGradientBorderProps> = ({
   children,
   borderWidth = 2,
   borderRadius = 16,
-  colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#10b981'],
+  colors = ['#FFD700', '#8b5cf6', '#ec4899', '#D4AF37'],
   animationDuration = 4,
 }) => {
   const gradient = `linear-gradient(135deg, ${colors.join(', ')})`;

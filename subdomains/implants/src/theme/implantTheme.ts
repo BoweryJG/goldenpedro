@@ -92,12 +92,12 @@ export const implantTheme = createTheme({
           fontWeight: 600,
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: '0 4px 12px rgba(21, 101, 192, 0.3)',
+            boxShadow: '0 4px 12px rgba(212, 175, 55, 0.3)',
           },
         },
         contained: {
           '&:hover': {
-            boxShadow: '0 6px 16px rgba(21, 101, 192, 0.4)',
+            boxShadow: '0 6px 16px rgba(212, 175, 55, 0.4)',
           },
         },
       },
