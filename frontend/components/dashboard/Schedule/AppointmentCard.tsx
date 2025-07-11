@@ -69,33 +69,33 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({
   const getTypeStyles = () => {
     const styles = {
       'TMJ': {
-        bg: 'bg-gradient-to-r from-purple-500 to-purple-600',
-        border: 'border-purple-300',
-        text: 'text-purple-100',
+        bg: 'bg-gradient-to-r from-gray-700 to-gray-800',
+        border: 'border-gray-600',
+        text: 'text-gray-100',
         icon: '🦷'
       },
       'Implants': {
-        bg: 'bg-gradient-to-r from-blue-500 to-blue-600',
-        border: 'border-blue-300',
-        text: 'text-blue-100',
+        bg: 'bg-gradient-to-r from-gray-600 to-gray-700',
+        border: 'border-gray-500',
+        text: 'text-gray-100',
         icon: '🔧'
       },
       'Cosmetic': {
-        bg: 'bg-gradient-to-r from-pink-500 to-pink-600',
-        border: 'border-pink-300',
-        text: 'text-pink-100',
+        bg: 'bg-gradient-to-r from-gray-500 to-gray-600',
+        border: 'border-gray-400',
+        text: 'text-gray-100',
         icon: '✨'
       },
       'General': {
-        bg: 'bg-gradient-to-r from-green-500 to-green-600',
-        border: 'border-green-300',
-        text: 'text-green-100',
+        bg: 'bg-gradient-to-r from-gray-600 to-gray-700',
+        border: 'border-gray-500',
+        text: 'text-gray-100',
         icon: '🏥'
       },
       'Emergency': {
-        bg: 'bg-gradient-to-r from-red-500 to-red-600',
-        border: 'border-red-300',
-        text: 'text-red-100',
+        bg: 'bg-gradient-to-r from-gray-800 to-gray-900',
+        border: 'border-gray-700',
+        text: 'text-gray-100',
         icon: '🚨'
       }
     };
@@ -105,13 +105,13 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({
   const getStatusIcon = () => {
     switch (appointment.status) {
       case 'checked-in':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
+        return <CheckCircle className="w-4 h-4 text-yellow-400" />;
       case 'in-progress':
-        return <div className="w-4 h-4 rounded-full bg-yellow-400 animate-pulse" />;
+        return <div className="w-4 h-4 rounded-full bg-yellow-500 animate-pulse" />;
       case 'completed':
         return <CheckCircle className="w-4 h-4 text-white" />;
       case 'cancelled':
-        return <XCircle className="w-4 h-4 text-red-400" />;
+        return <XCircle className="w-4 h-4 text-gray-400" />;
       default:
         return <Clock className="w-4 h-4 text-white/70" />;
     }
@@ -199,14 +199,14 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({
           <hr className="my-2" />
           <button
             onClick={() => onQuickAction?.('checkin', appointment)}
-            className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+            className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
           >
             <CheckCircle className="w-4 h-4" />
             <span>Check In</span>
           </button>
           <button
             onClick={() => onQuickAction?.('cancel', appointment)}
-            className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
           >
             <XCircle className="w-4 h-4" />
             <span>Cancel</span>

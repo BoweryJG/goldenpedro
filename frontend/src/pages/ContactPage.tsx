@@ -75,9 +75,9 @@ const ContactPage = () => {
               >
                 <Card 
                   sx={{ 
-                    background: 'linear-gradient(135deg, rgba(224, 242, 254, 0.5), rgba(255, 255, 255, 0.9))',
-                    border: '1px solid rgba(129, 230, 217, 0.2)',
-                    boxShadow: '0 10px 40px rgba(129, 230, 217, 0.1)',
+                    background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.95))',
+                    border: '1px solid rgba(212, 175, 55, 0.2)',
+                    boxShadow: '0 10px 40px rgba(212, 175, 55, 0.1)',
                   }}
                 >
                   <CardContent sx={{ p: { xs: 3, md: 6 } }}>
@@ -125,12 +125,12 @@ const ContactPage = () => {
                               px: 6,
                               fontSize: '1.25rem',
                               fontWeight: 600,
-                              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                              background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)',
                               borderRadius: 3,
-                              boxShadow: '0 4px 20px rgba(118, 75, 162, 0.3)',
+                              boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)',
                               '&:hover': {
                                 transform: 'translateY(-2px)',
-                                boxShadow: '0 8px 30px rgba(118, 75, 162, 0.4)',
+                                boxShadow: '0 8px 30px rgba(212, 175, 55, 0.4)',
                               },
                             }}
                           >
@@ -143,7 +143,7 @@ const ContactPage = () => {
                         </Typography>
                       </Stack>
                       
-                      <Box sx={{ mt: 6, p: 4, bgcolor: 'rgba(129, 230, 217, 0.05)', borderRadius: 3 }}>
+                      <Box sx={{ mt: 6, p: 4, bgcolor: 'rgba(212, 175, 55, 0.05)', borderRadius: 3 }}>
                         <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
                           How Julie Can Help You:
                         </Typography>

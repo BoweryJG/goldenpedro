@@ -19,8 +19,9 @@ import { trackChatOpen, trackEvent } from '../../../utils/analytics'
 
 // Animation keyframes
 const dataFlow = keyframes`
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
 `
 
 const pulse = keyframes`
@@ -29,13 +30,14 @@ const pulse = keyframes`
 `
 
 const glow = keyframes`
-  0%, 100% { filter: drop-shadow(0 0 20px #e3e3e3); }
-  50% { filter: drop-shadow(0 0 40px #e3e3e3); }
+  0%, 100% { filter: drop-shadow(0 0 20px #FFD700); }
+  50% { filter: drop-shadow(0 0 40px #FFD700); }
 `
 
 const holographicShimmer = keyframes`
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% { background-position: -200% center; opacity: 0; }
+  50% { opacity: 1; }
+  100% { background-position: 200% center; opacity: 0; }
 `
 
 // Circuit Board Pattern Component
@@ -76,14 +78,14 @@ const CircuitBoardPattern: React.FC = () => {
           <pattern id="circuitGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
             <path
               d="M 0 50 L 100 50 M 50 0 L 50 100"
-              stroke="#e3e3e3"
+              stroke="#FFD700"
               strokeWidth="0.5"
               fill="none"
               opacity="0.3"
             />
             <path
               d="M 25 25 L 75 25 L 75 75 L 25 75 Z"
-              stroke="#e3e3e3"
+              stroke="#FFD700"
               strokeWidth="0.5"
               fill="none"
               opacity="0.3"
@@ -101,7 +103,7 @@ const CircuitBoardPattern: React.FC = () => {
           left: 0,
           width: '100%',
           height: '2px',
-          background: 'linear-gradient(90deg, transparent, #e3e3e3, transparent)',
+          background: 'linear-gradient(90deg, transparent, #FFD700, transparent)',
           animation: `${dataFlow} 3s linear infinite`
         }}
       />
@@ -112,7 +114,7 @@ const CircuitBoardPattern: React.FC = () => {
           left: 0,
           width: '100%',
           height: '2px',
-          background: 'linear-gradient(90deg, transparent, #e3e3e3, transparent)',
+          background: 'linear-gradient(90deg, transparent, #FFD700, transparent)',
           animation: `${dataFlow} 4s linear infinite`
         }}
       />
@@ -139,8 +141,8 @@ const CircuitBoardPattern: React.FC = () => {
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            background: '#e3e3e3',
-            boxShadow: '0 0 20px #e3e3e3',
+            background: '#FFD700',
+            boxShadow: '0 0 20px #FFD700',
             animation: `${pulse} 2s ease-in-out infinite`,
             animationDelay: `${Math.random() * 2}s`
           }}
@@ -152,7 +154,7 @@ const CircuitBoardPattern: React.FC = () => {
 
 // Color Echo Particles Component
 const ColorEchoParticles: React.FC = () => {
-  const spectrumColors = ['#e3e3e3', '#D4AF37', '#ffffff', '#e3e3e3', '#D4AF37', '#ffffff', '#e3e3e3']
+  const spectrumColors = ['#FFD700', '#FFA500', '#FFD700', '#FFFF00', '#FFD700', '#FFA500', '#FFD700']
   
   return (
     <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, pointerEvents: 'none' }}>
@@ -225,7 +227,7 @@ const YomiHero: React.FC = () => {
     <Box
       className="hero-robotic"
       sx={{
-        background: '#000000', // Deep black background
+        background: 'conic-gradient(from 45deg at 50% 50%, #000000 0deg, #1a1a1a 90deg, #000000 180deg, #1a1a1a 270deg, #000000 360deg)',
         backgroundSize: '200% 200%',
         animation: 'gradientShift 10s ease infinite',
         color: 'white',
@@ -239,7 +241,7 @@ const YomiHero: React.FC = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(circle at 20% 50%, rgba(227, 227, 227, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(227, 227, 227, 0.08) 0%, transparent 50%)',
+          background: 'radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%)',
           pointerEvents: 'none'
         }
       }}
@@ -265,7 +267,7 @@ const YomiHero: React.FC = () => {
             content: '""',
             position: 'absolute',
             inset: 0,
-            border: '2px solid #ffffff',
+            border: '2px solid #FFD700',
             borderRadius: '50%',
             animation: 'rotate 20s linear infinite'
           },
@@ -273,7 +275,7 @@ const YomiHero: React.FC = () => {
             content: '""',
             position: 'absolute',
             inset: '20%',
-            border: '2px solid #e3e3e3',
+            border: '2px solid #FFD700',
             transform: 'rotate(45deg)',
             animation: 'rotate 30s linear infinite reverse'
           }
@@ -299,11 +301,11 @@ const YomiHero: React.FC = () => {
                   letterSpacing: '-0.03em',
                   mb: 2,
                   color: 'white',
-                  background: 'linear-gradient(45deg, #e3e3e3 0%, #FFFFFF 50%, #ffffff 100%)',
+                  background: 'linear-gradient(45deg, #FFD700 0%, #FFA500 50%, #FFD700 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  filter: 'drop-shadow(0 0 30px rgba(227, 227, 227, 0.5))',
+                  filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.5))',
                   animation: `${glow} 3s ease-in-out infinite`
                 }}
               >
@@ -321,7 +323,7 @@ const YomiHero: React.FC = () => {
                   letterSpacing: '-0.02em',
                   mb: 3,
                   color: 'rgba(255, 255, 255, 0.95)',
-                  textShadow: '0 0 20px rgba(227, 227, 227, 0.3)'
+                  textShadow: '0 0 20px rgba(255, 215, 0, 0.3)'
                 }}
               >
                 {hero.subtitle}
@@ -353,17 +355,17 @@ const YomiHero: React.FC = () => {
                         textAlign="center"
                         sx={{
                           p: 2,
-                          background: 'linear-gradient(135deg, rgba(26, 26, 26, 0.3) 0%, rgba(227, 227, 227, 0.1) 100%)',
+                          background: 'linear-gradient(135deg, rgba(26, 26, 26, 0.3) 0%, rgba(255, 215, 0, 0.1) 100%)',
                           borderRadius: 2,
                           backdropFilter: 'blur(20px)',
-                          border: '1px solid rgba(227, 227, 227, 0.3)',
+                          border: '1px solid rgba(255, 215, 0, 0.3)',
                           position: 'relative',
                           overflow: 'hidden',
                           transition: 'all 0.3s ease',
                           '&:hover': {
-                            border: '1px solid #e3e3e3',
+                            border: '1px solid #FFD700',
                             transform: 'translateY(-5px)',
-                            boxShadow: '0 10px 30px rgba(227, 227, 227, 0.3)'
+                            boxShadow: '0 10px 30px rgba(255, 215, 0, 0.3)'
                           },
                           '&::before': {
                             content: '""',
@@ -385,9 +387,9 @@ const YomiHero: React.FC = () => {
                             fontWeight: 800,
                             fontStretch: 'condensed',
                             letterSpacing: '-0.02em',
-                            color: '#D4AF37', // Luxury gold for numbers
+                            color: '#FFD700', // Bright gold for numbers
                             mb: 0.5,
-                            textShadow: '0 0 20px rgba(212, 175, 55, 0.5)',
+                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5)',
                             filter: isProcessing && index === 1 ? 'brightness(1.5)' : 'none',
                             transition: 'filter 0.3s ease'
                           }}
@@ -421,7 +423,7 @@ const YomiHero: React.FC = () => {
                   startIcon={<SmartToy />}
                   sx={{
                     position: 'relative',
-                    background: 'linear-gradient(145deg, #f5d76e, #f8c059)', // Luxury gold gradient
+                    background: 'linear-gradient(145deg, #FFD700, #FFA500)', // Bright gold gradient
                     color: 'black',
                     fontSize: '1.1rem',
                     py: 1.5,
@@ -441,7 +443,7 @@ const YomiHero: React.FC = () => {
                     },
                     '&:hover': {
                       transform: 'translateY(-2px) scale(1.05)',
-                      boxShadow: '0 8px 25px rgba(212, 175, 55, 0.4)',
+                      boxShadow: '0 8px 25px rgba(255, 215, 0, 0.4)',
                       filter: 'brightness(1.1)'
                     },
                     transition: 'all 0.3s ease'
@@ -457,13 +459,13 @@ const YomiHero: React.FC = () => {
                   startIcon={<Chat />}
                   sx={{
                     position: 'relative',
-                    borderColor: '#e3e3e3', // Platinum border
+                    borderColor: '#FFD700', // Gold border
                     color: 'white',
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 3,
                     fontWeight: 500,
-                    background: 'rgba(227, 227, 227, 0.1)', // Platinum overlay
+                    background: 'rgba(255, 215, 0, 0.1)', // Gold overlay
                     backdropFilter: 'blur(10px)',
                     overflow: 'hidden',
                     '&::after': {
@@ -474,10 +476,10 @@ const YomiHero: React.FC = () => {
                       animation: `${holographicShimmer} 4s linear infinite`
                     },
                     '&:hover': {
-                      bgcolor: 'rgba(227, 227, 227, 0.2)',
-                      borderColor: '#e3e3e3', // Platinum border
+                      bgcolor: 'rgba(255, 215, 0, 0.2)',
+                      borderColor: '#FFD700', // Gold border
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 0 20px rgba(227, 227, 227, 0.5)'
+                      boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)'
                     },
                     transition: 'all 0.3s ease'
                   }}
@@ -526,7 +528,7 @@ const YomiHero: React.FC = () => {
                   backdropFilter: 'blur(20px)',
                   borderRadius: 3,
                   p: 3,
-                  border: '1px solid rgba(227, 227, 227, 0.3)', // Platinum border
+                  border: '1px solid rgba(255, 215, 0, 0.3)', // Gold border
                   position: 'relative',
                   overflow: 'hidden',
                   color: '#FFFFFF', // Ensure white text in card
@@ -546,11 +548,11 @@ const YomiHero: React.FC = () => {
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                     <Avatar
                       sx={{
-                        background: 'linear-gradient(145deg, #f5d76e, #f8c059)', // Luxury gold gradient
+                        background: 'linear-gradient(145deg, #FFD700, #FFA500)', // Bright gold gradient
                         width: 56,
                         height: 56,
                         mr: 2,
-                        boxShadow: '0 0 20px rgba(227, 227, 227, 0.5)',
+                        boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)',
                         animation: `${glow} 3s ease-in-out infinite`
                       }}
                     >
@@ -560,12 +562,12 @@ const YomiHero: React.FC = () => {
                       <Typography
                         variant="h4"
                         sx={{
-                          color: '#D4AF37', // Luxury gold
+                          color: '#FFD700', // Bright gold
                           fontWeight: 600,
                           mb: 0.5,
                           fontFamily: '"Bodoni Moda", serif',
                           letterSpacing: '-0.02em',
-                          textShadow: '0 0 10px rgba(212, 175, 55, 0.5)'
+                          textShadow: '0 0 10px rgba(255, 215, 0, 0.5)'
                         }}
                       >
                         {doctor.name}
@@ -607,7 +609,7 @@ const YomiHero: React.FC = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: '#e3e3e3', // Platinum text
+                      color: '#FFFFFF', // White text
                       mb: 2,
                       fontWeight: 500
                     }}
@@ -634,7 +636,7 @@ const YomiHero: React.FC = () => {
                   </Box>
 
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                    <LocationOn sx={{ color: '#D4AF37', mr: 1 }} />
+                    <LocationOn sx={{ color: '#FFD700', mr: 1 }} />
                     <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                       Staten Island, NY • Manhattan, NY
                     </Typography>
@@ -650,7 +652,7 @@ const YomiHero: React.FC = () => {
                       textAlign: 'center',
                       position: 'relative',
                       overflow: 'hidden',
-                      border: '1px solid rgba(227, 227, 227, 0.3)', // Platinum border
+                      border: '1px solid rgba(255, 215, 0, 0.3)', // Gold border
                       '&::before': {
                         content: '""',
                         position: 'absolute',

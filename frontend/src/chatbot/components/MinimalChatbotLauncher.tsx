@@ -36,7 +36,7 @@ export const MinimalChatbotLauncher: React.FC<MinimalChatbotLauncherProps> = ({
           width: 60,
           height: 60,
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
           cursor: 'pointer',
           position: 'relative',
           overflow: 'visible',
@@ -44,12 +44,12 @@ export const MinimalChatbotLauncher: React.FC<MinimalChatbotLauncherProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 4px 20px rgba(102, 126, 234, 0.25)',
+          boxShadow: '0 4px 20px rgba(212, 175, 55, 0.25)',
           
           // Hover state
           '&:hover': {
             transform: 'translateY(-2px) scale(1.05)',
-            boxShadow: '0 6px 30px rgba(102, 126, 234, 0.35)',
+            boxShadow: '0 6px 30px rgba(212, 175, 55, 0.35)',
             '& .chat-icon': {
               transform: 'scale(1.1)',
             },
@@ -69,7 +69,7 @@ export const MinimalChatbotLauncher: React.FC<MinimalChatbotLauncherProps> = ({
             position: 'absolute',
             inset: -2,
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
             opacity: 0.4,
             filter: 'blur(10px)',
             animation: 'glow 3s ease-in-out infinite',
@@ -145,7 +145,7 @@ export const MinimalChatbotLauncher: React.FC<MinimalChatbotLauncherProps> = ({
                   width: 3.5,
                   height: 3.5,
                   borderRadius: '50%',
-                  background: '#667eea',
+                  background: '#D4AF37',
                   animationPlayState: 'paused',
                   animation: `blink 1.4s ease-in-out infinite ${i * 0.2}s`,
                   '@keyframes blink': {

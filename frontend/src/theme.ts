@@ -5,8 +5,8 @@ const theme = createTheme({
     primary: {
       main: '#D4AF37', // luxury gold
       contrastText: '#000000',
-      light: '#f5d76e',
-      dark: '#f8c059',
+      light: '#FFD700',
+      dark: '#D4AF37',
     },
     secondary: {
       main: '#e3e3e3', // platinum
@@ -29,14 +29,14 @@ const theme = createTheme({
     grey: {
       50: '#FAFAFA',
       100: '#F5F5F5',
-      200: '#EEEEEE',
-      300: '#E0E0E0',
-      400: '#BDBDBD',
-      500: '#9E9E9E',
-      600: '#757575',
-      700: '#616161',
-      800: '#424242',
-      900: '#212121',
+      200: '#e3e3e3',
+      300: '#e3e3e3',
+      400: '#999999',
+      500: '#999999',
+      600: '#666666',
+      700: '#666666',
+      800: '#3d3d3d',
+      900: '#1a1a1a',
     }
   },
   typography: {
@@ -116,7 +116,7 @@ const theme = createTheme({
           },
         },
         contained: {
-          background: 'linear-gradient(145deg, #f5d76e, #f8c059)',
+          background: 'linear-gradient(145deg, #FFD700, #D4AF37)',
           color: '#000000',
           border: '1px solid #D4AF37',
           '&:hover': {

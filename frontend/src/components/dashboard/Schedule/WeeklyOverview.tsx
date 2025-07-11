@@ -43,10 +43,10 @@ const WeeklyOverview: React.FC = () => {
     if (dayOfWeek === 0 || dayOfWeek === 6) return []; // No appointments on weekends
 
     const baseAppointments = [
-      { id: '1', time: '09:00', patientName: 'Patient A', type: 'TMJ', duration: 60, color: '#FF6B6B' },
-      { id: '2', time: '10:30', patientName: 'Patient B', type: 'Implant', duration: 90, color: '#4ECDC4' },
-      { id: '3', time: '14:00', patientName: 'Patient C', type: 'Yomi', duration: 120, color: '#95E1D3' },
-      { id: '4', time: '16:00', patientName: 'Patient D', type: 'MedSpa', duration: 45, color: '#F38181' }
+      { id: '1', time: '09:00', patientName: 'Patient A', type: 'TMJ', duration: 60, color: '#D4AF37' },
+      { id: '2', time: '10:30', patientName: 'Patient B', type: 'Implant', duration: 90, color: '#FFD700' },
+      { id: '3', time: '14:00', patientName: 'Patient C', type: 'Yomi', duration: 120, color: '#F7E7CE' },
+      { id: '4', time: '16:00', patientName: 'Patient D', type: 'MedSpa', duration: 45, color: '#A9A9A9' }
     ];
 
     // Randomize appointments for variety
@@ -140,13 +140,13 @@ const WeeklyOverview: React.FC = () => {
                         textAlign: 'center',
                         pb: 1,
                         mb: 1,
-                        borderBottom: isCurrentDay ? '2px solid #FFD93D' : '1px solid rgba(255,255,255,0.1)'
+                        borderBottom: isCurrentDay ? '2px solid #D4AF37' : '1px solid rgba(255,255,255,0.1)'
                       }}
                     >
                       <Typography
                         variant="caption"
                         sx={{
-                          color: isCurrentDay ? '#FFD93D' : 'rgba(255,255,255,0.7)',
+                          color: isCurrentDay ? '#D4AF37' : 'rgba(255,255,255,0.7)',
                           fontWeight: isCurrentDay ? 600 : 400
                         }}
                       >
@@ -155,7 +155,7 @@ const WeeklyOverview: React.FC = () => {
                       <Typography
                         variant="h6"
                         sx={{
-                          color: isCurrentDay ? '#FFD93D' : 'white',
+                          color: isCurrentDay ? '#D4AF37' : 'white',
                           fontWeight: isCurrentDay ? 600 : 400
                         }}
                       >
@@ -247,10 +247,10 @@ const WeeklyOverview: React.FC = () => {
         {/* Legend */}
         <Box sx={{ display: 'flex', gap: 2, mt: 3, flexWrap: 'wrap' }}>
           {[
-            { label: 'TMJ', color: '#FF6B6B' },
-            { label: 'Implants', color: '#4ECDC4' },
-            { label: 'Yomi', color: '#95E1D3' },
-            { label: 'MedSpa', color: '#F38181' }
+            { label: 'TMJ', color: '#D4AF37' },
+            { label: 'Implants', color: '#FFD700' },
+            { label: 'Yomi', color: '#F7E7CE' },
+            { label: 'MedSpa', color: '#A9A9A9' }
           ].map(item => (
             <Box key={item.label} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
               <CircleIcon sx={{ color: item.color, fontSize: 12 }} />

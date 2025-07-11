@@ -57,11 +57,11 @@ const StaffScheduler: React.FC = () => {
 
   // Mock staff data
   const staffMembers: StaffMember[] = [
-    { id: '1', name: 'Dr. Pedro', role: 'Lead Dentist', color: '#FFD93D', email: 'drpedro@clinic.com', phone: '+1 555-0001' },
-    { id: '2', name: 'Dr. Sarah Chen', role: 'Associate Dentist', color: '#4ECDC4', email: 'sarah@clinic.com', phone: '+1 555-0002' },
-    { id: '3', name: 'Maria Garcia', role: 'Hygienist', color: '#FF6B6B', email: 'maria@clinic.com', phone: '+1 555-0003' },
-    { id: '4', name: 'James Wilson', role: 'Assistant', color: '#95E1D3', email: 'james@clinic.com', phone: '+1 555-0004' },
-    { id: '5', name: 'Emily Brown', role: 'Receptionist', color: '#F38181', email: 'emily@clinic.com', phone: '+1 555-0005' }
+    { id: '1', name: 'Dr. Pedro', role: 'Lead Dentist', color: '#D4AF37', email: 'drpedro@clinic.com', phone: '+1 555-0001' },
+    { id: '2', name: 'Dr. Sarah Chen', role: 'Associate Dentist', color: '#FFD700', email: 'sarah@clinic.com', phone: '+1 555-0002' },
+    { id: '3', name: 'Maria Garcia', role: 'Hygienist', color: '#F7E7CE', email: 'maria@clinic.com', phone: '+1 555-0003' },
+    { id: '4', name: 'James Wilson', role: 'Assistant', color: '#A9A9A9', email: 'james@clinic.com', phone: '+1 555-0004' },
+    { id: '5', name: 'Emily Brown', role: 'Receptionist', color: '#808080', email: 'emily@clinic.com', phone: '+1 555-0005' }
   ];
 
   // Mock shift data
@@ -123,11 +123,11 @@ const StaffScheduler: React.FC = () => {
             startIcon={<AddIcon />}
             onClick={handleAddShift}
             sx={{
-              background: 'linear-gradient(45deg, #FFD93D 0%, #FFB03A 100%)',
+              background: 'linear-gradient(45deg, #D4AF37 0%, #FFD700 100%)',
               color: '#000',
               fontWeight: 600,
               '&:hover': {
-                background: 'linear-gradient(45deg, #FFB03A 0%, #FF9500 100%)'
+                background: 'linear-gradient(45deg, #FFD700 0%, #D4AF37 100%)'
               }
             }}
           >

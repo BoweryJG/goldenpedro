@@ -82,7 +82,7 @@ const DashboardPage: React.FC = () => {
     <Box
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
+        background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%)',
         pt: { xs: 10, md: 12 },
         pb: 4,
       }}
@@ -98,7 +98,7 @@ const DashboardPage: React.FC = () => {
               fontWeight: 800,
               mb: 1,
               textAlign: 'center',
-              background: 'linear-gradient(45deg, #ffffff 30%, #e1bee7 90%)',
+              background: 'linear-gradient(45deg, #ffffff 30%, #F7E7CE 90%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -130,11 +130,11 @@ const DashboardPage: React.FC = () => {
                 fontSize: '1rem',
                 minHeight: 64,
                 '&.Mui-selected': {
-                  color: '#22c55e',
+                  color: '#D4AF37',
                 },
               },
               '& .MuiTabs-indicator': {
-                backgroundColor: '#22c55e',
+                backgroundColor: '#D4AF37',
                 height: 3,
               },
             }}
@@ -170,7 +170,7 @@ const DashboardPage: React.FC = () => {
                   max: 10,
                   unit: 'procedures',
                   type: 'number',
-                  color: '#00bcd4'
+                  color: '#808080'
                 },
                 {
                   position: 'right',
@@ -180,7 +180,7 @@ const DashboardPage: React.FC = () => {
                   max: 120,
                   unit: 'minutes',
                   type: 'duration',
-                  color: '#4fc3f7',
+                  color: '#A9A9A9',
                   secondaryLabel: '+15% Group Trend'
                 },
                 {
@@ -191,7 +191,7 @@ const DashboardPage: React.FC = () => {
                   max: 1000,
                   unit: 'USD',
                   type: 'currency',
-                  color: '#66bb6a'
+                  color: '#D4AF37'
                 }
               ]}
               bottomDisplay="Dental Bridge"
@@ -212,7 +212,7 @@ const DashboardPage: React.FC = () => {
                   max: 50,
                   unit: 'patients',
                   type: 'number',
-                  color: '#29b6f6'
+                  color: '#696969'
                 },
                 {
                   position: 'right',
@@ -222,7 +222,7 @@ const DashboardPage: React.FC = () => {
                   max: 180,
                   unit: 'minutes',
                   type: 'duration',
-                  color: '#ffa726',
+                  color: '#FFD700',
                   secondaryLabel: '30m Late'
                 },
                 {
@@ -233,7 +233,7 @@ const DashboardPage: React.FC = () => {
                   max: 20,
                   unit: 'percent',
                   type: 'percentage',
-                  color: '#66bb6a'
+                  color: '#D4AF37'
                 }
               ]}
               personName="Jason Golden"
@@ -329,7 +329,7 @@ const DashboardPage: React.FC = () => {
           fullWidth
           PaperProps={{
             sx: {
-              background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
+              background: 'linear-gradient(135deg, #1a1a1a 0%, #333333 100%)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
             },
           }}

@@ -158,7 +158,7 @@ const RoboticVsTraditional: React.FC = () => {
       id="robotic-vs-traditional"
       sx={{ 
         py: { xs: 8, md: 12 }, 
-        bgcolor: 'grey.50',
+        bgcolor: '#000000',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -172,7 +172,7 @@ const RoboticVsTraditional: React.FC = () => {
           right: 0,
           bottom: 0,
           opacity: 0.03,
-          backgroundImage: 'radial-gradient(circle at 50% 50%, #D4AF37 2px, transparent 2px)',
+          backgroundImage: 'radial-gradient(circle at 50% 50%, #FFD700 2px, transparent 2px)',
           backgroundSize: '40px 40px'
         }}
       />
@@ -184,7 +184,7 @@ const RoboticVsTraditional: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Box textAlign="center" sx={{ mb: 6 }}>
-            <CompareArrows sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
+            <CompareArrows sx={{ fontSize: '3rem', color: '#FFD700', mb: 2 }} />
             <Typography
               variant="h2"
               component="h2"
@@ -192,7 +192,7 @@ const RoboticVsTraditional: React.FC = () => {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 700,
                 mb: 2,
-                color: '#D4AF37'
+                color: '#FFD700'
               }}
             >
               Robotic vs Traditional Implants
@@ -201,7 +201,7 @@ const RoboticVsTraditional: React.FC = () => {
               variant="body1"
               sx={{
                 fontSize: '1.1rem',
-                color: 'text.secondary',
+                color: 'rgba(255, 255, 255, 0.8)',
                 maxWidth: '600px',
                 mx: 'auto'
               }}
@@ -226,11 +226,11 @@ const RoboticVsTraditional: React.FC = () => {
           </Box>
 
           {/* Comparison Table */}
-          <Card sx={{ mb: 6, overflow: 'hidden' }}>
+          <Card sx={{ mb: 6, overflow: 'hidden', bgcolor: '#1a1a1a' }}>
             <TableContainer component={Paper}>
               <Table>
                 <TableHead>
-                  <TableRow sx={{ bgcolor: '#000000' }}>
+                  <TableRow sx={{ bgcolor: '#000000', borderBottom: '2px solid #FFD700' }}>
                     <TableCell sx={{ color: 'white', fontWeight: 600 }}>
                       <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Science sx={{ mr: 1 }} />
@@ -270,8 +270,8 @@ const RoboticVsTraditional: React.FC = () => {
                           <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Avatar
                               sx={{
-                                bgcolor: selectedMetric === index ? 'white' : '#1a1a1a',
-                                color: selectedMetric === index ? '#D4AF37' : '#FFFFFF',
+                                bgcolor: selectedMetric === index ? '#FFD700' : '#1a1a1a',
+                                color: selectedMetric === index ? '#000000' : '#FFD700',
                                 mr: 2,
                                 width: 32,
                                 height: 32
@@ -283,19 +283,19 @@ const RoboticVsTraditional: React.FC = () => {
                               <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
                                 {metric.category}
                               </Typography>
-                              <Typography variant="body2" color="text.secondary">
+                              <Typography variant="body2" sx={{ color: selectedMetric === index ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)' }}>
                                 {metric.description}
                               </Typography>
                             </Box>
                           </Box>
                         </TableCell>
                         <TableCell align="center">
-                          <Typography variant="h6" sx={{ fontWeight: 600, color: 'success.main' }}>
+                          <Typography variant="h6" sx={{ fontWeight: 600, color: '#FFD700' }}>
                             {metric.roboticValue}
                           </Typography>
                         </TableCell>
                         <TableCell align="center">
-                          <Typography variant="h6" sx={{ fontWeight: 600, color: 'warning.main' }}>
+                          <Typography variant="h6" sx={{ fontWeight: 600, color: 'rgba(255, 255, 255, 0.6)' }}>
                             {metric.traditionalValue}
                           </Typography>
                         </TableCell>
@@ -304,14 +304,14 @@ const RoboticVsTraditional: React.FC = () => {
                             <Chip
                               icon={<SmartToy />}
                               label="Robotic"
-                              color="primary"
+                              sx={{ bgcolor: '#FFD700', color: '#000000' }}
                               size="small"
                             />
                           ) : (
                             <Chip
                               icon={<AttachMoney />}
                               label="Traditional"
-                              color="warning"
+                              sx={{ bgcolor: '#1a1a1a', color: '#FFD700', border: '1px solid #FFD700' }}
                               size="small"
                             />
                           )}
@@ -320,7 +320,7 @@ const RoboticVsTraditional: React.FC = () => {
                       
                       {showDetails && selectedMetric === index && (
                         <TableRow>
-                          <TableCell colSpan={4} sx={{ bgcolor: 'grey.50' }}>
+                          <TableCell colSpan={4} sx={{ bgcolor: '#000000' }}>
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
@@ -338,9 +338,9 @@ const RoboticVsTraditional: React.FC = () => {
                                       sx={{
                                         flex: { xs: '1 1 100%', sm: '1 1 calc(50% - 8px)' },
                                         p: 1,
-                                        bgcolor: detail.includes('Robotic:') ? '#1a1a1a' : '#000000',
+                                        bgcolor: detail.includes('Robotic:') ? '#FFD700' : '#1a1a1a',
                                         borderRadius: 1,
-                                        color: '#FFFFFF'
+                                        color: detail.includes('Robotic:') ? '#000000' : '#FFFFFF'
                                       }}
                                     >
                                       <Typography variant="body2">
@@ -380,7 +380,7 @@ const RoboticVsTraditional: React.FC = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <CheckCircle sx={{ mr: 2, color: '#FFFFFF' }} />
+                        <CheckCircle sx={{ mr: 2, color: '#FFD700' }} />
                         <Typography variant="body1">
                           {advantage}
                         </Typography>
@@ -408,7 +408,7 @@ const RoboticVsTraditional: React.FC = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <Cancel sx={{ mr: 2, color: '#FFFFFF' }} />
+                        <Cancel sx={{ mr: 2, color: '#FFD700' }} />
                         <Typography variant="body1">
                           {limitation}
                         </Typography>
@@ -421,19 +421,19 @@ const RoboticVsTraditional: React.FC = () => {
           </Box>
 
           {/* ROI Analysis */}
-          <Card sx={{ mb: 6 }}>
+          <Card sx={{ mb: 6, bgcolor: '#1a1a1a', border: '1px solid #FFD700' }}>
             <CardContent sx={{ p: 4 }}>
-              <Typography variant="h4" gutterBottom sx={{ color: '#D4AF37' }} textAlign="center">
+              <Typography variant="h4" gutterBottom sx={{ color: '#FFD700' }} textAlign="center">
                 Long-Term Value Analysis
               </Typography>
               
               <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 2 }}>
                 <Box sx={{ flex: 1, textAlign: 'center' }}>
-                  <TrendingUp sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
+                  <TrendingUp sx={{ fontSize: '3rem', color: '#FFD700', mb: 2 }} />
                   <Typography variant="h6" gutterBottom>
                     Higher Success Rate
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                     98.7% vs 95% success rate means fewer complications and replacements
                   </Typography>
                 </Box>
@@ -442,16 +442,16 @@ const RoboticVsTraditional: React.FC = () => {
                   <Typography variant="h6" gutterBottom>
                     Faster Recovery
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                     Return to work and normal activities 50% faster with robotic precision
                   </Typography>
                 </Box>
                 <Box sx={{ flex: 1, textAlign: 'center' }}>
-                  <Engineering sx={{ fontSize: '3rem', color: '#e3e3e3', mb: 2 }} />
+                  <Engineering sx={{ fontSize: '3rem', color: '#FFD700', mb: 2 }} />
                   <Typography variant="h6" gutterBottom>
                     Predictable Outcomes
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                     Computer-guided placement ensures optimal positioning every time
                   </Typography>
                 </Box>
@@ -460,9 +460,9 @@ const RoboticVsTraditional: React.FC = () => {
           </Card>
 
           {/* Cost Justification */}
-          <Accordion sx={{ mb: 4 }}>
+          <Accordion sx={{ mb: 4, bgcolor: '#1a1a1a', border: '1px solid #FFD700' }}>
             <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6" sx={{ color: '#D4AF37' }}>
+              <Typography variant="h6" sx={{ color: '#FFD700' }}>
                 Understanding the Technology Investment
               </Typography>
             </AccordionSummary>
@@ -512,8 +512,8 @@ const RoboticVsTraditional: React.FC = () => {
 
           {/* CTA Section */}
           <Box sx={{ textAlign: 'center' }}>
-            <Card sx={{ p: 4, bgcolor: '#000000', color: '#FFFFFF' }}>
-              <CompareArrows sx={{ fontSize: '3rem', mb: 2 }} />
+            <Card sx={{ p: 4, bgcolor: '#000000', color: '#FFFFFF', border: '2px solid #FFD700' }}>
+              <CompareArrows sx={{ fontSize: '3rem', mb: 2, color: '#FFD700' }} />
               <Typography variant="h4" gutterBottom>
                 Experience the Robotic Difference
               </Typography>
@@ -541,13 +541,13 @@ const RoboticVsTraditional: React.FC = () => {
                     }, 500)
                   }}
                   sx={{
-                    bgcolor: '#D4AF37',
+                    bgcolor: '#FFD700',
                     color: '#000000',
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 4,
                     '&:hover': {
-                      bgcolor: '#B8860B'
+                      bgcolor: '#FFA500'
                     }
                   }}
                 >
@@ -561,14 +561,14 @@ const RoboticVsTraditional: React.FC = () => {
                     element?.scrollIntoView({ behavior: 'smooth' })
                   }}
                   sx={{
-                    borderColor: '#e3e3e3',
-                    color: '#FFFFFF',
+                    borderColor: '#FFD700',
+                    color: '#FFD700',
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 4,
                     '&:hover': {
-                      bgcolor: 'rgba(227, 227, 227, 0.1)',
-                      borderColor: '#e3e3e3'
+                      bgcolor: 'rgba(255, 215, 0, 0.1)',
+                      borderColor: '#FFD700'
                     }
                   }}
                 >

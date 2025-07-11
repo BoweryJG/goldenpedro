@@ -77,7 +77,7 @@ const LoginPage: React.FC = () => {
           width: 300,
           height: 300,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
           animation: 'float 15s ease-in-out infinite',
         }}
       />
@@ -89,7 +89,7 @@ const LoginPage: React.FC = () => {
           width: 400,
           height: 400,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(156, 39, 176, 0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%)',
           animation: 'float 20s ease-in-out infinite reverse',
         }}
       />
@@ -115,7 +115,7 @@ const LoginPage: React.FC = () => {
           <Box
             sx={{
               height: 6,
-              background: 'linear-gradient(90deg, #22c55e 0%, #16a34a 50%, #15803d 100%)',
+              background: 'linear-gradient(90deg, #D4AF37 0%, #B8952F 50%, #9C7A27 100%)',
             }}
           />
 
@@ -127,13 +127,13 @@ const LoginPage: React.FC = () => {
                   width: 80,
                   height: 80,
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+                  background: 'linear-gradient(135deg, #D4AF37 0%, #B8952F 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   mx: 'auto',
                   mb: 3,
-                  boxShadow: '0 8px 32px rgba(34, 197, 94, 0.3)',
+                  boxShadow: '0 8px 32px rgba(212, 175, 55, 0.3)',
                 }}
               >
                 <Typography
@@ -226,7 +226,7 @@ const LoginPage: React.FC = () => {
                     borderColor: 'rgba(255, 255, 255, 0.5)',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#22c55e',
+                    borderColor: '#D4AF37',
                   },
                 },
                 '& .MuiInputBase-input::placeholder': {
@@ -246,15 +246,15 @@ const LoginPage: React.FC = () => {
                 py: 2,
                 fontSize: '1.1rem',
                 fontWeight: 600,
-                background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #B8952F 100%)',
                 color: 'white',
                 borderRadius: 2,
                 textTransform: 'none',
-                boxShadow: '0 4px 20px rgba(34, 197, 94, 0.3)',
+                boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)',
                 '&:hover': {
-                  background: 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)',
+                  background: 'linear-gradient(135deg, #B8952F 0%, #9C7A27 100%)',
                   transform: 'translateY(-2px)',
-                  boxShadow: '0 8px 30px rgba(34, 197, 94, 0.4)',
+                  boxShadow: '0 8px 30px rgba(212, 175, 55, 0.4)',
                 },
                 '&:disabled': {
                   background: 'rgba(255, 255, 255, 0.1)',

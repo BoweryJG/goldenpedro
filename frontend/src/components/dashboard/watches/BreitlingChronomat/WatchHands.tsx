@@ -101,11 +101,11 @@ const WatchHands: React.FC<WatchHandsProps> = ({
           <stop offset="100%" stopColor="#64748b" />
         </linearGradient>
 
-        {/* Glowing green gradient for real-time indicators */}
+        {/* Glowing gold gradient for real-time indicators */}
         <linearGradient id="glowingGreenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#86efac" />
-          <stop offset="50%" stopColor="#22c55e" />
-          <stop offset="100%" stopColor="#16a34a" />
+          <stop offset="0%" stopColor="#FFD700" />
+          <stop offset="50%" stopColor="#D4AF37" />
+          <stop offset="100%" stopColor="#B8860B" />
         </linearGradient>
 
         {/* Electric blue gradient for data */}
@@ -270,7 +270,7 @@ const WatchHands: React.FC<WatchHandsProps> = ({
             x={subdialPositions[2].cx}
             y={subdialPositions[2].cy + 5}
             textAnchor="middle"
-            fill="#22c55e"
+            fill="#D4AF37"
             fontSize="16"
             fontWeight="bold"
             fontFamily="'Helvetica Neue', sans-serif"
@@ -293,7 +293,7 @@ const WatchHands: React.FC<WatchHandsProps> = ({
           cx={center}
           cy={center - radius * 0.85}
           r="3"
-          fill="#ef4444"
+          fill="#3d3d3d"
           filter="url(#glowFilter)"
           className="pulse-animation"
         />

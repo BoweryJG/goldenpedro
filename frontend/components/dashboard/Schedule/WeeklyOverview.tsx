@@ -62,11 +62,11 @@ const WeeklyOverview: React.FC = () => {
 
   const getTypeColor = (type: string) => {
     const colors = {
-      'TMJ': 'bg-purple-500',
-      'Implants': 'bg-blue-500',
-      'Cosmetic': 'bg-pink-500',
-      'General': 'bg-green-500',
-      'Emergency': 'bg-red-500'
+      'TMJ': 'bg-gray-700',
+      'Implants': 'bg-gray-600',
+      'Cosmetic': 'bg-gray-500',
+      'General': 'bg-gray-600',
+      'Emergency': 'bg-gray-800'
     };
     return colors[type as keyof typeof colors] || 'bg-gray-500';
   };

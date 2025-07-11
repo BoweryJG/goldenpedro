@@ -75,31 +75,31 @@ const StaffScheduler: React.FC = () => {
         id: '1',
         name: 'Dr. Pedro',
         role: 'Dentist',
-        color: 'bg-blue-500'
+        color: 'bg-gray-700'
       },
       {
         id: '2',
         name: 'Dr. Sarah Chen',
         role: 'Dentist',
-        color: 'bg-purple-500'
+        color: 'bg-gray-600'
       },
       {
         id: '3',
         name: 'Maria Rodriguez',
         role: 'Hygienist',
-        color: 'bg-green-500'
+        color: 'bg-gray-500'
       },
       {
         id: '4',
         name: 'James Wilson',
         role: 'Assistant',
-        color: 'bg-yellow-500'
+        color: 'bg-gray-600'
       },
       {
         id: '5',
         name: 'Emma Thompson',
         role: 'Receptionist',
-        color: 'bg-pink-500'
+        color: 'bg-gray-500'
       }
     ]);
 
@@ -265,7 +265,7 @@ const StaffScheduler: React.FC = () => {
                             </div>
                           )}
                           {shift.type === 'overtime' && (
-                            <span className="text-xs text-orange-600 font-medium">OT</span>
+                            <span className="text-xs text-yellow-600 font-medium">OT</span>
                           )}
                         </div>
                       ) : (
@@ -304,11 +304,11 @@ const StaffScheduler: React.FC = () => {
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-gray-500" />
               <span className="text-sm text-gray-600">
-                Staff Coverage: <span className="font-semibold text-green-600">Good</span>
+                Staff Coverage: <span className="font-semibold text-gray-700">Good</span>
               </span>
             </div>
             <div className="flex items-center space-x-2">
-              <AlertCircle className="w-4 h-4 text-yellow-500" />
+              <AlertCircle className="w-4 h-4 text-yellow-600" />
               <span className="text-sm text-gray-600">
                 Time Off Requests: <span className="font-semibold text-yellow-600">2 Pending</span>
               </span>

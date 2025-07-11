@@ -108,7 +108,7 @@ const DataDisplay: React.FC<DataDisplayProps> = ({
         left: '50%',
         transform: 'translateX(-50%)',
         background: 'rgba(0, 0, 0, 0.7)',
-        color: '#22c55e',
+        color: '#D4AF37',
         padding: '2px 8px',
         borderRadius: '3px',
         fontSize: `${diameter * 0.02}px`,
@@ -204,7 +204,7 @@ const DataDisplay: React.FC<DataDisplayProps> = ({
         left: '50%',
         transform: 'translateX(-50%)',
         background: 'rgba(0, 0, 0, 0.8)',
-        color: '#22c55e',
+        color: '#D4AF37',
         padding: '3px 6px',
         borderRadius: '3px',
         fontSize: `${diameter * 0.0225}px`,
@@ -228,8 +228,8 @@ const DataDisplay: React.FC<DataDisplayProps> = ({
         width: `${diameter * 0.015}px`,
         height: `${diameter * 0.015}px`,
         borderRadius: '50%',
-        background: metrics ? '#22c55e' : '#ef4444',
-        boxShadow: '0 0 4px rgba(34, 197, 94, 0.5)'
+        background: metrics ? '#D4AF37' : '#3d3d3d',
+        boxShadow: '0 0 4px rgba(212, 175, 55, 0.5)'
       }}
       title={metrics ? 'Data Connected' : 'No Data'}
       />
@@ -250,8 +250,8 @@ const DataDisplay: React.FC<DataDisplayProps> = ({
 
       <style>{`
         .mode-indicator:hover {
-          background: rgba(34, 197, 94, 0.2) !important;
-          border-color: #22c55e !important;
+          background: rgba(212, 175, 55, 0.2) !important;
+          border-color: #D4AF37 !important;
         }
         
         .data-display-overlay {

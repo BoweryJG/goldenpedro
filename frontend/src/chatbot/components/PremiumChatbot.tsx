@@ -39,9 +39,9 @@ const TypingIndicator: React.FC = () => (
       sx={{ 
         width: 40,
         height: 40,
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
         border: '2px solid rgba(255, 255, 255, 0.3)',
-        boxShadow: '0 4px 15px rgba(102, 126, 234, 0.3)',
+        boxShadow: '0 4px 15px rgba(212, 175, 55, 0.3)',
       }}
     >
       <Typography fontSize="1.4rem">👩‍⚕️</Typography>
@@ -78,7 +78,7 @@ const TypingIndicator: React.FC = () => (
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
               }}
             />
           </motion.div>
@@ -248,7 +248,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                 left: -1,
                 right: -1,
                 bottom: -1,
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f857a6 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFA500 100%)',
                 borderRadius: { xs: 0, sm: 3 },
                 zIndex: -1,
                 opacity: 0.8,
@@ -271,7 +271,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
               <Box
                 sx={{
                   p: 2.5,
-                  background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)',
+                  background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(255, 215, 0, 0.95) 100%)',
                   backdropFilter: 'blur(10px)',
                   color: 'white',
                   position: 'relative',
@@ -416,7 +416,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                     variant="caption" 
                     sx={{ 
                       fontWeight: 700,
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                     }}
@@ -437,9 +437,9 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                         background: bookingIntent > 80 
                           ? 'linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%)'
                           : bookingIntent > 50
-                          ? 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'
+                          ? 'linear-gradient(90deg, #D4AF37 0%, #FFD700 100%)'
                           : 'linear-gradient(90deg, #D4AF37 0%, #E91E63 100%)',
-                        boxShadow: '0 2px 8px rgba(102, 126, 234, 0.3)',
+                        boxShadow: '0 2px 8px rgba(212, 175, 55, 0.3)',
                       }
                     }}
                   />
@@ -477,10 +477,10 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                     borderRadius: 3,
                   },
                   '&::-webkit-scrollbar-thumb': {
-                    background: 'rgba(102, 126, 234, 0.3)',
+                    background: 'rgba(212, 175, 55, 0.3)',
                     borderRadius: 3,
                     '&:hover': {
-                      background: 'rgba(102, 126, 234, 0.5)',
+                      background: 'rgba(212, 175, 55, 0.5)',
                     },
                   },
                 }}
@@ -521,11 +521,11 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                                 height: 40,
                                 bgcolor: message.role === 'user' ? 'primary.main' : 'transparent',
                                 background: message.role === 'assistant' 
-                                  ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                                  ? 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)'
                                   : undefined,
                                 border: message.role === 'assistant' ? '2px solid rgba(255, 255, 255, 0.3)' : 'none',
                                 boxShadow: message.role === 'assistant' 
-                                  ? '0 4px 15px rgba(102, 126, 234, 0.3)'
+                                  ? '0 4px 15px rgba(212, 175, 55, 0.3)'
                                   : '0 2px 8px rgba(0, 0, 0, 0.1)',
                               }}
                             >
@@ -540,7 +540,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                                 maxWidth: '75%',
                                 p: 2.5,
                                 background: message.role === 'user' 
-                                  ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                                  ? 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)'
                                   : 'rgba(255, 255, 255, 0.8)',
                                 backdropFilter: 'blur(10px)',
                                 border: '1px solid',
@@ -550,7 +550,7 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                                 borderRadius: 3,
                                 color: message.role === 'user' ? 'white' : 'text.primary',
                                 boxShadow: message.role === 'user'
-                                  ? '0 4px 20px rgba(102, 126, 234, 0.3)'
+                                  ? '0 4px 20px rgba(212, 175, 55, 0.3)'
                                   : '0 2px 10px rgba(0, 0, 0, 0.05)',
                                 position: 'relative',
                                 '& p': {
@@ -624,14 +624,14 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                                 cursor: 'pointer',
                                 background: 'rgba(255, 255, 255, 0.9)',
                                 backdropFilter: 'blur(10px)',
-                                border: '1px solid rgba(102, 126, 234, 0.3)',
+                                border: '1px solid rgba(212, 175, 55, 0.3)',
                                 fontWeight: 500,
                                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                 '&:hover': {
-                                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                  background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                                   color: 'white',
                                   transform: 'translateY(-2px)',
-                                  boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
+                                  boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
                                   '& .MuiChip-icon': {
                                     color: 'white',
                                   },
@@ -677,11 +677,11 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                       fontSize: { xs: 16, sm: 15 },
                       transition: 'all 0.3s ease',
                       '&:hover': {
-                        borderColor: 'rgba(102, 126, 234, 0.5)',
+                        borderColor: 'rgba(212, 175, 55, 0.5)',
                       },
                       '&.Mui-focused': {
                         borderColor: 'primary.main',
-                        boxShadow: '0 0 0 3px rgba(102, 126, 234, 0.1)',
+                        boxShadow: '0 0 0 3px rgba(212, 175, 55, 0.1)',
                       },
                       '& fieldset': {
                         borderColor: 'rgba(0, 0, 0, 0.1)',
@@ -697,15 +697,15 @@ export const PremiumChatbot: React.FC<PremiumChatbotProps> = React.memo(({ onClo
                     onClick={handleSend}
                     disabled={!input.trim() || isLoading}
                     sx={{
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                       color: 'white',
                       width: 48,
                       height: 48,
-                      boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
+                      boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
                       transition: 'all 0.3s ease',
                       '&:hover': {
-                        background: 'linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)',
-                        boxShadow: '0 6px 20px rgba(102, 126, 234, 0.5)',
+                        background: 'linear-gradient(135deg, #B8860B 0%, #DAA520 100%)',
+                        boxShadow: '0 6px 20px rgba(212, 175, 55, 0.5)',
                       },
                       '&:disabled': {
                         background: 'rgba(0, 0, 0, 0.1)',

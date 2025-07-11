@@ -18,15 +18,17 @@ import implantContent from '../../../data/subdomain-content/implants/implantCont
 import { useChatStore } from '../../../chatbot/store/chatStore'
 import { trackChatOpen, trackEvent } from '../../../utils/analytics'
 
-// Color scheme constants
+// Color scheme constants - Metallic Silver/Grey Theme
 const colors = {
-  luxuryGold: '#D4AF37', // luxury gold
-  luxuryGoldGradient: 'linear-gradient(145deg, #f5d76e, #f8c059)', // 24k gold gradient
-  platinum: '#e3e3e3', // platinum silver
-  charcoal: '#1a1a1a', // charcoal gray
-  deepBlack: '#000000', // black
-  neonWhite: '#FFFFFF', // neon white for labels
-  spectrumColors: ['#D4AF37', '#e3e3e3', '#ffffff', '#D4AF37', '#e3e3e3', '#ffffff']
+  platinum: '#e3e3e3', // Primary: platinum silver
+  metalGradient: 'linear-gradient(135deg, #e3e3e3 0%, #999999 25%, #e3e3e3 50%, #666666 75%, #e3e3e3 100%)', // Metallic gradient
+  platinumGradient: 'linear-gradient(145deg, #e3e3e3, #c4c4c4)', // Platinum gradient
+  charcoal: '#1a1a1a', // Secondary: black
+  deepGrey: '#333333', // Deep grey
+  midGrey: '#666666', // Mid grey
+  lightGrey: '#999999', // Light grey
+  white: '#FFFFFF', // White for contrast
+  spectrumColors: ['#e3e3e3', '#999999', '#666666', '#e3e3e3', '#999999', '#666666']
 }
 
 // Keyframe animations
@@ -73,7 +75,7 @@ const crystallineRotate = keyframes`
 const HeroContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   overflow: 'hidden',
-  background: colors.deepBlack,
+  background: colors.charcoal,
   '&.hero-implants': {
     '&::before': {
       content: '""',
@@ -82,21 +84,21 @@ const HeroContainer = styled(Box)(({ theme }) => ({
       left: 0,
       right: 0,
       bottom: 0,
-      background: `radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                   radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                   radial-gradient(circle at 40% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%)`,
+      background: `radial-gradient(circle at 20% 50%, rgba(227, 227, 227, 0.1) 0%, transparent 50%),
+                   radial-gradient(circle at 80% 80%, rgba(227, 227, 227, 0.08) 0%, transparent 50%),
+                   radial-gradient(circle at 40% 20%, rgba(227, 227, 227, 0.06) 0%, transparent 50%)`,
       pointerEvents: 'none'
     }
   }
 }))
 
-const GoldButton = styled(Button)(({ theme }) => ({
+const PlatinumButton = styled(Button)(({ theme }) => ({
   position: 'relative',
   overflow: 'hidden',
-  background: colors.luxuryGoldGradient,
+  background: colors.metalGradient,
   backgroundSize: '200% 100%',
   animation: `${shimmer} 3s ease-in-out infinite`,
-  color: colors.deepBlack,
+  color: colors.charcoal,
   fontWeight: 600,
   textTransform: 'none',
   '&::before': {
@@ -112,7 +114,7 @@ const GoldButton = styled(Button)(({ theme }) => ({
   },
   '&:hover': {
     transform: 'translateY(-2px)',
-    boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)',
+    boxShadow: '0 10px 30px rgba(227, 227, 227, 0.3)',
     '&::before': {
       transform: 'translateX(100%)'
     }
@@ -120,8 +122,8 @@ const GoldButton = styled(Button)(({ theme }) => ({
 }))
 
 const WhiteButton = styled(Button)(({ theme }) => ({
-  background: colors.neonWhite,
-  color: colors.deepBlack,
+  background: colors.white,
+  color: colors.charcoal,
   fontWeight: 600,
   textTransform: 'none',
   position: 'relative',
@@ -135,7 +137,7 @@ const WhiteButton = styled(Button)(({ theme }) => ({
     width: 0,
     height: 0,
     borderRadius: '50%',
-    background: 'rgba(212, 175, 55, 0.2)',
+    background: 'rgba(227, 227, 227, 0.2)',
     transform: 'translate(-50%, -50%)',
     transition: 'width 0.6s, height 0.6s',
   },
@@ -165,7 +167,7 @@ const GoldCircuitryPattern = () => (
   >
     <defs>
       <pattern id="circuitry-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-        <g stroke={colors.luxuryGold} strokeWidth="1" fill="none">
+        <g stroke={colors.platinum} strokeWidth="1" fill="none">
           {/* Circuit paths */}
           <path d="M10,10 L50,10 L50,30 L90,30" />
           <path d="M50,10 L50,50 L70,50" />
@@ -175,24 +177,24 @@ const GoldCircuitryPattern = () => (
           <path d="M50,90 L50,110" />
           
           {/* Connection nodes */}
-          <circle cx="10" cy="10" r="3" fill={colors.luxuryGold} />
-          <circle cx="50" cy="10" r="3" fill={colors.luxuryGold} />
-          <circle cx="90" cy="30" r="3" fill={colors.luxuryGold} />
-          <circle cx="50" cy="50" r="3" fill={colors.luxuryGold} />
-          <circle cx="70" cy="50" r="3" fill={colors.luxuryGold} />
-          <circle cx="30" cy="90" r="3" fill={colors.luxuryGold} />
-          <circle cx="50" cy="90" r="3" fill={colors.luxuryGold} />
-          <circle cx="90" cy="90" r="3" fill={colors.luxuryGold} />
+          <circle cx="10" cy="10" r="3" fill={colors.platinum} />
+          <circle cx="50" cy="10" r="3" fill={colors.platinum} />
+          <circle cx="90" cy="30" r="3" fill={colors.platinum} />
+          <circle cx="50" cy="50" r="3" fill={colors.platinum} />
+          <circle cx="70" cy="50" r="3" fill={colors.platinum} />
+          <circle cx="30" cy="90" r="3" fill={colors.platinum} />
+          <circle cx="50" cy="90" r="3" fill={colors.platinum} />
+          <circle cx="90" cy="90" r="3" fill={colors.platinum} />
           
           {/* Processor chips */}
-          <rect x="40" y="40" width="20" height="20" stroke={colors.luxuryGold} strokeWidth="1" fill="none" />
-          <rect x="80" y="80" width="15" height="15" stroke={colors.luxuryGold} strokeWidth="1" fill="none" />
+          <rect x="40" y="40" width="20" height="20" stroke={colors.platinum} strokeWidth="1" fill="none" />
+          <rect x="80" y="80" width="15" height="15" stroke={colors.platinum} strokeWidth="1" fill="none" />
         </g>
       </pattern>
       <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor={colors.luxuryGold} stopOpacity="0.1" />
-        <stop offset="50%" stopColor={colors.luxuryGold} stopOpacity="0.05" />
-        <stop offset="100%" stopColor={colors.luxuryGold} stopOpacity="0.02" />
+        <stop offset="0%" stopColor={colors.platinum} stopOpacity="0.1" />
+        <stop offset="50%" stopColor={colors.platinum} stopOpacity="0.05" />
+        <stop offset="100%" stopColor={colors.platinum} stopOpacity="0.02" />
       </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="url(#circuitry-pattern)" />
@@ -301,12 +303,12 @@ const ImplantHero: React.FC = () => {
           <polygon
             points="50,5 90,25 90,75 50,95 10,75 10,25"
             fill="none"
-            stroke={colors.luxuryGold}
+            stroke={colors.platinum}
             strokeWidth="2"
           />
           <polygon
             points="50,20 75,35 75,65 50,80 25,65 25,35"
-            fill={colors.luxuryGold}
+            fill={colors.platinum}
             fillOpacity="0.3"
           />
         </svg>
@@ -340,7 +342,7 @@ const ImplantHero: React.FC = () => {
                     left: 0,
                     width: '80px',
                     height: '4px',
-                    background: `linear-gradient(90deg, ${colors.luxuryGold} 0%, transparent 100%)`,
+                    background: `linear-gradient(90deg, ${colors.platinum} 0%, transparent 100%)`,
                   }
                 }}
               >
@@ -355,7 +357,7 @@ const ImplantHero: React.FC = () => {
                   fontSize: { xs: '1.5rem', md: '2rem' },
                   fontWeight: 500,
                   mb: 3,
-                  color: colors.neonWhite,
+                  color: colors.white,
                   letterSpacing: '0.01em',
                   textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
                 }}
@@ -396,7 +398,7 @@ const ImplantHero: React.FC = () => {
                             transform: 'translateX(-50%)',
                             width: '40px',
                             height: '40px',
-                            background: `linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, transparent 50%)`,
+                            background: `linear-gradient(135deg, rgba(227, 227, 227, 0.15) 0%, transparent 50%)`,
                             borderRadius: '50%',
                             filter: 'blur(20px)',
                           }
@@ -408,10 +410,10 @@ const ImplantHero: React.FC = () => {
                             fontFamily: "'Bodoni Moda', serif",
                             fontSize: '2.5rem',
                             fontWeight: 800,
-                            color: colors.neonWhite,
+                            color: colors.white,
                             mb: 0.5,
                             textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                            background: colors.luxuryGoldGradient,
+                            background: colors.platinumGradient,
                             backgroundSize: '200% 100%',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
@@ -423,7 +425,7 @@ const ImplantHero: React.FC = () => {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: colors.neonWhite,
+                            color: colors.white,
                             fontSize: '0.875rem',
                             fontWeight: 500,
                             letterSpacing: '0.05em',
@@ -440,7 +442,7 @@ const ImplantHero: React.FC = () => {
 
               {/* Action Buttons */}
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                <GoldButton
+                <PlatinumButton
                   variant="contained"
                   size="large"
                   onClick={handlePrimaryAction}
@@ -454,7 +456,7 @@ const ImplantHero: React.FC = () => {
                   }}
                 >
                   Chat with Julie about Implants
-                </GoldButton>
+                </PlatinumButton>
 
                 <WhiteButton
                   variant="contained"
@@ -496,8 +498,8 @@ const ImplantHero: React.FC = () => {
                       transition: 'left 0.5s',
                     },
                     '&:hover': {
-                      borderColor: colors.neonWhite,
-                      color: colors.neonWhite,
+                      borderColor: colors.white,
+                      color: colors.white,
                       background: 'rgba(227, 227, 227, 0.1)',
                       transform: 'translateY(-2px)',
                       boxShadow: '0 5px 20px rgba(227, 227, 227, 0.3)',
@@ -527,11 +529,11 @@ const ImplantHero: React.FC = () => {
                   backdropFilter: 'blur(20px)',
                   borderRadius: 3,
                   p: 3,
-                  border: `1px solid rgba(212, 175, 55, 0.3)`,
-                  boxShadow: '0 20px 60px rgba(212, 175, 55, 0.15)',
+                  border: `1px solid rgba(227, 227, 227, 0.3)`,
+                  boxShadow: '0 20px 60px rgba(227, 227, 227, 0.15)',
                   position: 'relative',
                   overflow: 'hidden',
-                  color: colors.neonWhite,
+                  color: colors.white,
                   '&::before': {
                     content: '""',
                     position: 'absolute',
@@ -539,7 +541,7 @@ const ImplantHero: React.FC = () => {
                     right: '-50%',
                     width: '200%',
                     height: '200%',
-                    background: `radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%)`,
+                    background: `radial-gradient(circle, rgba(227, 227, 227, 0.08) 0%, transparent 70%)`,
                     pointerEvents: 'none',
                   }
                 }}
@@ -549,7 +551,7 @@ const ImplantHero: React.FC = () => {
                     variant="h4"
                     sx={{
                       fontFamily: "'Bodoni Moda', serif",
-                      color: colors.luxuryGold,
+                      color: colors.platinum,
                       fontWeight: 700,
                       mb: 2,
                       fontSize: { xs: '1.75rem', md: '2.125rem' },
@@ -579,11 +581,11 @@ const ImplantHero: React.FC = () => {
                         sx={{
                           mr: 1,
                           mb: 1,
-                          background: colors.luxuryGoldGradient,
+                          background: colors.platinumGradient,
                           color: 'white',
                           fontWeight: 500,
                           border: 'none',
-                          boxShadow: '0 2px 8px rgba(212, 175, 55, 0.3)',
+                          boxShadow: '0 2px 8px rgba(227, 227, 227, 0.3)',
                         }}
                       />
                     ))}
@@ -592,7 +594,7 @@ const ImplantHero: React.FC = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: colors.neonWhite,
+                      color: colors.white,
                       mb: 2,
                       fontWeight: 500
                     }}
@@ -606,7 +608,7 @@ const ImplantHero: React.FC = () => {
                         <Star
                           key={i}
                           sx={{
-                            color: i < 5 ? '#D4AF37' : 'grey.300',
+                            color: i < 5 ? '#e3e3e3' : 'grey.300',
                             fontSize: '1.2rem'
                           }}
                         />
@@ -618,7 +620,7 @@ const ImplantHero: React.FC = () => {
                   </Box>
 
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                    <LocationOn sx={{ color: colors.luxuryGold, mr: 1 }} />
+                    <LocationOn sx={{ color: colors.platinum, mr: 1 }} />
                     <Typography variant="body2" color="text.secondary">
                       Staten Island, NY • Manhattan, NY
                     </Typography>
@@ -629,11 +631,11 @@ const ImplantHero: React.FC = () => {
                     sx={{
                       mt: 3,
                       p: 2,
-                      background: `linear-gradient(135deg, ${colors.deepBlack} 0%, ${colors.charcoal} 100%)`,
+                      background: `linear-gradient(135deg, ${colors.charcoal} 0%, ${colors.deepGrey} 100%)`,
                       borderRadius: 2,
                       textAlign: 'center',
                       position: 'relative',
-                      border: `1px solid rgba(212, 175, 55, 0.3)`,
+                      border: `1px solid rgba(227, 227, 227, 0.3)`,
                       '&::before': {
                         content: '""',
                         position: 'absolute',
@@ -641,7 +643,7 @@ const ImplantHero: React.FC = () => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        background: `linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%)`,
+                        background: `linear-gradient(45deg, transparent 30%, rgba(227, 227, 227, 0.1) 50%, transparent 70%)`,
                         backgroundSize: '200% 100%',
                         animation: `${shimmer} 4s ease-in-out infinite`,
                         borderRadius: 2,

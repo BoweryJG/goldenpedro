@@ -110,7 +110,7 @@ const Chronometer: React.FC<ChronometerProps> = ({
         left: '50%',
         transform: 'translateX(-50%)',
         background: 'rgba(0, 0, 0, 0.8)',
-        color: '#22c55e',
+        color: '#D4AF37',
         padding: '4px 8px',
         borderRadius: '4px',
         fontSize: '12px',
@@ -131,7 +131,7 @@ const Chronometer: React.FC<ChronometerProps> = ({
           right: '20px',
           width: '8px',
           height: '8px',
-          background: '#ef4444',
+          background: '#3d3d3d',
           borderRadius: '50%',
           animation: 'pulse 1s infinite'
         }} />

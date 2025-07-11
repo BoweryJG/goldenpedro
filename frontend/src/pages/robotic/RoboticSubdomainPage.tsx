@@ -6,7 +6,7 @@ import YomiChatbot from '../../components/subdomain-components/robotic/YomiChatb
 
 function RoboticSubdomainPage() {
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+    <Box sx={{ minHeight: '100vh', bgcolor: '#000000' }}>
       <Container maxWidth={false} disableGutters>
         <YomiHero />
         <YomiTechnologyShowcase />

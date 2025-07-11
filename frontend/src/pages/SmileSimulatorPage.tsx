@@ -64,7 +64,7 @@ const SmileSimulatorPage = () => {
                 size="small"
                 sx={{ 
                   fontWeight: 600,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                  background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)'
                 }}
               />
             </Box>
@@ -146,7 +146,7 @@ const SmileSimulatorPage = () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  background: 'linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%)',
+                  background: 'linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(184,134,11,0.05) 100%)',
                   pointerEvents: 'none',
                   zIndex: 1
                 }
@@ -222,12 +222,12 @@ const SmileSimulatorPage = () => {
               size="large"
               onClick={() => navigate('/contact')}
               sx={{
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 100%)',
                 py: 1.5,
                 px: 4,
                 fontSize: '1.1rem',
                 '&:hover': {
-                  background: 'linear-gradient(135deg, #5a67d8 0%, #68428e 100%)',
+                  background: 'linear-gradient(135deg, #C9A02E 0%, #A67C00 100%)',
                 }
               }}
             >

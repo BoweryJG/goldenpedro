@@ -16,15 +16,15 @@
 .crystal-facet {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   background: linear-gradient(45deg, 
-    rgba(212, 175, 55, 0.3) 0%, 
-    rgba(255, 215, 0, 0.1) 50%, 
-    rgba(184, 134, 11, 0.2) 100%);
+    rgba(227, 227, 227, 0.3) 0%, 
+    rgba(153, 153, 153, 0.1) 50%, 
+    rgba(102, 102, 102, 0.2) 100%);
   backdrop-filter: blur(10px);
 }
 
 /* Metallic text effects */
 .metallic-text {
-  background: linear-gradient(45deg, #D4AF37 0%, #FFD700 25%, #FFFFFF 50%, #FFD700 75%, #D4AF37 100%);
+  background: linear-gradient(135deg, #e3e3e3 0%, #999999 25%, #e3e3e3 50%, #666666 75%, #e3e3e3 100%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -84,11 +84,11 @@
   background: conic-gradient(
     from 0deg at 50% 50%,
     transparent 0deg,
-    rgba(212, 175, 55, 0.1) 60deg,
+    rgba(227, 227, 227, 0.1) 60deg,
     transparent 120deg,
     rgba(227, 227, 227, 0.1) 180deg,
     transparent 240deg,
-    rgba(212, 175, 55, 0.1) 300deg,
+    rgba(227, 227, 227, 0.1) 300deg,
     transparent 360deg
   );
   animation: crystal-rotate 10s linear infinite;
@@ -132,7 +132,7 @@
 /* Faceted crystal background pattern */
 .faceted-bg {
   background-image: 
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, 0.03) 35px, rgba(212, 175, 55, 0.03) 70px),
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(227, 227, 227, 0.03) 35px, rgba(227, 227, 227, 0.03) 70px),
     repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(227, 227, 227, 0.02) 35px, rgba(227, 227, 227, 0.02) 70px);
 }
 
@@ -150,8 +150,9 @@
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .hero-implants {
-    --luxury-gold: #D4AF37;
     --platinum-silver: #e3e3e3;
-    --deep-black: #000000;
+    --light-grey: #999999;
+    --mid-grey: #666666;
+    --charcoal: #1a1a1a;
   }
 }

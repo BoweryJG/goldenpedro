@@ -117,7 +117,7 @@ const FacialGallery: React.FC = () => {
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-8px)',
-                        boxShadow: '0 16px 48px rgba(200, 168, 130, 0.2)'
+                        boxShadow: '0 16px 48px rgba(212, 175, 55, 0.2)'
                       }
                     }}
                   >
@@ -184,10 +184,10 @@ const FacialGallery: React.FC = () => {
                           top: '50%',
                           left: '50%',
                           transform: 'translate(-50%, -50%)',
-                          backgroundColor: 'rgba(200, 168, 130, 0.9)',
+                          backgroundColor: 'rgba(212, 175, 55, 0.9)',
                           color: 'white',
                           '&:hover': {
-                            backgroundColor: 'rgba(200, 168, 130, 1)',
+                            backgroundColor: 'rgba(212, 175, 55, 1)',
                             transform: 'translate(-50%, -50%) scale(1.1)'
                           }
                         }}
@@ -237,7 +237,7 @@ const FacialGallery: React.FC = () => {
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-4px)',
-                        boxShadow: '0 12px 48px rgba(200, 168, 130, 0.15)'
+                        boxShadow: '0 12px 48px rgba(212, 175, 55, 0.15)'
                       }
                     }}
                   >
@@ -255,7 +255,7 @@ const FacialGallery: React.FC = () => {
                             value={testimonial.rating}
                             readOnly
                             size="small"
-                            sx={{ color: '#C8A882' }}
+                            sx={{ color: '#D4AF37' }}
                           />
                         </Box>
                       </Box>

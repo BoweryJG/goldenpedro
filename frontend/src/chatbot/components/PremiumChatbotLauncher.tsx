@@ -50,7 +50,7 @@ export const PremiumChatbotLauncher: React.FC<PremiumChatbotLauncherProps> = ({
           borderRadius: '20px',
           border: '1px solid rgba(255, 255, 255, 0.3)',
           boxShadow: `
-            0 8px 32px rgba(102, 126, 234, 0.2),
+            0 8px 32px rgba(212, 175, 55, 0.2),
             inset 0 1px 0 rgba(255, 255, 255, 0.6),
             inset 0 -1px 0 rgba(0, 0, 0, 0.05)
           `,
@@ -59,7 +59,7 @@ export const PremiumChatbotLauncher: React.FC<PremiumChatbotLauncherProps> = ({
           '&:hover': {
             transform: 'translateY(-3px)',
             boxShadow: `
-              0 12px 40px rgba(102, 126, 234, 0.3),
+              0 12px 40px rgba(212, 175, 55, 0.3),
               inset 0 1px 0 rgba(255, 255, 255, 0.8),
               inset 0 -1px 0 rgba(0, 0, 0, 0.05)
             `,
@@ -72,7 +72,7 @@ export const PremiumChatbotLauncher: React.FC<PremiumChatbotLauncherProps> = ({
           '&:active': {
             transform: 'translateY(-1px)',
             boxShadow: `
-              0 4px 20px rgba(102, 126, 234, 0.2),
+              0 4px 20px rgba(212, 175, 55, 0.2),
               inset 0 1px 0 rgba(255, 255, 255, 0.6),
               inset 0 -1px 0 rgba(0, 0, 0, 0.05)
             `,
@@ -83,10 +83,10 @@ export const PremiumChatbotLauncher: React.FC<PremiumChatbotLauncherProps> = ({
           className="chat-icon"
           sx={{ 
             fontSize: 32,
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            filter: 'drop-shadow(0 2px 4px rgba(102, 126, 234, 0.2))',
+            filter: 'drop-shadow(0 2px 4px rgba(212, 175, 55, 0.2))',
             transition: 'all 0.3s ease',
           }} 
         />

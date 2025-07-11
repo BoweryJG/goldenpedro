@@ -62,8 +62,8 @@ body {
   /* Gold Variations */
   --luxury-gold: #D4AF37;
   --luxury-bright-gold: #FFD700;
-  --luxury-gold-gradient: linear-gradient(145deg, #f5d76e, #f8c059);
-  --luxury-rose-gold: #f9e3b8;
+  --luxury-gold-gradient: linear-gradient(145deg, var(--luxury-bright-gold), var(--luxury-gold));
+  --luxury-rose-gold: #F7E7CE;
   --luxury-champagne: #F7E7CE;
   
   /* Subdomain Accent Colors - All within Black/Gold/Gray/White */
@@ -79,32 +79,32 @@ body {
   --robotic-secondary: var(--luxury-white);
   --robotic-accent: var(--luxury-bright-gold);
   
-  --medspa-primary: var(--luxury-gold);
-  --medspa-secondary: var(--luxury-champagne);
-  --medspa-accent: var(--luxury-bright-gold);
+  --medspa-primary: #F7E7CE;
+  --medspa-secondary: #FFFFFF;
+  --medspa-accent: #8B7355;
   
   --aboutface-primary: var(--luxury-gold);
   --aboutface-secondary: var(--luxury-bright-gold);
   --aboutface-accent: var(--luxury-white);
   
   /* Master Gradients - Black Gold Excellence */
-  --gradient-gold: linear-gradient(145deg, #f5d76e, #f8c059);
-  --gradient-black-gold: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #D4AF37 75%, #FFD700 100%);
-  --gradient-subtle-gold: linear-gradient(135deg, #1a1a1a 0%, #3d3d3d 50%, #D4AF37 100%);
+  --gradient-gold: linear-gradient(145deg, var(--luxury-bright-gold), var(--luxury-gold));
+  --gradient-black-gold: linear-gradient(135deg, var(--luxury-black) 0%, var(--luxury-charcoal) 25%, var(--luxury-gold) 75%, var(--luxury-bright-gold) 100%);
+  --gradient-subtle-gold: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-gray) 50%, var(--luxury-gold) 100%);
   
-  /* Subdomain Gradients */
-  --gradient-tmj: radial-gradient(circle, #3a3a3a 0%, #1f1f1f 100%);
-  --gradient-implants: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #3d3d3d 100%);
-  --gradient-robotic: conic-gradient(from 0deg, #0f0f0f, #1e1e1e);
-  --gradient-medspa: linear-gradient(150deg, #000000, #1a1a1a);
-  --gradient-aboutface: linear-gradient(to right, #0c0c0c, #1c1c1c, #2c2c2c);
+  /* Subdomain Gradients - All using black/grey spectrum */
+  --gradient-tmj: radial-gradient(circle, var(--luxury-gray) 0%, var(--luxury-charcoal) 100%);
+  --gradient-implants: linear-gradient(135deg, var(--luxury-black) 0%, var(--luxury-charcoal) 50%, var(--luxury-gray) 100%);
+  --gradient-robotic: conic-gradient(from 0deg, var(--luxury-black), var(--luxury-charcoal));
+  --gradient-medspa: linear-gradient(180deg, #FFFFFF 0%, #F7E7CE 50%, #FAFAFA 100%);
+  --gradient-aboutface: linear-gradient(to right, var(--luxury-black), var(--luxury-charcoal), var(--luxury-gray));
   
   /* Refined Gradients */
   --gradient-luxury: var(--gradient-gold);
-  --gradient-metallic: linear-gradient(135deg, #e3e3e3 0%, #999999 50%, #e3e3e3 100%);
-  --gradient-pearl: linear-gradient(135deg, #FAFAFA 0%, #e3e3e3 50%, #FAFAFA 100%);
-  --gradient-midnight: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
-  --gradient-subtle: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+  --gradient-metallic: linear-gradient(135deg, var(--luxury-platinum) 0%, var(--luxury-light-gray) 50%, var(--luxury-platinum) 100%);
+  --gradient-pearl: linear-gradient(135deg, var(--luxury-off-white) 0%, var(--luxury-platinum) 50%, var(--luxury-off-white) 100%);
+  --gradient-midnight: linear-gradient(135deg, var(--luxury-black) 0%, var(--luxury-charcoal) 50%, var(--luxury-black) 100%);
+  --gradient-subtle: linear-gradient(180deg, var(--luxury-white) 0%, var(--luxury-off-white) 100%);
   
   /* Glass Effects */
   --glass-white: rgba(255, 255, 255, 0.1);
@@ -411,13 +411,13 @@ p {
 
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
   }
 }
 
@@ -561,7 +561,7 @@ button,
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--luxury-pearl);
+  background: var(--luxury-charcoal);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -833,7 +833,7 @@ button,
   font-size: 1.35rem;
   line-height: 1.75;
   letter-spacing: 0.01em;
-  color: #2d2d2d;
+  color: var(--luxury-gray);
 }
 
 .premium-caption {

@@ -112,8 +112,8 @@ const WatchSubdial: React.FC<SubdialProps> = ({
         </div>
         {change !== undefined && (
           <div className={`text-xs flex items-center gap-1 ${
-            trend === 'up' ? 'text-green-400' : 
-            trend === 'down' ? 'text-red-400' : 
+            trend === 'up' ? 'text-yellow-400' : 
+            trend === 'down' ? 'text-gray-400' : 
             'text-gray-400'
           }`}>
             {trend === 'up' && '↑'}
@@ -133,11 +133,11 @@ interface ComplicationProps {
 
 const WatchComplication: React.FC<ComplicationProps> = ({ insight, onDismiss }) => {
   const styles = {
-    alert: 'bg-red-900/20 border-red-600',
-    opportunity: 'bg-blue-900/20 border-blue-600',
-    trend: 'bg-purple-900/20 border-purple-600',
-    achievement: 'bg-green-900/20 border-green-600',
-    recommendation: 'bg-orange-900/20 border-orange-600'
+    alert: 'bg-gray-900/20 border-gray-600',
+    opportunity: 'bg-gray-800/20 border-gray-500',
+    trend: 'bg-gray-700/20 border-gray-400',
+    achievement: 'bg-yellow-900/20 border-yellow-600',
+    recommendation: 'bg-yellow-800/20 border-yellow-500'
   };
 
   const icons = {
@@ -249,9 +249,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={10000}
             thresholds={[
-              { value: 3000, color: '#EF4444' },
-              { value: 5000, color: '#F59E0B' },
-              { value: 7000, color: '#10B981' }
+              { value: 3000, color: '#3d3d3d' },
+              { value: 5000, color: '#FFD700' },
+              { value: 7000, color: '#D4AF37' }
             ]}
           />
           
@@ -262,9 +262,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             change={metrics.operational.chairUtilization.changePercent}
             trend={metrics.operational.chairUtilization.trend}
             thresholds={[
-              { value: 60, color: '#EF4444' },
-              { value: 75, color: '#F59E0B' },
-              { value: 85, color: '#10B981' }
+              { value: 60, color: '#3d3d3d' },
+              { value: 75, color: '#FFD700' },
+              { value: 85, color: '#D4AF37' }
             ]}
           />
           
@@ -275,9 +275,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             change={metrics.financial.collectionRate.changePercent}
             trend={metrics.financial.collectionRate.trend}
             thresholds={[
-              { value: 85, color: '#EF4444' },
-              { value: 92, color: '#F59E0B' },
-              { value: 95, color: '#10B981' }
+              { value: 85, color: '#3d3d3d' },
+              { value: 92, color: '#FFD700' },
+              { value: 95, color: '#D4AF37' }
             ]}
           />
           
@@ -290,9 +290,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={30}
             thresholds={[
-              { value: 20, color: '#10B981' },
-              { value: 15, color: '#F59E0B' },
-              { value: 10, color: '#EF4444' }
+              { value: 20, color: '#D4AF37' },
+              { value: 15, color: '#FFD700' },
+              { value: 10, color: '#3d3d3d' }
             ]}
           />
         </div>
@@ -307,9 +307,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={20}
             thresholds={[
-              { value: 15, color: '#10B981' },
-              { value: 10, color: '#F59E0B' },
-              { value: 5, color: '#EF4444' }
+              { value: 15, color: '#D4AF37' },
+              { value: 10, color: '#FFD700' },
+              { value: 5, color: '#3d3d3d' }
             ]}
           />
           
@@ -321,9 +321,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={50}
             thresholds={[
-              { value: 15, color: '#EF4444' },
-              { value: 25, color: '#F59E0B' },
-              { value: 35, color: '#10B981' }
+              { value: 15, color: '#3d3d3d' },
+              { value: 25, color: '#FFD700' },
+              { value: 35, color: '#D4AF37' }
             ]}
           />
           
@@ -333,9 +333,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             unit="%"
             size="small"
             thresholds={[
-              { value: 70, color: '#EF4444' },
-              { value: 80, color: '#F59E0B' },
-              { value: 90, color: '#10B981' }
+              { value: 70, color: '#3d3d3d' },
+              { value: 80, color: '#FFD700' },
+              { value: 90, color: '#D4AF37' }
             ]}
           />
           
@@ -345,9 +345,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             unit="%"
             size="small"
             thresholds={[
-              { value: 50, color: '#EF4444' },
-              { value: 65, color: '#F59E0B' },
-              { value: 80, color: '#10B981' }
+              { value: 50, color: '#3d3d3d' },
+              { value: 65, color: '#FFD700' },
+              { value: 80, color: '#D4AF37' }
             ]}
           />
           
@@ -359,9 +359,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={5}
             thresholds={[
-              { value: 3.5, color: '#EF4444' },
-              { value: 4.0, color: '#F59E0B' },
-              { value: 4.5, color: '#10B981' }
+              { value: 3.5, color: '#3d3d3d' },
+              { value: 4.0, color: '#FFD700' },
+              { value: 4.5, color: '#D4AF37' }
             ]}
           />
           
@@ -373,9 +373,9 @@ export const WatchSubdialMetrics: React.FC<{ practiceId: string }> = ({ practice
             min={0}
             max={2000}
             thresholds={[
-              { value: 800, color: '#EF4444' },
-              { value: 1200, color: '#F59E0B' },
-              { value: 1500, color: '#10B981' }
+              { value: 800, color: '#3d3d3d' },
+              { value: 1200, color: '#FFD700' },
+              { value: 1500, color: '#D4AF37' }
             ]}
           />
         </div>

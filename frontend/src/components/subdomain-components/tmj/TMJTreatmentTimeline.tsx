@@ -56,10 +56,10 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
   const { toggleChat, sendMessage } = useChatStore()
   
   const phaseIcons = [
-    <Assessment color="primary" />,
-    <LocalHospital color="primary" />,
-    <Healing color="primary" />,
-    <MonitorHeart color="primary" />
+    <Assessment sx={{ color: '#D4AF37' }} />,
+    <LocalHospital sx={{ color: '#D4AF37' }} />,
+    <Healing sx={{ color: '#D4AF37' }} />,
+    <MonitorHeart sx={{ color: '#D4AF37' }} />
   ]
 
   const handleChatWithJulie = async () => {
@@ -91,7 +91,7 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
           variant="h3"
           component="h2"
           textAlign="center"
-          sx={{ mb: 2, color: 'primary.main' }}
+          sx={{ mb: 2, color: '#D4AF37' }}
         >
           Your TMJ Treatment Journey
         </Typography>
@@ -117,7 +117,7 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
                     '& .MuiStepLabel-label': {
                       fontSize: '1.2rem',
                       fontWeight: 600,
-                      color: 'primary.main'
+                      color: '#D4AF37'
                     }
                   }}
                 >
@@ -134,11 +134,14 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                         <Chip 
                           label={phase.duration} 
-                          color="primary" 
                           size="small" 
-                          sx={{ mr: 2 }}
+                          sx={{ 
+                            mr: 2,
+                            bgcolor: '#D4AF37',
+                            color: '#1a1a1a'
+                          }}
                         />
-                        <TimelineIcon sx={{ color: 'primary.light', mr: 1 }} />
+                        <TimelineIcon sx={{ color: '#F5E6C9', mr: 1 }} />
                       </Box>
                       
                       <Typography
@@ -183,7 +186,7 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
           variant="h4"
           component="h3"
           textAlign="center"
-          sx={{ mb: 4, color: 'primary.main' }}
+          sx={{ mb: 4, color: '#D4AF37' }}
         >
           Advanced Treatment Options
         </Typography>
@@ -214,10 +217,10 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
               >
                   <CardContent sx={{ p: 3 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                      <Science sx={{ color: 'primary.main', mr: 1 }} />
+                      <Science sx={{ color: '#D4AF37', mr: 1 }} />
                       <Typography
                         variant="h6"
-                        sx={{ color: 'primary.main', fontWeight: 600 }}
+                        sx={{ color: '#D4AF37', fontWeight: 600 }}
                       >
                         {treatment.name}
                       </Typography>
@@ -235,20 +238,26 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
                       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                         <Chip 
                           label={`${treatment.effectiveness} Effective`} 
-                          color="success" 
                           size="small" 
+                          sx={{
+                            bgcolor: '#4caf50',
+                            color: 'white'
+                          }}
                         />
                         <Chip 
                           label={treatment.duration} 
-                          color="primary" 
                           size="small" 
+                          sx={{
+                            bgcolor: '#D4AF37',
+                            color: '#1a1a1a'
+                          }}
                         />
                       </Box>
                     </Box>
 
                     <Typography
                       variant="subtitle2"
-                      sx={{ mb: 1, color: 'primary.main', fontWeight: 600 }}
+                      sx={{ mb: 1, color: '#D4AF37', fontWeight: 600 }}
                     >
                       Key Features:
                     </Typography>
@@ -284,7 +293,7 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
                         display: 'block',
                         mt: 2,
                         p: 1,
-                        bgcolor: 'grey.50',
+                        bgcolor: '#f5f5f5',
                         borderRadius: 1,
                         fontStyle: 'italic'
                       }}
@@ -303,9 +312,9 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
             textAlign: 'center', 
             mt: 6, 
             p: 4, 
-            bgcolor: 'primary.main',
+            bgcolor: '#D4AF37',
             borderRadius: 3,
-            color: 'white'
+            color: '#1a1a1a'
           }}
         >
           <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
@@ -319,8 +328,8 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                background: 'white',
-                color: '#2C5530',
+                background: '#1a1a1a',
+                color: '#D4AF37',
                 border: 'none',
                 borderRadius: '8px',
                 padding: '12px 24px',
@@ -342,8 +351,8 @@ const TMJTreatmentTimeline: React.FC<TMJTreatmentTimelineProps> = ({ timeline, t
               whileTap={{ scale: 0.95 }}
               style={{
                 background: 'transparent',
-                color: 'white',
-                border: '2px solid white',
+                color: '#1a1a1a',
+                border: '2px solid #1a1a1a',
                 borderRadius: '8px',
                 padding: '12px 24px',
                 fontSize: '1rem',

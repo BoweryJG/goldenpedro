@@ -167,14 +167,14 @@ const RoboticDashboard: React.FC = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          border: '2px solid rgba(102, 126, 234, 0.3)',
+          border: '2px solid rgba(212, 175, 55, 0.3)',
           overflow: 'hidden',
           '&::before': {
             content: '""',
             position: 'absolute',
             width: '100%',
             height: '100%',
-            background: 'conic-gradient(from 0deg, transparent, rgba(102, 126, 234, 0.3), transparent)',
+            background: 'conic-gradient(from 0deg, transparent, rgba(212, 175, 55, 0.3), transparent)',
             animation: 'rotate 4s linear infinite',
           }
         }}
@@ -281,7 +281,7 @@ const RoboticDashboard: React.FC = () => {
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" sx={{ 
         mb: 3, 
-        background: 'linear-gradient(135deg, #00F5FF 0%, #FF00E5 50%, #FFE500 100%)',
+        background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #F7E7CE 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontWeight: 'bold',
@@ -298,7 +298,7 @@ const RoboticDashboard: React.FC = () => {
             value={metrics.averageAccuracy.toFixed(1)}
             label="Accuracy"
             unit="%"
-            icon={<CenterFocusStrong sx={{ color: '#00F5FF', fontSize: 24 }} />}
+            icon={<CenterFocusStrong sx={{ color: '#D4AF37', fontSize: 24 }} />}
           />
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -306,7 +306,7 @@ const RoboticDashboard: React.FC = () => {
             value={metrics.averageDuration.toFixed(0)}
             label="Avg Time"
             unit="min"
-            icon={<Timer sx={{ color: '#FF00E5', fontSize: 24 }} />}
+            icon={<Timer sx={{ color: '#808080', fontSize: 24 }} />}
           />
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -314,7 +314,7 @@ const RoboticDashboard: React.FC = () => {
             value={metrics.timeReduction}
             label="Time Saved"
             unit="%"
-            icon={<Speed sx={{ color: '#FFE500', fontSize: 24 }} />}
+            icon={<Speed sx={{ color: '#FFD700', fontSize: 24 }} />}
           />
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -322,7 +322,7 @@ const RoboticDashboard: React.FC = () => {
             value={metrics.complicationRate}
             label="Complication"
             unit="%"
-            icon={<Engineering sx={{ color: '#4CAF50', fontSize: 24 }} />}
+            icon={<Engineering sx={{ color: '#D4AF37', fontSize: 24 }} />}
           />
         </Grid>
       </Grid>
@@ -338,7 +338,7 @@ const RoboticDashboard: React.FC = () => {
       }}>
         <Box sx={{ 
           p: 3,
-          background: 'linear-gradient(90deg, rgba(0,245,255,0.1) 0%, rgba(255,0,229,0.1) 50%, rgba(255,229,0,0.1) 100%)'
+          background: 'linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(255,215,0,0.1) 50%, rgba(247,231,206,0.1) 100%)'
         }}>
           <Typography variant="h6" sx={{ color: '#fff', mb: 3 }}>
             Yomi vs Traditional Precision Metrics
@@ -351,7 +351,7 @@ const RoboticDashboard: React.FC = () => {
                   {metric.metric}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                  <Typography variant="caption" sx={{ color: '#00F5FF' }}>
+                  <Typography variant="caption" sx={{ color: '#D4AF37' }}>
                     Yomi: {metric.yomiValue}{metric.unit}
                   </Typography>
                   <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)' }}>
@@ -362,8 +362,8 @@ const RoboticDashboard: React.FC = () => {
                     size="small"
                     sx={{ 
                       height: 18,
-                      backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                      color: '#4CAF50',
+                      backgroundColor: 'rgba(212, 175, 55, 0.2)',
+                      color: '#D4AF37',
                       fontWeight: 'bold',
                       fontSize: '0.7rem'
                     }}
@@ -373,9 +373,9 @@ const RoboticDashboard: React.FC = () => {
               <Box sx={{ display: 'flex', gap: 1, height: 8 }}>
                 <Box sx={{ 
                   flex: metric.yomiValue / metric.traditionalValue,
-                  background: 'linear-gradient(90deg, #00F5FF, #00A5FF)',
+                  background: 'linear-gradient(90deg, #D4AF37, #FFD700)',
                   borderRadius: 4,
-                  boxShadow: '0 0 10px #00F5FF66'
+                  boxShadow: '0 0 10px #D4AF3766'
                 }} />
                 <Box sx={{ 
                   flex: 1 - (metric.yomiValue / metric.traditionalValue),
@@ -406,8 +406,8 @@ const RoboticDashboard: React.FC = () => {
               label={`${metrics.totalProcedures} Total`}
               size="small"
               sx={{ 
-                backgroundColor: 'rgba(0, 245, 255, 0.2)',
-                color: '#00F5FF',
+                backgroundColor: 'rgba(212, 175, 55, 0.2)',
+                color: '#D4AF37',
                 fontWeight: 'bold'
               }}
             />
@@ -422,14 +422,14 @@ const RoboticDashboard: React.FC = () => {
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255,255,255,0.1)',
                     p: 2,
-                    borderLeft: `4px solid ${procedure.status === 'completed' ? '#00F5FF' : '#FFE500'}`
+                    borderLeft: `4px solid ${procedure.status === 'completed' ? '#D4AF37' : '#FFD700'}`
                   }}>
                     <Grid container alignItems="center" spacing={2}>
                       <Grid item xs={12} sm={3}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                           <Avatar sx={{ 
-                            bgcolor: procedure.status === 'completed' ? '#00F5FF22' : '#FFE50022',
-                            color: procedure.status === 'completed' ? '#00F5FF' : '#FFE500'
+                            bgcolor: procedure.status === 'completed' ? '#D4AF3722' : '#FFD70022',
+                            color: procedure.status === 'completed' ? '#D4AF37' : '#FFD700'
                           }}>
                             <ThreeDRotation />
                           </Avatar>
@@ -468,7 +468,7 @@ const RoboticDashboard: React.FC = () => {
                             <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
                               Accuracy
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#00F5FF', fontWeight: 'bold' }}>
+                            <Typography variant="body2" sx={{ color: '#D4AF37', fontWeight: 'bold' }}>
                               {procedure.accuracyScore}%
                             </Typography>
                           </Grid>
@@ -477,7 +477,7 @@ const RoboticDashboard: React.FC = () => {
                             <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
                               Deviation
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#4CAF50', fontWeight: 'bold' }}>
+                            <Typography variant="body2" sx={{ color: '#D4AF37', fontWeight: 'bold' }}>
                               {procedure.deviationMm}mm
                             </Typography>
                           </Grid>
@@ -489,8 +489,8 @@ const RoboticDashboard: React.FC = () => {
                           label={procedure.status}
                           size="small"
                           sx={{
-                            backgroundColor: procedure.status === 'completed' ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 229, 0, 0.2)',
-                            color: procedure.status === 'completed' ? '#4CAF50' : '#FFE500',
+                            backgroundColor: procedure.status === 'completed' ? 'rgba(212, 175, 55, 0.2)' : 'rgba(255, 215, 0, 0.2)',
+                            color: procedure.status === 'completed' ? '#D4AF37' : '#FFD700',
                             fontWeight: 'bold',
                             fontSize: '0.7rem'
                           }}
@@ -513,7 +513,7 @@ const RoboticDashboard: React.FC = () => {
             value={`$${metrics.revenueGenerated.toLocaleString()}`}
             subtitle={`${metrics.totalProcedures} procedures`}
             icon={<AttachMoney sx={{ fontSize: 48 }} />}
-            gradient="linear-gradient(135deg, #667eea, #764ba2)"
+            gradient="linear-gradient(135deg, #D4AF37, #FFD700)"
           />
         </Grid>
         
@@ -523,7 +523,7 @@ const RoboticDashboard: React.FC = () => {
             value={`${metrics.efficiencyGain}%`}
             subtitle="vs traditional methods"
             icon={<Insights sx={{ fontSize: 48 }} />}
-            gradient="linear-gradient(135deg, #00F5FF, #0080FF)"
+            gradient="linear-gradient(135deg, #808080, #A9A9A9)"
           />
         </Grid>
         
@@ -533,7 +533,7 @@ const RoboticDashboard: React.FC = () => {
             value={metrics.patientSatisfaction}
             subtitle="out of 5.0 rating"
             icon={<CheckCircle sx={{ fontSize: 48 }} />}
-            gradient="linear-gradient(135deg, #4CAF50, #45a049)"
+            gradient="linear-gradient(135deg, #D4AF37, #FFD700)"
           />
         </Grid>
       </Grid>

@@ -294,8 +294,8 @@ const TMJHero: React.FC<TMJHeroProps> = ({ content, doctor }) => {
                         sx={{
                           mr: 1,
                           mb: 1,
-                          background: 'linear-gradient(145deg, #f5d76e, #f8c059)',
-                          color: '#000000',
+                          background: 'linear-gradient(145deg, #D4AF37, #F5E6C9)',
+                          color: '#1a1a1a',
                           fontWeight: 600,
                           border: '1px solid #D4AF37'
                         }}
@@ -320,7 +320,7 @@ const TMJHero: React.FC<TMJHeroProps> = ({ content, doctor }) => {
                         <Star
                           key={i}
                           sx={{
-                            color: i < 5 ? '#FFD700' : 'grey.300',
+                            color: i < 5 ? '#D4AF37' : '#bdbdbd',
                             fontSize: '1.2rem'
                           }}
                         />

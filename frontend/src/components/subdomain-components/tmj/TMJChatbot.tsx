@@ -62,14 +62,16 @@ const TMJChatbot: React.FC<TMJChatbotProps> = ({ contact }) => {
             }}
           >
             <Fab
-              color="primary"
               size="large"
               onClick={handleChatOpen}
               sx={{
-                boxShadow: '0 4px 20px rgba(44, 85, 48, 0.3)',
+                bgcolor: '#D4AF37',
+                color: '#1a1a1a',
+                boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)',
                 '&:hover': {
+                  bgcolor: '#D4AF37',
                   transform: 'scale(1.1)',
-                  boxShadow: '0 6px 25px rgba(44, 85, 48, 0.4)',
+                  boxShadow: '0 6px 25px rgba(212, 175, 55, 0.4)',
                 }
               }}
             >

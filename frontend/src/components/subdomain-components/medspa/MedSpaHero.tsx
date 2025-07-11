@@ -66,7 +66,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
       className="hero-medspa"
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #e3e3e3 0%, #D4AF37 25%, #e3e3e3 50%, #D4AF37 75%, #e3e3e3 100%)', // Soft gray gradient with gold shimmer
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #F7E7CE 50%, #FAFAFA 100%)', // Soft luxury champagne gradient
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
@@ -78,7 +78,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%)', // Gold shimmer
+          background: 'radial-gradient(ellipse at center, rgba(247, 231, 206, 0.15) 0%, transparent 70%)', // Champagne shimmer
           animation: 'shimmer 8s ease-in-out infinite'
         },
         '@keyframes shimmer': {
@@ -125,15 +125,15 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
           </filter>
           
           <linearGradient id="pearlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#e3e3e3" stopOpacity="0.6" />
-            <stop offset="50%" stopColor="#D4AF37" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#1a1a1a" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.6" />
+            <stop offset="50%" stopColor="#F7E7CE" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#FAFAFA" stopOpacity="0.4" />
           </linearGradient>
 
           <radialGradient id="roseGoldGradient">
-            <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.8" />
-            <stop offset="50%" stopColor="#e3e3e3" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#1a1a1a" stopOpacity="0.2" />
+            <stop offset="0%" stopColor="#F7E7CE" stopOpacity="0.8" />
+            <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#FAFAFA" stopOpacity="0.2" />
           </radialGradient>
         </defs>
 
@@ -182,7 +182,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
             position: 'absolute',
             width: '4px',
             height: '4px',
-            background: i % 3 === 0 ? '#D4AF37' : i % 3 === 1 ? '#e3e3e3' : '#ffffff',
+            background: i % 3 === 0 ? '#F7E7CE' : i % 3 === 1 ? '#FFFFFF' : '#FAFAFA',
             borderRadius: '50%',
             boxShadow: '0 0 10px currentColor',
             left: `${Math.random() * 100}%`,
@@ -216,13 +216,13 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                 variant="h1"
                 sx={{
                   fontFamily: '"Bodoni Moda", serif',
-                  color: '#000000', // Deep black
+                  color: '#4A4A4A', // Soft charcoal
                   fontWeight: 400,
                   mb: 2,
                   letterSpacing: '0.05em',
-                  textShadow: '2px 2px 8px rgba(212, 175, 55, 0.3)',
+                  textShadow: '2px 2px 8px rgba(247, 231, 206, 0.3)',
                   fontSize: { xs: '2.5rem', md: '4rem' },
-                  background: 'linear-gradient(45deg, #000000 30%, #D4AF37 50%, #e3e3e3 70%, #000000 90%)',
+                  background: 'linear-gradient(45deg, #4A4A4A 30%, #F7E7CE 50%, #FFFFFF 70%, #4A4A4A 90%)',
                   backgroundSize: '200% auto',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -241,11 +241,11 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                 variant="h4"
                 sx={{
                   fontFamily: '"Bodoni Moda", serif',
-                  color: '#000000', // Deep black
+                  color: '#4A4A4A', // Soft charcoal
                   mb: 3,
                   fontWeight: 300,
                   letterSpacing: '0.05em',
-                  textShadow: '1px 1px 4px rgba(212, 175, 55, 0.2)',
+                  textShadow: '1px 1px 4px rgba(247, 231, 206, 0.2)',
                   fontSize: { xs: '1.25rem', md: '1.75rem' },
                   fontStyle: 'italic'
                 }}
@@ -257,12 +257,12 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                 variant="body1"
                 sx={{
                   fontFamily: '"Bodoni Moda", serif',
-                  color: 'rgba(0, 0, 0, 0.95)', // Deep black
+                  color: 'rgba(74, 74, 74, 0.95)', // Soft charcoal
                   mb: 4,
                   fontSize: '1.1rem',
                   lineHeight: 1.8,
                   letterSpacing: '0.02em',
-                  textShadow: '1px 1px 2px rgba(212, 175, 55, 0.1)'
+                  textShadow: '1px 1px 2px rgba(247, 231, 206, 0.1)'
                 }}
               >
                 {content.description}
@@ -282,10 +282,10 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                           icon={iconMap[feature] || <AutoAwesome />}
                           label={feature}
                           sx={{
-                            bgcolor: 'rgba(212, 175, 55, 0.15)', // Luxury gold with opacity
-                            color: '#000000', // Deep black
+                            bgcolor: 'rgba(247, 231, 206, 0.15)', // Champagne with opacity
+                            color: '#4A4A4A', // Soft charcoal
                             backdropFilter: 'blur(20px)',
-                            border: '1px solid rgba(212, 175, 55, 0.3)',
+                            border: '1px solid rgba(247, 231, 206, 0.3)',
                             borderRadius: '20px',
                             px: 1,
                             py: 0.5,
@@ -294,13 +294,13 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                             fontSize: '0.9rem',
                             transition: 'all 0.3s ease',
                             '& .MuiChip-icon': {
-                              color: '#D4AF37', // Luxury gold
-                              filter: 'drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))'
+                              color: '#F7E7CE', // Champagne
+                              filter: 'drop-shadow(0 0 3px rgba(247, 231, 206, 0.5))'
                             },
                             '&:hover': {
-                              bgcolor: 'rgba(212, 175, 55, 0.2)',
+                              bgcolor: 'rgba(247, 231, 206, 0.2)',
                               transform: 'translateY(-2px)',
-                              boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)'
+                              boxShadow: '0 4px 20px rgba(247, 231, 206, 0.3)'
                             }
                           }}
                         />
@@ -326,10 +326,10 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     fontWeight: 400,
                     letterSpacing: '0.05em',
                     borderRadius: '30px',
-                    background: 'linear-gradient(145deg, #f5d76e, #f8c059)', // Luxury gold gradient
-                    color: '#000000', // Black text on gold button
+                    background: 'linear-gradient(145deg, #F7E7CE, #FFFFFF)', // Champagne gradient
+                    color: '#4A4A4A', // Soft charcoal text
                     border: '1px solid rgba(255, 255, 255, 0.3)',
-                    boxShadow: '0 8px 32px rgba(255, 215, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5)',
+                    boxShadow: '0 8px 32px rgba(247, 231, 206, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5)',
                     position: 'relative',
                     overflow: 'hidden',
                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -345,8 +345,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     },
                     '&:hover': {
                       transform: 'translateY(-3px) scale(1.02)',
-                      boxShadow: '0 12px 48px rgba(255, 215, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.6)',
-                      background: 'linear-gradient(145deg, #D4AF37, #FFD700)', // Reverse gold gradient on hover
+                      boxShadow: '0 12px 48px rgba(247, 231, 206, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.6)',
+                      background: 'linear-gradient(145deg, #FFFFFF, #F7E7CE)', // Reverse champagne gradient on hover
                       '&::before': {
                         left: '100%'
                       }
@@ -375,8 +375,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                   bgcolor: 'rgba(255, 255, 255, 0.95)',
                   backdropFilter: 'blur(30px)',
                   borderRadius: '20px',
-                  border: '1px solid rgba(212, 175, 55, 0.2)',
-                  boxShadow: '0 20px 60px rgba(212, 175, 55, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(247, 231, 206, 0.2)',
+                  boxShadow: '0 20px 60px rgba(247, 231, 206, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.9)',
                   overflow: 'hidden',
                   position: 'relative',
                   '&::before': {
@@ -386,7 +386,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     left: 0,
                     right: 0,
                     height: '100px',
-                    background: 'linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%)',
+                    background: 'linear-gradient(180deg, rgba(247, 231, 206, 0.1) 0%, transparent 100%)',
                     pointerEvents: 'none'
                   }
                 }}
@@ -400,8 +400,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                         width: 80, 
                         height: 80, 
                         mr: 2,
-                        border: '2px solid rgba(212, 175, 55, 0.3)',
-                        boxShadow: '0 4px 20px rgba(212, 175, 55, 0.2)'
+                        border: '2px solid rgba(247, 231, 206, 0.3)',
+                        boxShadow: '0 4px 20px rgba(247, 231, 206, 0.2)'
                       }}
                     />
                     <Box>
@@ -410,7 +410,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                         sx={{ 
                           fontFamily: '"Bodoni Moda", serif',
                           fontWeight: 500, 
-                          color: '#c2ae7b',
+                          color: '#8B7355',
                           letterSpacing: '0.03em',
                           mb: 0.5
                         }}
@@ -421,7 +421,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                         variant="subtitle1" 
                         sx={{ 
                           fontFamily: '"Bodoni Moda", serif',
-                          color: '#1a1a1a', // Charcoal
+                          color: '#4A4A4A', // Charcoal
                           letterSpacing: '0.02em',
                           fontStyle: 'italic'
                         }}
@@ -435,7 +435,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                     variant="body2" 
                     sx={{ 
                       mb: 3, 
-                      color: '#1a1a1a', // Charcoal
+                      color: '#4A4A4A', // Charcoal
                       fontFamily: '"Bodoni Moda", serif',
                       lineHeight: 1.7,
                       letterSpacing: '0.01em'
@@ -453,14 +453,14 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
                         sx={{
                           mr: 1,
                           mb: 1,
-                          bgcolor: 'rgba(212, 175, 55, 0.1)', // Luxury gold with opacity
-                          color: '#c2ae7b',
-                          border: '1px solid rgba(212, 175, 55, 0.3)',
+                          bgcolor: 'rgba(247, 231, 206, 0.1)', // Luxury gold with opacity
+                          color: '#8B7355',
+                          border: '1px solid rgba(247, 231, 206, 0.3)',
                           fontFamily: '"Bodoni Moda", serif',
                           fontSize: '0.75rem',
                           letterSpacing: '0.02em',
                           '&:hover': {
-                            bgcolor: 'rgba(212, 175, 55, 0.2)',
+                            bgcolor: 'rgba(247, 231, 206, 0.2)',
                             transform: 'scale(1.05)'
                           },
                           transition: 'all 0.3s ease'
@@ -495,8 +495,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
         <AutoAwesome 
           sx={{ 
             fontSize: 50, 
-            color: 'rgba(212, 175, 55, 0.2)',
-            filter: 'drop-shadow(0 0 20px rgba(212, 175, 55, 0.4))'
+            color: 'rgba(247, 231, 206, 0.2)',
+            filter: 'drop-shadow(0 0 20px rgba(247, 231, 206, 0.4))'
           }} 
         />
       </motion.div>
@@ -522,8 +522,8 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
         <Spa 
           sx={{ 
             fontSize: 45, 
-            color: 'rgba(227, 227, 227, 0.3)', // Platinum
-            filter: 'drop-shadow(0 0 15px rgba(227, 227, 227, 0.5))'
+            color: 'rgba(250, 250, 250, 0.3)', // Soft white
+            filter: 'drop-shadow(0 0 15px rgba(250, 250, 250, 0.5))'
           }} 
         />
       </motion.div>
@@ -545,7 +545,7 @@ const MedSpaHero: React.FC<MedSpaHeroProps> = ({ content, doctor }) => {
           left: '20%',
           width: '120px',
           height: '120px',
-          background: 'radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(227, 227, 227, 0.1) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(247, 231, 206, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(40px)',
           zIndex: 0

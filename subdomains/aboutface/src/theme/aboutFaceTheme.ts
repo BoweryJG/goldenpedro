@@ -4,16 +4,16 @@ export const aboutFaceTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#C8A882', // Warm champagne gold
-      light: '#E6D3B7',
-      dark: '#A18A5C',
-      contrastText: '#2C2C2C',
+      main: '#D4AF37', // Luxury gold
+      light: '#E6C757',
+      dark: '#B89C2F',
+      contrastText: '#000000',
     },
     secondary: {
-      main: '#8B6F8B', // Sophisticated mauve
-      light: '#B3A1B3',
-      dark: '#6B536B',
-      contrastText: '#FFFFFF',
+      main: '#FFFFFF', // Pure white
+      light: '#FFFFFF',
+      dark: '#F5F5F5',
+      contrastText: '#000000',
     },
     background: {
       default: '#FEFEFE',
@@ -30,7 +30,7 @@ export const aboutFaceTheme = createTheme({
       main: '#F57C00',
     },
     info: {
-      main: '#8B6F8B',
+      main: '#D4AF37',
     },
     success: {
       main: '#2E7D32',
@@ -98,13 +98,14 @@ export const aboutFaceTheme = createTheme({
           borderRadius: '28px',
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: '0 4px 12px rgba(200, 168, 130, 0.3)',
+            boxShadow: '0 4px 12px rgba(212, 175, 55, 0.3)',
           },
         },
         contained: {
-          background: 'linear-gradient(135deg, #C8A882 0%, #A18A5C 100%)',
+          background: 'linear-gradient(45deg, #FFFFFF 0%, #D4AF37 50%, #FFFFFF 100%)',
+          color: '#000000',
           '&:hover': {
-            background: 'linear-gradient(135deg, #A18A5C 0%, #8B7549 100%)',
+            background: 'linear-gradient(45deg, #D4AF37 0%, #FFFFFF 50%, #D4AF37 100%)',
           },
         },
       },
@@ -115,7 +116,7 @@ export const aboutFaceTheme = createTheme({
           borderRadius: 16,
           boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
           '&:hover': {
-            boxShadow: '0 12px 48px rgba(200, 168, 130, 0.15)',
+            boxShadow: '0 12px 48px rgba(212, 175, 55, 0.15)',
             transform: 'translateY(-2px)',
           },
           transition: 'all 0.3s ease',
@@ -130,10 +131,10 @@ export const aboutFaceTheme = createTheme({
           fontWeight: 500,
         },
         filled: {
-          backgroundColor: '#C8A882',
-          color: '#2C2C2C',
+          backgroundColor: '#D4AF37',
+          color: '#000000',
           '&:hover': {
-            backgroundColor: '#A18A5C',
+            backgroundColor: '#B89C2F',
           },
         },
       },

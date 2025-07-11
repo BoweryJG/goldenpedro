@@ -91,12 +91,12 @@ export const IntegratedChatbotLauncher: React.FC<IntegratedChatbotLauncherProps>
               >
                 <Box
                   sx={{
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                     borderRadius: '18px 18px 4px 18px',
                     px: 2.5,
                     py: 1.5,
                     maxWidth: 200,
-                    boxShadow: '0 2px 12px rgba(102, 126, 234, 0.3)',
+                    boxShadow: '0 2px 12px rgba(212, 175, 55, 0.3)',
                   }}
                 >
                   <Typography 
@@ -136,7 +136,7 @@ export const IntegratedChatbotLauncher: React.FC<IntegratedChatbotLauncherProps>
             width: 64,
             height: 64,
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
             cursor: 'pointer',
             position: 'relative',
             overflow: 'visible',
@@ -144,12 +144,12 @@ export const IntegratedChatbotLauncher: React.FC<IntegratedChatbotLauncherProps>
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 24px rgba(102, 126, 234, 0.3)',
+            boxShadow: '0 4px 24px rgba(212, 175, 55, 0.3)',
             
             // Hover effects
             '&:hover': {
               transform: 'translateY(-3px) scale(1.05)',
-              boxShadow: '0 8px 32px rgba(102, 126, 234, 0.4)',
+              boxShadow: '0 8px 32px rgba(212, 175, 55, 0.4)',
               '& .inner-icon': {
                 transform: 'rotate(90deg) scale(1.1)',
               },
@@ -169,7 +169,7 @@ export const IntegratedChatbotLauncher: React.FC<IntegratedChatbotLauncherProps>
               position: 'absolute',
               inset: -3,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
               opacity: 0.3,
               filter: 'blur(8px)',
               animation: 'breathe 3s ease-in-out infinite',
@@ -269,7 +269,7 @@ export const IntegratedChatbotLauncher: React.FC<IntegratedChatbotLauncherProps>
                     width: 4,
                     height: 4,
                     borderRadius: '50%',
-                    background: '#667eea',
+                    background: '#D4AF37',
                     animation: hovering ? `bounce 1.4s ease-in-out infinite ${i * 0.16}s` : 'none',
                     '@keyframes bounce': {
                       '0%, 60%, 100%': {

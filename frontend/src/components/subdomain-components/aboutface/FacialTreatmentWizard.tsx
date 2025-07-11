@@ -260,7 +260,7 @@ const FacialTreatmentWizard: React.FC = () => {
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-4px)',
-                        boxShadow: '0 12px 48px rgba(200, 168, 130, 0.15)'
+                        boxShadow: '0 12px 48px rgba(212, 175, 55, 0.15)'
                       }
                     }}
                   >

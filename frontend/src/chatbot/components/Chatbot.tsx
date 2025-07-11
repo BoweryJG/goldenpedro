@@ -210,7 +210,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
           <Box
             sx={{
               p: 2,
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
               color: 'white',
               display: { xs: 'none', sm: 'flex' },
               alignItems: 'center',

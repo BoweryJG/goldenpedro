@@ -126,11 +126,11 @@ const DailySchedule: React.FC = () => {
   };
 
   const getTypeColor = (type: string) => {
-    if (type.includes('TMJ')) return '#FF6B6B';
-    if (type.includes('Implant')) return '#4ECDC4';
-    if (type.includes('Yomi')) return '#95E1D3';
-    if (type.includes('MedSpa')) return '#F38181';
-    return '#778BEB';
+    if (type.includes('TMJ')) return '#D4AF37';
+    if (type.includes('Implant')) return '#FFD700';
+    if (type.includes('Yomi')) return '#F7E7CE';
+    if (type.includes('MedSpa')) return '#A9A9A9';
+    return '#808080';
   };
 
   return (
@@ -158,7 +158,7 @@ const DailySchedule: React.FC = () => {
           <Chip
             label={`${appointments.length} Appointments`}
             sx={{
-              background: 'linear-gradient(45deg, #FFD93D 0%, #FFB03A 100%)',
+              background: 'linear-gradient(45deg, #D4AF37 0%, #FFD700 100%)',
               color: '#000',
               fontWeight: 600
             }}

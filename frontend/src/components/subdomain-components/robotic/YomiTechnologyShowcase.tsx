@@ -139,7 +139,7 @@ const YomiTechnologyShowcase: React.FC = () => {
       id="yomi-technology-showcase"
       sx={{ 
         py: { xs: 8, md: 12 }, 
-        bgcolor: 'background.default',
+        bgcolor: '#000000',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -153,7 +153,7 @@ const YomiTechnologyShowcase: React.FC = () => {
           right: 0,
           bottom: 0,
           opacity: 0.05,
-          backgroundImage: 'linear-gradient(45deg, #D4AF37 25%, transparent 25%), linear-gradient(-45deg, #D4AF37 25%, transparent 25%)',
+          backgroundImage: 'linear-gradient(45deg, #FFD700 25%, transparent 25%), linear-gradient(-45deg, #FFD700 25%, transparent 25%)',
           backgroundSize: '60px 60px'
         }}
       />
@@ -165,7 +165,7 @@ const YomiTechnologyShowcase: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Box textAlign="center" sx={{ mb: 6 }}>
-            <SmartToy sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
+            <SmartToy sx={{ fontSize: '3rem', color: '#FFD700', mb: 2 }} />
             <Typography
               variant="h2"
               component="h2"
@@ -173,7 +173,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 700,
                 mb: 2,
-                color: '#D4AF37'
+                color: '#FFD700'
               }}
             >
               Yomi Technology Deep Dive
@@ -182,7 +182,7 @@ const YomiTechnologyShowcase: React.FC = () => {
               variant="body1"
               sx={{
                 fontSize: '1.1rem',
-                color: 'text.secondary',
+                color: 'rgba(255, 255, 255, 0.8)',
                 maxWidth: '600px',
                 mx: 'auto'
               }}
@@ -195,7 +195,7 @@ const YomiTechnologyShowcase: React.FC = () => {
           {/* Technology Features Grid */}
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 4, mb: 8 }}>
             <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 50%' } }}>
-              <Typography variant="h4" gutterBottom sx={{ color: '#D4AF37' }}>
+              <Typography variant="h4" gutterBottom sx={{ color: '#FFD700' }}>
                 Core Technologies
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -209,8 +209,8 @@ const YomiTechnologyShowcase: React.FC = () => {
                         sx={{
                           cursor: 'pointer',
                           border: selectedFeature === index ? 2 : 1,
-                          borderColor: selectedFeature === index ? '#D4AF37' : '#999999',
-                          bgcolor: selectedFeature === index ? '#1a1a1a' : 'background.paper',
+                          borderColor: selectedFeature === index ? '#FFD700' : '#1a1a1a',
+                          bgcolor: selectedFeature === index ? '#1a1a1a' : '#000000',
                           color: selectedFeature === index ? '#FFFFFF' : 'text.primary',
                           transition: 'all 0.3s ease'
                         }}
@@ -220,8 +220,8 @@ const YomiTechnologyShowcase: React.FC = () => {
                           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                             <Avatar
                               sx={{
-                                bgcolor: selectedFeature === index ? 'white' : '#D4AF37',
-                                color: selectedFeature === index ? '#D4AF37' : '#000000',
+                                bgcolor: selectedFeature === index ? '#FFD700' : '#1a1a1a',
+                                color: selectedFeature === index ? '#000000' : '#FFD700',
                                 mr: 2,
                                 width: 40,
                                 height: 40
@@ -242,9 +242,9 @@ const YomiTechnologyShowcase: React.FC = () => {
                                     mr: 1,
                                     height: 6,
                                     borderRadius: 3,
-                                    bgcolor: selectedFeature === index ? 'rgba(255,255,255,0.3)' : 'grey.200',
+                                    bgcolor: selectedFeature === index ? 'rgba(255,215,0,0.3)' : 'rgba(255,255,255,0.1)',
                                     '& .MuiLinearProgress-bar': {
-                                      bgcolor: selectedFeature === index ? 'white' : '#D4AF37'
+                                      bgcolor: selectedFeature === index ? '#FFD700' : '#FFD700'
                                     }
                                   }}
                                 />
@@ -271,12 +271,12 @@ const YomiTechnologyShowcase: React.FC = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card sx={{ height: '100%', bgcolor: 'grey.50' }}>
+                  <Card sx={{ height: '100%', bgcolor: '#1a1a1a', border: '1px solid #FFD700' }}>
                     <CardContent sx={{ p: 4 }}>
                       <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                         <Avatar
                           sx={{
-                            bgcolor: '#D4AF37',
+                            bgcolor: '#FFD700',
                             width: 60,
                             height: 60,
                             mr: 3
@@ -288,13 +288,13 @@ const YomiTechnologyShowcase: React.FC = () => {
                           <Typography variant="h4" sx={{ color: '#D4AF37' }} gutterBottom>
                             {technologyFeatures[selectedFeature].title}
                           </Typography>
-                          <Typography variant="body1" color="text.secondary">
+                          <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                             {technologyFeatures[selectedFeature].description}
                           </Typography>
                         </Box>
                       </Box>
 
-                      <Typography variant="h6" gutterBottom sx={{ color: '#D4AF37' }}>
+                      <Typography variant="h6" gutterBottom sx={{ color: '#FFD700' }}>
                         Key Benefits
                       </Typography>
                       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
@@ -305,8 +305,8 @@ const YomiTechnologyShowcase: React.FC = () => {
                               size="small"
                               sx={{
                                 width: '100%',
-                                bgcolor: '#1a1a1a',
-                                color: '#FFFFFF',
+                                bgcolor: '#FFD700',
+                                color: '#000000',
                                 justifyContent: 'flex-start'
                               }}
                             />
@@ -314,7 +314,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                         ))}
                       </Box>
 
-                      <Typography variant="h6" gutterBottom sx={{ color: '#D4AF37' }}>
+                      <Typography variant="h6" gutterBottom sx={{ color: '#FFD700' }}>
                         Technical Specifications
                       </Typography>
                       {technologyFeatures[selectedFeature].techSpecs.map((spec, index) => (
@@ -324,10 +324,10 @@ const YomiTechnologyShowcase: React.FC = () => {
                           sx={{
                             mb: 1,
                             p: 1,
-                            bgcolor: 'white',
+                            bgcolor: '#000000',
                             borderRadius: 1,
                             border: '1px solid',
-                            borderColor: 'grey.300'
+                            borderColor: '#FFD700'
                           }}
                         >
                           {spec}
@@ -341,12 +341,12 @@ const YomiTechnologyShowcase: React.FC = () => {
           </Box>
 
           {/* Procedure Timeline */}
-          <Card sx={{ mb: 6 }}>
+          <Card sx={{ mb: 6, bgcolor: '#1a1a1a', border: '1px solid #FFD700' }}>
             <CardContent sx={{ p: 4 }}>
-              <Typography variant="h4" gutterBottom sx={{ color: '#D4AF37' }} textAlign="center">
+              <Typography variant="h4" gutterBottom sx={{ color: '#FFD700' }} textAlign="center">
                 Yomi Procedure Timeline
               </Typography>
-              <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
+              <Typography variant="body1" textAlign="center" sx={{ mb: 4, color: 'rgba(255, 255, 255, 0.8)' }}>
                 Experience the streamlined robotic implant process
               </Typography>
 
@@ -355,7 +355,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                   <Step key={step.step}>
                     <StepLabel
                       icon={
-                        <Avatar sx={{ bgcolor: '#D4AF37', width: 40, height: 40 }}>
+                        <Avatar sx={{ bgcolor: '#FFD700', width: 40, height: 40 }}>
                           {step.icon}
                         </Avatar>
                       }
@@ -363,7 +363,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                       <Typography variant="h6" sx={{ fontWeight: 600 }}>
                         {step.title}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                         Duration: {step.duration}
                       </Typography>
                     </StepLabel>
@@ -411,7 +411,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                       <Button
                         variant="contained"
                         onClick={() => setActiveStep(0)}
-                        sx={{ bgcolor: '#D4AF37', color: '#000000' }}
+                        sx={{ bgcolor: '#FFD700', color: '#000000' }}
                       >
                         Start Over
                       </Button>
@@ -436,7 +436,7 @@ const YomiTechnologyShowcase: React.FC = () => {
                 >
                   <Accordion>
                     <AccordionSummary expandIcon={<ExpandMore />}>
-                      <Typography variant="h6" sx={{ color: '#D4AF37' }}>
+                      <Typography variant="h6" sx={{ color: '#FFD700' }}>
                         {feature.title}
                       </Typography>
                     </AccordionSummary>
@@ -465,8 +465,8 @@ const YomiTechnologyShowcase: React.FC = () => {
 
           {/* CTA Section */}
           <Box sx={{ mt: 8, textAlign: 'center' }}>
-            <Card sx={{ p: 4, bgcolor: '#000000', color: '#FFFFFF' }}>
-              <SmartToy sx={{ fontSize: '3rem', mb: 2 }} />
+            <Card sx={{ p: 4, bgcolor: '#000000', color: '#FFFFFF', border: '2px solid #FFD700' }}>
+              <SmartToy sx={{ fontSize: '3rem', mb: 2, color: '#FFD700' }} />
               <Typography variant="h4" gutterBottom>
                 Ready to Experience Robotic Precision?
               </Typography>
@@ -494,13 +494,13 @@ const YomiTechnologyShowcase: React.FC = () => {
                     }, 500)
                   }}
                   sx={{
-                    bgcolor: '#D4AF37',
+                    bgcolor: '#FFD700',
                     color: '#000000',
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 4,
                     '&:hover': {
-                      bgcolor: '#B8860B'
+                      bgcolor: '#FFA500'
                     }
                   }}
                 >
@@ -514,14 +514,14 @@ const YomiTechnologyShowcase: React.FC = () => {
                     element?.scrollIntoView({ behavior: 'smooth' })
                   }}
                   sx={{
-                    borderColor: '#e3e3e3',
-                    color: '#FFFFFF',
+                    borderColor: '#FFD700',
+                    color: '#FFD700',
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 4,
                     '&:hover': {
-                      bgcolor: 'rgba(227, 227, 227, 0.1)',
-                      borderColor: '#e3e3e3'
+                      bgcolor: 'rgba(255, 215, 0, 0.1)',
+                      borderColor: '#FFD700'
                     }
                   }}
                 >

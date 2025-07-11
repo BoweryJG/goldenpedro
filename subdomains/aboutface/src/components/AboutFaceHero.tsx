@@ -21,7 +21,7 @@ const AboutFaceHero: React.FC = () => {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #F9F7F4 0%, #FEFEFE 100%)',
+        background: 'linear-gradient(135deg, #1a1a1a 0%, #000000 100%)',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -51,7 +51,7 @@ const AboutFaceHero: React.FC = () => {
                   color="primary"
                   gutterBottom
                   sx={{
-                    background: 'linear-gradient(135deg, #C8A882 0%, #8B6F8B 100%)',
+                    background: 'linear-gradient(45deg, #FFFFFF 0%, #D4AF37 50%, #FFFFFF 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -146,8 +146,8 @@ const AboutFaceHero: React.FC = () => {
                   <Card
                     elevation={0}
                     sx={{
-                      background: 'linear-gradient(135deg, #C8A882 0%, #8B6F8B 100%)',
-                      color: 'white',
+                      background: 'linear-gradient(45deg, #FFFFFF 0%, #D4AF37 50%, #FFFFFF 100%)',
+                      color: '#000000',
                       borderRadius: 3
                     }}
                   >

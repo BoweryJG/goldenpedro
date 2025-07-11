@@ -141,7 +141,7 @@ const ServicesPage = () => {
       <Box
         sx={{
           py: 10,
-          background: 'linear-gradient(135deg, #FFD700 0%, #1a1a1a 100%)',
+          background: 'linear-gradient(135deg, #D4AF37 0%, #1a1a1a 100%)',
           color: 'white',
         }}
       >

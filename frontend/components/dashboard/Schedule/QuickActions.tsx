@@ -55,42 +55,42 @@ const QuickActions: React.FC<QuickActionsProps> = ({ patient, onActionComplete }
       id: 'call',
       icon: <Phone className="w-5 h-5" />,
       label: 'Call Patient',
-      color: 'bg-green-500 hover:bg-green-600',
+      color: 'bg-gray-600 hover:bg-gray-700',
       action: () => setShowCallModal(true)
     },
     {
       id: 'sms',
       icon: <MessageSquare className="w-5 h-5" />,
       label: 'Send SMS',
-      color: 'bg-blue-500 hover:bg-blue-600',
+      color: 'bg-gray-700 hover:bg-gray-800',
       action: () => setShowSMSModal(true)
     },
     {
       id: 'email',
       icon: <Mail className="w-5 h-5" />,
       label: 'Send Email',
-      color: 'bg-purple-500 hover:bg-purple-600',
+      color: 'bg-gray-600 hover:bg-gray-700',
       action: () => setShowEmailModal(true)
     },
     {
       id: 'video',
       icon: <Video className="w-5 h-5" />,
       label: 'Video Call',
-      color: 'bg-indigo-500 hover:bg-indigo-600',
+      color: 'bg-gray-700 hover:bg-gray-800',
       action: () => console.log('Starting video call...')
     },
     {
       id: 'chart',
       icon: <Stethoscope className="w-5 h-5" />,
       label: 'View Chart',
-      color: 'bg-pink-500 hover:bg-pink-600',
+      color: 'bg-gray-600 hover:bg-gray-700',
       action: () => console.log('Opening patient chart...')
     },
     {
       id: 'payment',
       icon: <CreditCard className="w-5 h-5" />,
       label: 'Process Payment',
-      color: 'bg-yellow-500 hover:bg-yellow-600',
+      color: 'bg-yellow-600 hover:bg-yellow-700',
       action: () => console.log('Processing payment...')
     }
   ];
@@ -189,23 +189,23 @@ const QuickActions: React.FC<QuickActionsProps> = ({ patient, onActionComplete }
             <div className="space-y-2">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-green-500" />
+                  <Phone className="w-4 h-4 text-gray-600" />
                   <div>
                     <p className="text-sm font-medium">Called patient</p>
                     <p className="text-xs text-gray-500">2 hours ago</p>
                   </div>
                 </div>
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-gray-600" />
               </div>
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center space-x-3">
-                  <MessageSquare className="w-4 h-4 text-blue-500" />
+                  <MessageSquare className="w-4 h-4 text-gray-700" />
                   <div>
                     <p className="text-sm font-medium">Sent appointment reminder</p>
                     <p className="text-xs text-gray-500">Yesterday</p>
                   </div>
                 </div>
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-gray-600" />
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@ const QuickActions: React.FC<QuickActionsProps> = ({ patient, onActionComplete }
               <div className="flex space-x-3">
                 <button
                   onClick={handleCall}
-                  className="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                  className="flex-1 bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Start Call</span>

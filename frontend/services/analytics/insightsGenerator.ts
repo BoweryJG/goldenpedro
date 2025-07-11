@@ -884,33 +884,33 @@ export class InsightsGenerator {
   } {
     const styles = {
       alert: {
-        backgroundColor: 'rgba(239, 68, 68, 0.1)',
-        borderColor: '#DC2626',
-        iconColor: '#DC2626',
+        backgroundColor: 'rgba(61, 61, 61, 0.1)',
+        borderColor: '#3d3d3d',
+        iconColor: '#3d3d3d',
         icon: '⚠️'
       },
       opportunity: {
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        borderColor: '#2563EB',
-        iconColor: '#2563EB',
+        backgroundColor: 'rgba(212, 175, 55, 0.1)',
+        borderColor: '#D4AF37',
+        iconColor: '#D4AF37',
         icon: '💡'
       },
       trend: {
-        backgroundColor: 'rgba(168, 85, 247, 0.1)',
-        borderColor: '#7C3AED',
-        iconColor: '#7C3AED',
+        backgroundColor: 'rgba(128, 128, 128, 0.1)',
+        borderColor: '#808080',
+        iconColor: '#808080',
         icon: '📈'
       },
       achievement: {
-        backgroundColor: 'rgba(34, 197, 94, 0.1)',
-        borderColor: '#16A34A',
-        iconColor: '#16A34A',
+        backgroundColor: 'rgba(212, 175, 55, 0.1)',
+        borderColor: '#D4AF37',
+        iconColor: '#D4AF37',
         icon: '🏆'
       },
       recommendation: {
-        backgroundColor: 'rgba(251, 146, 60, 0.1)',
-        borderColor: '#EA580C',
-        iconColor: '#EA580C',
+        backgroundColor: 'rgba(255, 215, 0, 0.1)',
+        borderColor: '#FFD700',
+        iconColor: '#FFD700',
         icon: '💭'
       }
     };

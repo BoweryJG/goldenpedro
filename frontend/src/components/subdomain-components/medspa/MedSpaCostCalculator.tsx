@@ -140,7 +140,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
           <Typography
             variant="h2"
             align="center"
-            sx={{ mb: 2, color: 'primary.main', fontWeight: 700 }}
+            sx={{ mb: 2, color: '#8B7355', fontWeight: 700 }}
           >
             <Calculate sx={{ mr: 2, fontSize: 'inherit' }} />
             Aesthetic Investment Calculator
@@ -149,7 +149,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
           <Typography
             variant="h5"
             align="center"
-            sx={{ mb: 6, color: 'text.secondary', maxWidth: 800, mx: 'auto' }}
+            sx={{ mb: 6, color: '#6B6B6B', maxWidth: 800, mx: 'auto' }}
           >
             Plan your aesthetic journey with flexible financing options
           </Typography>
@@ -159,7 +159,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
           {/* Treatment Selection */}
           <Grid item="true" xs={12} md={8}>
             <Card sx={{ p: 3 }}>
-              <Typography variant="h5" sx={{ mb: 3, color: 'primary.main' }}>
+              <Typography variant="h5" sx={{ mb: 3, color: '#8B7355' }}>
                 Select Your Treatments
               </Typography>
 
@@ -175,7 +175,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                         variant="outlined"
                         sx={{
                           border: selectedTreatments[treatment.id] ? '2px solid' : '1px solid',
-                          borderColor: selectedTreatments[treatment.id] ? 'primary.main' : 'divider',
+                          borderColor: selectedTreatments[treatment.id] ? '#F7E7CE' : 'divider',
                           transition: 'all 0.3s ease-in-out'
                         }}
                       >
@@ -205,7 +205,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                             </Box>
                           </Box>
 
-                          <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                          <Typography variant="body2" sx={{ mb: 2, color: '#6B6B6B' }}>
                             {treatment.description}
                           </Typography>
 
@@ -245,7 +245,7 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
           {/* Cost Summary & Financing */}
           <Grid item="true" xs={12} md={4}>
             <Card sx={{ p: 3, position: 'sticky', top: 20 }}>
-              <Typography variant="h5" sx={{ mb: 3, color: 'primary.main' }}>
+              <Typography variant="h5" sx={{ mb: 3, color: '#8B7355' }}>
                 Investment Summary
               </Typography>
 
@@ -268,27 +268,27 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                     <Divider sx={{ my: 2 }} />
                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                       <Typography variant="h6">Total Investment:</Typography>
-                      <Typography variant="h6" sx={{ color: 'primary.main' }}>
+                      <Typography variant="h6" sx={{ color: '#8B7355' }}>
                         ${getTotalCost().toLocaleString()}
                       </Typography>
                     </Box>
                   </Box>
 
                   {/* Financing Options */}
-                  <Paper sx={{ p: 2, bgcolor: '#1a1a1a', color: '#FFFFFF', mb: 3 }}>
+                  <Paper sx={{ p: 2, bgcolor: '#FAFAFA', color: '#4A4A4A', mb: 3, border: '1px solid #F7E7CE' }}>
                     <Typography variant="h6" sx={{ mb: 2 }}>
                       <CreditCard sx={{ mr: 1 }} />
                       Financing Options
                     </Typography>
 
                     <FormControl fullWidth sx={{ mb: 2 }}>
-                      <InputLabel sx={{ color: '#FFFFFF' }}>Financing Provider</InputLabel>
+                      <InputLabel sx={{ color: '#4A4A4A' }}>Financing Provider</InputLabel>
                       <Select
                         value={selectedFinancing}
                         onChange={(e) => setSelectedFinancing(e.target.value)}
                         sx={{ 
-                          color: '#FFFFFF',
-                          '& .MuiOutlinedInput-notchedOutline': { borderColor: '#FFFFFF' }
+                          color: '#4A4A4A',
+                          '& .MuiOutlinedInput-notchedOutline': { borderColor: '#F7E7CE' }
                         }}
                       >
                         {financing.options.map((option, index) => (
@@ -315,14 +315,14 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                         { value: 36, label: '36mo' }
                       ]}
                       sx={{ 
-                        color: '#FFD700',
-                        '& .MuiSlider-thumb': { bgcolor: '#FFD700' },
-                        '& .MuiSlider-track': { bgcolor: '#FFD700' },
-                        '& .MuiSlider-rail': { bgcolor: 'rgba(255,215,0,0.3)' }
+                        color: '#F7E7CE',
+                        '& .MuiSlider-thumb': { bgcolor: '#F7E7CE' },
+                        '& .MuiSlider-track': { bgcolor: '#F7E7CE' },
+                        '& .MuiSlider-rail': { bgcolor: 'rgba(247,231,206,0.3)' }
                       }}
                     />
 
-                    <Alert severity="success" sx={{ mt: 2 }}>
+                    <Alert severity="success" sx={{ mt: 2, bgcolor: '#F7E7CE', color: '#4A4A4A', '& .MuiAlert-icon': { color: '#8B7355' } }}>
                       <Typography variant="body2" sx={{ fontWeight: 600 }}>
                         Monthly Payment: ${getMonthlyPayment().toFixed(0)}
                       </Typography>
@@ -340,6 +340,14 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                     size="large"
                     startIcon={<Timeline />}
                     onClick={handleScheduleConsultation}
+                    sx={{ 
+                      bgcolor: '#F7E7CE', 
+                      color: '#4A4A4A', 
+                      '&:hover': { 
+                        bgcolor: '#FFFFFF', 
+                        border: '1px solid #F7E7CE' 
+                      } 
+                    }}
                   >
                     Chat with Julie about This Plan
                   </Button>
@@ -363,10 +371,10 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
           viewport={{ once: true }}
         >
           <Card sx={{ mt: 6, p: 4 }}>
-            <Typography variant="h5" sx={{ mb: 3, color: 'primary.main' }}>
+            <Typography variant="h5" sx={{ mb: 3, color: '#8B7355' }}>
               {financing.title}
             </Typography>
-            <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
+            <Typography variant="body1" sx={{ mb: 4, color: '#6B6B6B' }}>
               {financing.description}
             </Typography>
 
@@ -375,13 +383,13 @@ const MedSpaCostCalculator: React.FC<MedSpaCostCalculatorProps> = ({
                 <Grid item="true" key={index} xs={12} md={4}>
                   <Card variant="outlined" sx={{ height: '100%' }}>
                     <CardContent>
-                      <Typography variant="h6" sx={{ mb: 1, color: 'primary.main' }}>
+                      <Typography variant="h6" sx={{ mb: 1, color: '#8B7355' }}>
                         {option.provider}
                       </Typography>
                       <Typography variant="subtitle2" sx={{ mb: 2, color: 'success.main' }}>
                         {option.terms}
                       </Typography>
-                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      <Typography variant="body2" sx={{ color: '#6B6B6B' }}>
                         {option.description}
                       </Typography>
                     </CardContent>

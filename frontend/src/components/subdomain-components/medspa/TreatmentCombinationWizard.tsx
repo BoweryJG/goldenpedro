@@ -128,7 +128,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
           <Typography
             variant="h2"
             align="center"
-            sx={{ mb: 2, color: 'primary.main', fontWeight: 700 }}
+            sx={{ mb: 2, color: '#8B7355', fontWeight: 700 }}
           >
             <AutoAwesome sx={{ mr: 2, fontSize: 'inherit' }} />
             Treatment Combination Wizard
@@ -137,7 +137,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
           <Typography
             variant="h5"
             align="center"
-            sx={{ mb: 6, color: 'text.secondary', maxWidth: 800, mx: 'auto' }}
+            sx={{ mb: 6, color: '#6B6B6B', maxWidth: 800, mx: 'auto' }}
           >
             Discover the perfect combination of treatments for your aesthetic goals and save with our exclusive packages
           </Typography>
@@ -157,7 +157,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Typography variant="h4" sx={{ mb: 4, color: 'text.primary' }}>
+            <Typography variant="h4" sx={{ mb: 4, color: '#4A4A4A' }}>
               Select Your Desired Treatments
             </Typography>
             
@@ -178,7 +178,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                           ? '2px solid' 
                           : '2px solid transparent',
                         borderColor: selectedTreatments.includes(treatment.id) 
-                          ? 'primary.main' 
+                          ? '#F7E7CE' 
                           : 'transparent',
                         transform: selectedTreatments.includes(treatment.id) 
                           ? 'scale(1.02)' 
@@ -205,7 +205,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                               position: 'absolute',
                               top: 16,
                               right: 16,
-                              color: 'primary.main',
+                              color: '#8B7355',
                               fontSize: 32,
                               bgcolor: 'white',
                               borderRadius: '50%'
@@ -219,7 +219,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                           {treatment.name}
                         </Typography>
                         
-                        <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        <Typography variant="body2" sx={{ mb: 2, color: '#6B6B6B' }}>
                           {treatment.description}
                         </Typography>
                         
@@ -261,7 +261,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Paper sx={{ mt: 4, p: 3, bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+                <Paper sx={{ mt: 4, p: 3, bgcolor: '#FAFAFA', color: '#4A4A4A', border: '1px solid #F7E7CE' }}>
                   <Typography variant="h6" sx={{ mb: 2 }}>
                     Selected Treatments ({selectedTreatments.length})
                   </Typography>
@@ -273,7 +273,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                           key={treatmentId}
                           label={treatment.name}
                           onDelete={() => handleTreatmentToggle(treatmentId)}
-                          sx={{ bgcolor: '#FFFFFF', color: '#D4AF37' }}
+                          sx={{ bgcolor: '#F7E7CE', color: '#4A4A4A' }}
                         />
                       ) : null
                     })}
@@ -283,9 +283,9 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                     size="large"
                     onClick={findBestPackage}
                     sx={{
-                      bgcolor: '#FFD700',
-                      color: '#000000',
-                      '&:hover': { bgcolor: '#D4AF37' }
+                      bgcolor: '#F7E7CE',
+                      color: '#4A4A4A',
+                      '&:hover': { bgcolor: '#FFFFFF', border: '1px solid #F7E7CE' }
                     }}
                   >
                     Find Best Package Deal
@@ -302,7 +302,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Typography variant="h4" sx={{ mb: 4, color: 'text.primary' }}>
+            <Typography variant="h4" sx={{ mb: 4, color: '#4A4A4A' }}>
               Your Treatment Plan
             </Typography>
 
@@ -316,11 +316,11 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                   {selectedTreatments.map(treatmentId => {
                     const treatment = treatments.find(t => t.id === treatmentId)
                     return treatment ? (
-                      <Box key={treatmentId} sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+                      <Box key={treatmentId} sx={{ mb: 2, p: 2, bgcolor: '#FAFAFA', borderRadius: 2, border: '1px solid #F7E7CE' }}>
                         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
                           {treatment.name}
                         </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                        <Typography variant="body2" sx={{ color: '#6B6B6B' }}>
                           {treatment.description}
                         </Typography>
                         <Box sx={{ mt: 1 }}>
@@ -334,7 +334,7 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
               </Grid>
 
               <Grid item xs={12} md={4}>
-                <Card sx={{ p: 3, position: 'sticky', top: 20 }}>
+                <Card sx={{ p: 3, position: 'sticky', top: 20, bgcolor: '#FFFFFF', border: '1px solid #F7E7CE' }}>
                   <Typography variant="h6" sx={{ mb: 3 }}>
                     Pricing Summary
                   </Typography>
@@ -357,12 +357,12 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
                     </Typography>
                     {recommendedPackage && (
                       <>
-                        <Typography variant="body2" sx={{ display: 'flex', justifyContent: 'space-between', color: 'success.main' }}>
+                        <Typography variant="body2" sx={{ display: 'flex', justifyContent: 'space-between', color: '#8B7355' }}>
                           <span>Package Price:</span>
                           <span>${recommendedPackage.packagePrice}</span>
                         </Typography>
                         <Divider sx={{ my: 1 }} />
-                        <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'space-between', color: 'success.main' }}>
+                        <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'space-between', color: '#8B7355' }}>
                           <span>You Save:</span>
                           <span>${recommendedPackage.savings}</span>
                         </Typography>
@@ -392,11 +392,11 @@ const TreatmentCombinationWizard: React.FC<TreatmentCombinationWizardProps> = ({
             transition={{ duration: 0.5 }}
           >
             <Card sx={{ p: 4, textAlign: 'center', maxWidth: 600, mx: 'auto' }}>
-              <CheckCircle sx={{ fontSize: 80, color: 'success.main', mb: 2 }} />
-              <Typography variant="h4" sx={{ mb: 2, color: 'success.main' }}>
+              <CheckCircle sx={{ fontSize: 80, color: '#8B7355', mb: 2 }} />
+              <Typography variant="h4" sx={{ mb: 2, color: '#8B7355' }}>
                 Ready to Book!
               </Typography>
-              <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
+              <Typography variant="body1" sx={{ mb: 4, color: '#6B6B6B' }}>
                 Your personalized treatment plan is ready. Book your consultation to discuss your aesthetic goals and finalize your treatment schedule.
               </Typography>
               

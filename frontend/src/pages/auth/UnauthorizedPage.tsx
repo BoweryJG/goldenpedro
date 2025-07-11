@@ -45,7 +45,7 @@ const UnauthorizedPage: React.FC = () => {
                 width: 80,
                 height: 80,
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                background: 'linear-gradient(135deg, #3d3d3d 0%, #2d2d2d 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

@@ -145,11 +145,11 @@ const ImplantsDashboard: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'excellent': return '#4CAF50';
-      case 'good': return '#2196F3';
-      case 'monitoring': return '#FF9800';
-      case 'concern': return '#F44336';
-      default: return '#9E9E9E';
+      case 'excellent': return '#e3e3e3';
+      case 'good': return '#999999';
+      case 'monitoring': return '#999999';
+      case 'concern': return '#666666';
+      default: return '#999999';
     }
   };
 
@@ -245,7 +245,7 @@ const ImplantsDashboard: React.FC = () => {
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" sx={{ 
         mb: 3, 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #e3e3e3 0%, #999999 25%, #e3e3e3 50%, #666666 75%, #e3e3e3 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontWeight: 'bold'
@@ -262,7 +262,7 @@ const ImplantsDashboard: React.FC = () => {
               max={100}
               label="Success Rate"
               sublabel="Osseointegration"
-              color="#4CAF50"
+              color="#e3e3e3"
             />
           </motion.div>
         </Grid>
@@ -273,7 +273,7 @@ const ImplantsDashboard: React.FC = () => {
               max={100}
               label="Efficiency Rate"
               sublabel="Procedures"
-              color="#2196F3"
+              color="#999999"
             />
           </motion.div>
         </Grid>
@@ -284,7 +284,7 @@ const ImplantsDashboard: React.FC = () => {
               max={6}
               label="Avg Healing"
               sublabel="Months"
-              color="#D4AF37"
+              color="#e3e3e3"
             />
           </motion.div>
         </Grid>
@@ -295,7 +295,7 @@ const ImplantsDashboard: React.FC = () => {
               max={5}
               label="Satisfaction"
               sublabel="Rating"
-              color="#FF9800"
+              color="#999999"
             />
           </motion.div>
         </Grid>
@@ -319,7 +319,7 @@ const ImplantsDashboard: React.FC = () => {
               label={`${metrics.activePatients} Active`}
               size="small"
               sx={{ 
-                backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                backgroundColor: 'rgba(227, 227, 227, 0.2)',
                 color: '#fff',
                 fontWeight: 'bold'
               }}
@@ -398,7 +398,7 @@ const ImplantsDashboard: React.FC = () => {
                           Next: {new Date(caseData.nextCheckup).toLocaleDateString()}
                         </Typography>
                       </Box>
-                      <Typography variant="caption" sx={{ color: '#4CAF50', fontWeight: 'bold' }}>
+                      <Typography variant="caption" sx={{ color: '#e3e3e3', fontWeight: 'bold' }}>
                         ${caseData.totalCost.toLocaleString()}
                       </Typography>
                     </Box>
@@ -434,14 +434,14 @@ const ImplantsDashboard: React.FC = () => {
                     width: 24,
                     height: 24,
                     borderRadius: '50%',
-                    background: phase.status === 'completed' ? '#4CAF50' :
-                               phase.status === 'in-progress' ? '#2196F3' :
+                    background: phase.status === 'completed' ? '#e3e3e3' :
+                               phase.status === 'in-progress' ? '#999999' :
                                'rgba(255,255,255,0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     boxShadow: phase.status !== 'upcoming' ? 
-                      `0 0 20px ${phase.status === 'completed' ? '#4CAF50' : '#2196F3'}66` : 
+                      `0 0 20px ${phase.status === 'completed' ? '#e3e3e3' : '#999999'}66` : 
                       'none'
                   }}
                 >
@@ -457,7 +457,7 @@ const ImplantsDashboard: React.FC = () => {
                       top: 32,
                       width: 2,
                       height: 48,
-                      background: phase.status === 'completed' ? '#4CAF50' : 'rgba(255,255,255,0.1)'
+                      background: phase.status === 'completed' ? '#e3e3e3' : 'rgba(255,255,255,0.1)'
                     }}
                   />
                 )}
@@ -468,8 +468,8 @@ const ImplantsDashboard: React.FC = () => {
                       {phase.phase}
                     </Typography>
                     <Typography variant="caption" sx={{ 
-                      color: phase.status === 'completed' ? '#4CAF50' :
-                             phase.status === 'in-progress' ? '#2196F3' :
+                      color: phase.status === 'completed' ? '#e3e3e3' :
+                             phase.status === 'in-progress' ? '#999999' :
                              'rgba(255,255,255,0.6)'
                     }}>
                       {phase.duration}
@@ -489,8 +489,8 @@ const ImplantsDashboard: React.FC = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #667eea, #764ba2)',
-            boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)',
+            background: 'linear-gradient(135deg, #e3e3e3 0%, #999999 25%, #e3e3e3 50%, #666666 75%, #e3e3e3 100%)',
+            boxShadow: '0 10px 30px rgba(227, 227, 227, 0.3)',
             borderRadius: 2
           }}>
             <Box sx={{ p: 3 }}>
@@ -503,7 +503,7 @@ const ImplantsDashboard: React.FC = () => {
                     ${metrics.revenueGenerated.toLocaleString()}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 2 }}>
-                    <TrendingUp sx={{ fontSize: 20, color: '#4CAF50' }} />
+                    <TrendingUp sx={{ fontSize: 20, color: '#e3e3e3' }} />
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
                       +18% from last quarter
                     </Typography>
@@ -517,8 +517,8 @@ const ImplantsDashboard: React.FC = () => {
         
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #f093fb, #f5576c)',
-            boxShadow: '0 10px 30px rgba(240, 147, 251, 0.3)',
+            background: 'linear-gradient(135deg, #e3e3e3 0%, #999999 25%, #e3e3e3 50%, #666666 75%, #e3e3e3 100%)',
+            boxShadow: '0 10px 30px rgba(227, 227, 227, 0.3)',
             borderRadius: 2
           }}>
             <Box sx={{ p: 3 }}>

@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1a1a1a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,7 +23,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #B8860B;
+  color: #FFD700;
 }
 
 body {
@@ -64,13 +64,13 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #1a1a1a;
     background-color: #ffffff;
   }
   a:hover {
-    color: #FFD700;
+    color: #D4AF37;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #FAFAFA;
   }
 }

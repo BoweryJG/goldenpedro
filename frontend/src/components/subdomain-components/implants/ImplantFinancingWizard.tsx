@@ -101,7 +101,7 @@ const ImplantFinancingWizard: React.FC = () => {
         borderColor: '#e3e3e3'
       },
       '&.Mui-focused fieldset': {
-        borderColor: '#D4AF37'
+        borderColor: '#e3e3e3'
       }
     }
   }
@@ -253,7 +253,7 @@ const ImplantFinancingWizard: React.FC = () => {
                   { value: 200000, label: '$200K' }
                 ]}
                 sx={{
-                  color: '#D4AF37',
+                  color: '#e3e3e3',
                   '& .MuiSlider-mark': {
                     bgcolor: '#999999'
                   },
@@ -281,7 +281,7 @@ const ImplantFinancingWizard: React.FC = () => {
                   { value: 800, label: 'Excellent' }
                 ]}
                 sx={{
-                  color: '#D4AF37',
+                  color: '#e3e3e3',
                   '& .MuiSlider-mark': {
                     bgcolor: '#999999'
                   },
@@ -316,8 +316,8 @@ const ImplantFinancingWizard: React.FC = () => {
                   value={financingData.financialInfo.hasInsurance}
                   onChange={(e) => updateFinancingData('financialInfo', 'hasInsurance', e.target.value === 'true')}
                 >
-                  <FormControlLabel value={true} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} label="Yes" />
-                  <FormControlLabel value={false} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} label="No" />
+                  <FormControlLabel value={true} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#e3e3e3' } }} />} label="Yes" />
+                  <FormControlLabel value={false} control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#e3e3e3' } }} />} label="No" />
                 </RadioGroup>
               </FormControl>
             </Grid>
@@ -338,17 +338,17 @@ const ImplantFinancingWizard: React.FC = () => {
                 >
                   <FormControlLabel 
                     value="single" 
-                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#e3e3e3' } }} />} 
                     label="Single Implant ($3,500 - $5,500)" 
                   />
                   <FormControlLabel 
                     value="multiple" 
-                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#e3e3e3' } }} />} 
                     label="Multiple Implants ($7,000 - $15,000)" 
                   />
                   <FormControlLabel 
                     value="full_mouth" 
-                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#D4AF37' } }} />} 
+                    control={<Radio sx={{ color: '#e3e3e3', '&.Mui-checked': { color: '#e3e3e3' } }} />} 
                     label="Full Mouth Reconstruction ($25,000 - $45,000)" 
                   />
                 </RadioGroup>
@@ -364,10 +364,10 @@ const ImplantFinancingWizard: React.FC = () => {
                     <Card
                       sx={{
                         cursor: 'pointer',
-                        bgcolor: '#1a1a1a',
+                        bgcolor: '#333333',
                         color: '#FFFFFF',
                         border: financingData.treatmentInfo.preferredProvider === provider.name ? 2 : 1,
-                        borderColor: financingData.treatmentInfo.preferredProvider === provider.name ? '#D4AF37' : '#999999'
+                        borderColor: financingData.treatmentInfo.preferredProvider === provider.name ? '#e3e3e3' : '#999999'
                       }}
                       onClick={() => updateFinancingData('treatmentInfo', 'preferredProvider', provider.name)}
                     >
@@ -397,32 +397,32 @@ const ImplantFinancingWizard: React.FC = () => {
           <Box textAlign="center">
             {qualificationResults.approved ? (
               <>
-                <CheckCircle sx={{ fontSize: '4rem', color: '#D4AF37', mb: 2 }} />
-                <Typography variant="h4" gutterBottom sx={{ color: '#D4AF37' }}>
+                <CheckCircle sx={{ fontSize: '4rem', color: '#e3e3e3', mb: 2 }} />
+                <Typography variant="h4" gutterBottom sx={{ color: '#e3e3e3' }}>
                   Congratulations! You're Pre-Qualified
                 </Typography>
-                <Alert severity="success" sx={{ mb: 3, bgcolor: '#D4AF37', color: '#000000' }}>
+                <Alert severity="success" sx={{ mb: 3, bgcolor: '#e3e3e3', color: '#1a1a1a' }}>
                   You've been pre-qualified for up to ${qualificationResults.approvedAmount.toLocaleString()} 
                   with {qualificationResults.provider}
                 </Alert>
                 <Grid container spacing={2} sx={{ mb: 3 }}>
                   <Grid xs={6}>
-                    <Card sx={{ bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+                    <Card sx={{ bgcolor: '#333333', color: '#FFFFFF' }}>
                       <CardContent>
-                        <AttachMoney sx={{ fontSize: '2rem', color: '#D4AF37' }} />
+                        <AttachMoney sx={{ fontSize: '2rem', color: '#e3e3e3' }} />
                         <Typography variant="h6">Monthly Payment</Typography>
-                        <Typography variant="h4" sx={{ color: '#D4AF37' }}>
+                        <Typography variant="h4" sx={{ color: '#e3e3e3' }}>
                           ${qualificationResults.monthlyPayment}
                         </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
                   <Grid xs={6}>
-                    <Card sx={{ bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+                    <Card sx={{ bgcolor: '#333333', color: '#FFFFFF' }}>
                       <CardContent>
-                        <TrendingUp sx={{ fontSize: '2rem', color: '#D4AF37' }} />
+                        <TrendingUp sx={{ fontSize: '2rem', color: '#e3e3e3' }} />
                         <Typography variant="h6">APR</Typography>
-                        <Typography variant="h4" sx={{ color: '#D4AF37' }}>
+                        <Typography variant="h4" sx={{ color: '#e3e3e3' }}>
                           {qualificationResults.apr}%
                         </Typography>
                       </CardContent>
@@ -447,10 +447,10 @@ const ImplantFinancingWizard: React.FC = () => {
                   }}
                   sx={{ 
                     mr: 2,
-                    bgcolor: '#D4AF37',
-                    color: '#000000',
+                    bgcolor: '#e3e3e3',
+                    color: '#1a1a1a',
                     '&:hover': {
-                      bgcolor: '#B8860B'
+                      bgcolor: '#999999'
                     }
                   }}
                 >
@@ -474,11 +474,11 @@ const ImplantFinancingWizard: React.FC = () => {
               </>
             ) : (
               <>
-                <Psychology sx={{ fontSize: '4rem', color: '#FFD700', mb: 2 }} />
-                <Typography variant="h4" gutterBottom sx={{ color: '#FFD700' }}>
+                <Psychology sx={{ fontSize: '4rem', color: '#999999', mb: 2 }} />
+                <Typography variant="h4" gutterBottom sx={{ color: '#999999' }}>
                   Additional Information Needed
                 </Typography>
-                <Alert severity="info" sx={{ mb: 3, bgcolor: '#e3e3e3', color: '#000000' }}>
+                <Alert severity="info" sx={{ mb: 3, bgcolor: '#e3e3e3', color: '#1a1a1a' }}>
                   We'd like to discuss additional financing options with you personally.
                 </Alert>
                 <Button
@@ -497,10 +497,10 @@ const ImplantFinancingWizard: React.FC = () => {
                     }, 500)
                   }}
                   sx={{
-                    bgcolor: '#D4AF37',
-                    color: '#000000',
+                    bgcolor: '#e3e3e3',
+                    color: '#1a1a1a',
                     '&:hover': {
-                      bgcolor: '#B8860B'
+                      bgcolor: '#999999'
                     }
                   }}
                 >
@@ -521,7 +521,7 @@ const ImplantFinancingWizard: React.FC = () => {
       id="implant-financing-wizard"
       sx={{ 
         py: { xs: 8, md: 12 }, 
-        bgcolor: '#000000',
+        bgcolor: '#1a1a1a',
         color: '#FFFFFF'
       }}
     >
@@ -539,7 +539,7 @@ const ImplantFinancingWizard: React.FC = () => {
               fontSize: { xs: '2rem', md: '2.5rem' },
               fontWeight: 700,
               mb: 2,
-              color: '#D4AF37'
+              color: '#e3e3e3'
             }}
           >
             Financing Pre-Qualification Wizard
@@ -560,23 +560,23 @@ const ImplantFinancingWizard: React.FC = () => {
             No hard credit check required.
           </Typography>
 
-          <Card sx={{ p: 4, bgcolor: '#1a1a1a', color: '#FFFFFF' }}>
+          <Card sx={{ p: 4, bgcolor: '#333333', color: '#FFFFFF' }}>
             <Stepper activeStep={activeStep} sx={{ 
               mb: 4,
               '& .MuiStepLabel-label': {
                 color: '#e3e3e3'
               },
               '& .MuiStepLabel-label.Mui-active': {
-                color: '#D4AF37'
+                color: '#e3e3e3'
               },
               '& .MuiStepIcon-root': {
                 color: '#999999'
               },
               '& .MuiStepIcon-root.Mui-active': {
-                color: '#D4AF37'
+                color: '#e3e3e3'
               },
               '& .MuiStepIcon-root.Mui-completed': {
-                color: '#D4AF37'
+                color: '#e3e3e3'
               }
             }}>
               {steps.map((label) => (
@@ -636,10 +636,10 @@ const ImplantFinancingWizard: React.FC = () => {
                     (activeStep === 1 && !financingData.financialInfo.employmentStatus)
                   }
                   sx={{
-                    bgcolor: '#D4AF37',
-                    color: '#000000',
+                    bgcolor: '#e3e3e3',
+                    color: '#1a1a1a',
                     '&:hover': {
-                      bgcolor: '#B8860B'
+                      bgcolor: '#999999'
                     },
                     '&:disabled': {
                       bgcolor: '#666666',

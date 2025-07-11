@@ -26,7 +26,7 @@ function TMJSubdomainPage() {
       </Container>
 
       {/* Treatment Timeline Section */}
-      <Box sx={{ bgcolor: 'grey.50', py: 8 }}>
+      <Box sx={{ bgcolor: 'grey.100', py: 8 }}>
         <Container maxWidth="lg">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

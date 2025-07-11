@@ -131,7 +131,7 @@ const MedSpaDashboard: React.FC = () => {
       const mockTreatments: PopularTreatment[] = [
         {
           name: 'HydraFacial',
-          icon: <WaterDrop sx={{ color: '#2196F3' }} />,
+          icon: <WaterDrop sx={{ color: '#8B7355' }} />,
           bookings: 156,
           revenue: 23400,
           growth: 22,
@@ -139,7 +139,7 @@ const MedSpaDashboard: React.FC = () => {
         },
         {
           name: 'Botox',
-          icon: <FaceRetouchingNatural sx={{ color: '#D4AF37' }} />,
+          icon: <FaceRetouchingNatural sx={{ color: '#F7E7CE' }} />,
           bookings: 124,
           revenue: 37200,
           growth: 18,
@@ -147,7 +147,7 @@ const MedSpaDashboard: React.FC = () => {
         },
         {
           name: 'EmFace',
-          icon: <AutoAwesome sx={{ color: '#FF9800' }} />,
+          icon: <AutoAwesome sx={{ color: '#F7E7CE' }} />,
           bookings: 98,
           revenue: 68600,
           growth: 45,
@@ -155,7 +155,7 @@ const MedSpaDashboard: React.FC = () => {
         },
         {
           name: 'Laser Treatments',
-          icon: <Face sx={{ color: '#F44336' }} />,
+          icon: <Face sx={{ color: '#8B7355' }} />,
           bookings: 87,
           revenue: 26100,
           growth: 15,
@@ -223,7 +223,7 @@ const MedSpaDashboard: React.FC = () => {
           borderRadius: '50%',
           background: `conic-gradient(
             ${color} ${(value / 100) * 360}deg,
-            rgba(255,255,255,0.05) ${(value / 100) * 360}deg
+            rgba(107,107,107,0.05) ${(value / 100) * 360}deg
           )`,
           display: 'flex',
           alignItems: 'center',
@@ -234,7 +234,7 @@ const MedSpaDashboard: React.FC = () => {
             width: '85%',
             height: '85%',
             borderRadius: '50%',
-            background: 'linear-gradient(145deg, #1e1e1e, #2a2a2a)',
+            background: 'linear-gradient(145deg, #FFFFFF, #FAFAFA)',
             boxShadow: 'inset 0 0 20px rgba(0,0,0,0.5)'
           }
         }}
@@ -242,14 +242,14 @@ const MedSpaDashboard: React.FC = () => {
         <Box sx={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
           {icon}
           <Typography variant="h5" sx={{ 
-            color: '#fff', 
+            color: '#4A4A4A', 
             fontWeight: 'bold',
             mt: 1
           }}>
             {value}{suffix}
           </Typography>
           <Typography variant="caption" sx={{ 
-            color: 'rgba(255,255,255,0.7)',
+            color: 'rgba(107,107,107,0.7)',
             fontSize: '0.65rem'
           }}>
             {label}
@@ -267,7 +267,7 @@ const MedSpaDashboard: React.FC = () => {
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" sx={{ 
         mb: 3, 
-        background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        background: 'linear-gradient(135deg, #F7E7CE 0%, #F7E7CE 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontWeight: 'bold'
@@ -283,8 +283,8 @@ const MedSpaDashboard: React.FC = () => {
               value={metrics.retentionRate}
               label="Retention"
               suffix="%"
-              icon={<Favorite sx={{ color: '#f093fb' }} />}
-              color="#f093fb"
+              icon={<Favorite sx={{ color: '#F7E7CE' }} />}
+              color="#F7E7CE"
             />
           </motion.div>
         </Grid>
@@ -294,8 +294,8 @@ const MedSpaDashboard: React.FC = () => {
               value={metrics.packageSalesRate}
               label="Package Sales"
               suffix="%"
-              icon={<LocalOffer sx={{ color: '#f5576c' }} />}
-              color="#f5576c"
+              icon={<LocalOffer sx={{ color: '#F7E7CE' }} />}
+              color="#F7E7CE"
             />
           </motion.div>
         </Grid>
@@ -305,8 +305,8 @@ const MedSpaDashboard: React.FC = () => {
               value={Math.round(metrics.satisfactionScore * 20)}
               label="Satisfaction"
               suffix="%"
-              icon={<Star sx={{ color: '#FFD700' }} />}
-              color="#FFD700"
+              icon={<Star sx={{ color: '#F7E7CE' }} />}
+              color="#F7E7CE"
             />
           </motion.div>
         </Grid>
@@ -316,8 +316,8 @@ const MedSpaDashboard: React.FC = () => {
               value={Math.round((metrics.activeMembers / metrics.totalClients) * 100)}
               label="Active Members"
               suffix="%"
-              icon={<Groups sx={{ color: '#4CAF50' }} />}
-              color="#4CAF50"
+              icon={<Groups sx={{ color: '#F7E7CE' }} />}
+              color="#F7E7CE"
             />
           </motion.div>
         </Grid>
@@ -326,13 +326,13 @@ const MedSpaDashboard: React.FC = () => {
       {/* Treatment Packages Performance */}
       <Card sx={{ 
         mb: 3,
-        background: 'linear-gradient(145deg, #1e1e1e, #2a2a2a)',
-        boxShadow: '8px 8px 16px #0a0a0a, -8px -8px 16px #3a3a3a',
-        border: '1px solid rgba(255,255,255,0.1)',
+        background: '#FFFFFF',
+        boxShadow: '0 4px 20px rgba(247, 231, 206, 0.15)',
+        border: '1px solid #F7E7CE',
         borderRadius: 3
       }}>
         <Box sx={{ p: 3 }}>
-          <Typography variant="h6" sx={{ color: '#fff', mb: 3 }}>
+          <Typography variant="h6" sx={{ color: '#4A4A4A', mb: 3 }}>
             Treatment Package Performance
           </Typography>
           
@@ -341,14 +341,14 @@ const MedSpaDashboard: React.FC = () => {
               <Grid item xs={12} md={6} key={pkg.id}>
                 <motion.div whileHover={{ scale: 1.02 }}>
                   <Card sx={{ 
-                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1))',
+                    background: 'linear-gradient(135deg, rgba(247, 231, 206, 0.1), rgba(247, 231, 206, 0.1))',
                     backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(107,107,107,0.1)',
                     p: 2
                   }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 2 }}>
                       <Box>
-                        <Typography variant="body1" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                        <Typography variant="body1" sx={{ color: '#4A4A4A', fontWeight: 'bold' }}>
                           {pkg.name}
                         </Typography>
                         <Box sx={{ display: 'flex', gap: 0.5, mt: 1, flexWrap: 'wrap' }}>
@@ -358,8 +358,8 @@ const MedSpaDashboard: React.FC = () => {
                               label={treatment}
                               size="small"
                               sx={{
-                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                color: 'rgba(255,255,255,0.8)',
+                                backgroundColor: 'rgba(107,107,107,0.1)',
+                                color: 'rgba(107,107,107,0.8)',
                                 fontSize: '0.65rem',
                                 height: 20
                               }}
@@ -368,11 +368,11 @@ const MedSpaDashboard: React.FC = () => {
                         </Box>
                       </Box>
                       <Box sx={{ textAlign: 'right' }}>
-                        <Typography variant="h6" sx={{ color: '#4CAF50', fontWeight: 'bold' }}>
+                        <Typography variant="h6" sx={{ color: '#F7E7CE', fontWeight: 'bold' }}>
                           ${pkg.packagePrice}
                         </Typography>
                         <Typography variant="caption" sx={{ 
-                          color: 'rgba(255,255,255,0.6)',
+                          color: 'rgba(107,107,107,0.6)',
                           textDecoration: 'line-through'
                         }}>
                           ${pkg.totalValue}
@@ -383,7 +383,7 @@ const MedSpaDashboard: React.FC = () => {
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Box sx={{ display: 'flex', gap: 2 }}>
                         <Box>
-                          <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
+                          <Typography variant="caption" sx={{ color: 'rgba(107,107,107,0.6)' }}>
                             Popularity
                           </Typography>
                           <LinearProgress 
@@ -392,19 +392,19 @@ const MedSpaDashboard: React.FC = () => {
                             sx={{
                               height: 4,
                               borderRadius: 2,
-                              backgroundColor: 'rgba(255,255,255,0.1)',
+                              backgroundColor: 'rgba(107,107,107,0.1)',
                               '& .MuiLinearProgress-bar': {
                                 borderRadius: 2,
-                                background: 'linear-gradient(90deg, #f093fb, #f5576c)'
+                                background: 'linear-gradient(90deg, #F7E7CE, #F7E7CE)'
                               }
                             }}
                           />
                         </Box>
                         <Box>
-                          <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
+                          <Typography variant="caption" sx={{ color: 'rgba(107,107,107,0.6)' }}>
                             Bookings
                           </Typography>
-                          <Typography variant="body2" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                          <Typography variant="body2" sx={{ color: '#4A4A4A', fontWeight: 'bold' }}>
                             {pkg.bookings}
                           </Typography>
                         </Box>
@@ -413,8 +413,8 @@ const MedSpaDashboard: React.FC = () => {
                         label={`Save $${pkg.savings}`}
                         size="small"
                         sx={{
-                          backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                          color: '#4CAF50',
+                          backgroundColor: 'rgba(247, 231, 206, 0.2)',
+                          color: '#F7E7CE',
                           fontWeight: 'bold'
                         }}
                       />
@@ -430,13 +430,13 @@ const MedSpaDashboard: React.FC = () => {
       {/* Popular Treatments */}
       <Card sx={{ 
         mb: 3,
-        background: 'linear-gradient(145deg, #1e1e1e, #2a2a2a)',
-        boxShadow: '8px 8px 16px #0a0a0a, -8px -8px 16px #3a3a3a',
-        border: '1px solid rgba(255,255,255,0.1)',
+        background: '#FFFFFF',
+        boxShadow: '0 4px 20px rgba(247, 231, 206, 0.15)',
+        border: '1px solid #F7E7CE',
         borderRadius: 3
       }}>
         <Box sx={{ p: 3 }}>
-          <Typography variant="h6" sx={{ color: '#fff', mb: 3 }}>
+          <Typography variant="h6" sx={{ color: '#4A4A4A', mb: 3 }}>
             Treatment Performance
           </Typography>
           
@@ -444,40 +444,40 @@ const MedSpaDashboard: React.FC = () => {
             {popularTreatments.map((treatment, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Card sx={{ 
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  background: 'rgba(107,107,107,0.03)',
+                  border: '1px solid rgba(107,107,107,0.1)',
                   p: 2,
                   textAlign: 'center'
                 }}>
                   <Box sx={{ mb: 2 }}>
                     {treatment.icon}
                   </Box>
-                  <Typography variant="body1" sx={{ color: '#fff', fontWeight: 'bold', mb: 1 }}>
+                  <Typography variant="body1" sx={{ color: '#4A4A4A', fontWeight: 'bold', mb: 1 }}>
                     {treatment.name}
                   </Typography>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
+                    <Typography variant="caption" sx={{ color: 'rgba(107,107,107,0.6)' }}>
                       Bookings
                     </Typography>
-                    <Typography variant="caption" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                    <Typography variant="caption" sx={{ color: '#4A4A4A', fontWeight: 'bold' }}>
                       {treatment.bookings}
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
+                    <Typography variant="caption" sx={{ color: 'rgba(107,107,107,0.6)' }}>
                       Revenue
                     </Typography>
-                    <Typography variant="caption" sx={{ color: '#4CAF50', fontWeight: 'bold' }}>
+                    <Typography variant="caption" sx={{ color: '#F7E7CE', fontWeight: 'bold' }}>
                       ${(treatment.revenue / 1000).toFixed(1)}k
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
+                    <Typography variant="caption" sx={{ color: 'rgba(107,107,107,0.6)' }}>
                       Growth
                     </Typography>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                      <TrendingUp sx={{ fontSize: 12, color: '#4CAF50' }} />
-                      <Typography variant="caption" sx={{ color: '#4CAF50', fontWeight: 'bold' }}>
+                      <TrendingUp sx={{ fontSize: 12, color: '#F7E7CE' }} />
+                      <Typography variant="caption" sx={{ color: '#F7E7CE', fontWeight: 'bold' }}>
                         {treatment.growth}%
                       </Typography>
                     </Box>
@@ -488,7 +488,7 @@ const MedSpaDashboard: React.FC = () => {
                     readOnly 
                     size="small"
                     sx={{ 
-                      '& .MuiRating-iconFilled': { color: '#FFD700' }
+                      '& .MuiRating-iconFilled': { color: '#F7E7CE' }
                     }}
                   />
                 </Card>
@@ -501,26 +501,26 @@ const MedSpaDashboard: React.FC = () => {
       {/* Client Satisfaction */}
       <Card sx={{ 
         mb: 3,
-        background: 'linear-gradient(145deg, #1e1e1e, #2a2a2a)',
-        boxShadow: '8px 8px 16px #0a0a0a, -8px -8px 16px #3a3a3a',
-        border: '1px solid rgba(255,255,255,0.1)',
+        background: '#FFFFFF',
+        boxShadow: '0 4px 20px rgba(247, 231, 206, 0.15)',
+        border: '1px solid #F7E7CE',
         borderRadius: 3
       }}>
         <Box sx={{ p: 3 }}>
-          <Typography variant="h6" sx={{ color: '#fff', mb: 3 }}>
+          <Typography variant="h6" sx={{ color: '#4A4A4A', mb: 3 }}>
             Client Satisfaction Highlights
           </Typography>
           
           {clientSatisfaction.map((item, index) => (
-            <Box key={index} sx={{ mb: 3, pb: 2, borderBottom: index < clientSatisfaction.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}>
+            <Box key={index} sx={{ mb: 3, pb: 2, borderBottom: index < clientSatisfaction.length - 1 ? '1px solid rgba(107,107,107,0.1)' : 'none' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 1 }}>
                 <Box>
-                  <Typography variant="body1" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                  <Typography variant="body1" sx={{ color: '#4A4A4A', fontWeight: 'bold' }}>
                     {item.treatment}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.5 }}>
                     <Rating value={item.rating} precision={0.1} readOnly size="small" />
-                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
+                    <Typography variant="body2" sx={{ color: 'rgba(107,107,107,0.8)' }}>
                       {item.rating} ({item.reviews} reviews)
                     </Typography>
                   </Box>
@@ -531,12 +531,12 @@ const MedSpaDashboard: React.FC = () => {
                   size="small"
                   sx={{
                     backgroundColor: 'rgba(255, 215, 0, 0.2)',
-                    color: '#FFD700',
+                    color: '#F7E7CE',
                     fontWeight: 'bold'
                   }}
                 />
               </Box>
-              <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}>
+              <Typography variant="body2" sx={{ color: 'rgba(107,107,107,0.6)', fontStyle: 'italic' }}>
                 "{item.topComment}"
               </Typography>
             </Box>
@@ -548,27 +548,27 @@ const MedSpaDashboard: React.FC = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #f093fb, #f5576c)',
-            boxShadow: '0 10px 30px rgba(240, 147, 251, 0.3)',
+            background: 'linear-gradient(135deg, #F7E7CE, #F7E7CE)',
+            boxShadow: '0 10px 30px rgba(247, 231, 206, 0.3)',
             borderRadius: 3
           }}>
             <Box sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
                 <Box>
-                  <Typography variant="h6" sx={{ color: '#fff' }}>
+                  <Typography variant="h6" sx={{ color: '#4A4A4A' }}>
                     Monthly Revenue
                   </Typography>
-                  <Typography variant="h3" sx={{ color: '#fff', fontWeight: 'bold', mt: 1 }}>
+                  <Typography variant="h3" sx={{ color: '#4A4A4A', fontWeight: 'bold', mt: 1 }}>
                     ${metrics.monthlyRevenue.toLocaleString()}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 2 }}>
                     <TrendingUp sx={{ fontSize: 20 }} />
-                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    <Typography variant="body2" sx={{ color: 'rgba(107,107,107,0.9)' }}>
                       +24% from last month
                     </Typography>
                   </Box>
                 </Box>
-                <AttachMoney sx={{ fontSize: 48, color: 'rgba(255,255,255,0.3)' }} />
+                <AttachMoney sx={{ fontSize: 48, color: 'rgba(107,107,107,0.3)' }} />
               </Box>
             </Box>
           </Card>
@@ -576,24 +576,24 @@ const MedSpaDashboard: React.FC = () => {
         
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #667eea, #764ba2)',
-            boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)',
+            background: 'linear-gradient(135deg, #F7E7CE, #F7E7CE)',
+            boxShadow: '0 10px 30px rgba(247, 231, 206, 0.3)',
             borderRadius: 3
           }}>
             <Box sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
                 <Box>
-                  <Typography variant="h6" sx={{ color: '#fff' }}>
+                  <Typography variant="h6" sx={{ color: '#4A4A4A' }}>
                     Average Client Spend
                   </Typography>
-                  <Typography variant="h3" sx={{ color: '#fff', fontWeight: 'bold', mt: 1 }}>
+                  <Typography variant="h3" sx={{ color: '#4A4A4A', fontWeight: 'bold', mt: 1 }}>
                     ${metrics.averageSpend}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.9)', mt: 2 }}>
+                  <Typography variant="body2" sx={{ color: 'rgba(107,107,107,0.9)', mt: 2 }}>
                     {metrics.totalClients} total clients
                   </Typography>
                 </Box>
-                <Spa sx={{ fontSize: 48, color: 'rgba(255,255,255,0.3)' }} />
+                <Spa sx={{ fontSize: 48, color: 'rgba(107,107,107,0.3)' }} />
               </Box>
             </Box>
           </Card>

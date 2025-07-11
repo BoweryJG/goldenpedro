@@ -276,7 +276,7 @@ const ImplantChatbot: React.FC = () => {
   }
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: 'grey.50' }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#1a1a1a' }}>
       <Container maxWidth="md">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -284,7 +284,7 @@ const ImplantChatbot: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Box textAlign="center" sx={{ mb: 4 }}>
-            <Psychology sx={{ fontSize: '3rem', color: '#D4AF37', mb: 2 }} />
+            <Psychology sx={{ fontSize: '3rem', color: '#e3e3e3', mb: 2 }} />
             <Typography
               variant="h2"
               component="h2"
@@ -292,7 +292,7 @@ const ImplantChatbot: React.FC = () => {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 700,
                 mb: 2,
-                color: '#D4AF37'
+                color: '#e3e3e3'
               }}
             >
               Implant Financial Assistant
@@ -310,7 +310,7 @@ const ImplantChatbot: React.FC = () => {
             </Typography>
           </Box>
 
-          <Card sx={{ maxHeight: '600px', display: 'flex', flexDirection: 'column' }}>
+          <Card sx={{ maxHeight: '600px', display: 'flex', flexDirection: 'column', bgcolor: '#333333' }}>
             <CardContent sx={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
               {/* Messages Area */}
               <Box
@@ -347,7 +347,7 @@ const ImplantChatbot: React.FC = () => {
                         >
                           <Avatar
                             sx={{
-                              bgcolor: message.sender === 'user' ? '#D4AF37' : '#e3e3e3',
+                              bgcolor: message.sender === 'user' ? '#e3e3e3' : '#e3e3e3',
                               mx: 1,
                               width: 32,
                               height: 32
@@ -357,8 +357,8 @@ const ImplantChatbot: React.FC = () => {
                           </Avatar>
                           <Box
                             sx={{
-                              bgcolor: message.sender === 'user' ? '#D4AF37' : '#333333',
-                              color: message.sender === 'user' ? '#000000' : '#FFFFFF',
+                              bgcolor: message.sender === 'user' ? '#e3e3e3' : '#333333',
+                              color: message.sender === 'user' ? '#1a1a1a' : '#FFFFFF',
                               p: 2,
                               borderRadius: 2,
                               maxWidth: '100%'
@@ -369,17 +369,17 @@ const ImplantChatbot: React.FC = () => {
                             </Typography>
                             
                             {message.type === 'qualification' && message.data?.approved && (
-                              <Box sx={{ mt: 2, p: 2, bgcolor: '#D4AF37', borderRadius: 1 }}>
+                              <Box sx={{ mt: 2, p: 2, bgcolor: '#999999', borderRadius: 1 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                  <CheckCircle sx={{ color: '#000000', mr: 1 }} />
-                                  <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#000000' }}>
+                                  <CheckCircle sx={{ color: '#1a1a1a', mr: 1 }} />
+                                  <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#1a1a1a' }}>
                                     Pre-Qualification Approved!
                                   </Typography>
                                 </Box>
-                                <Typography variant="body2" sx={{ color: '#000000' }}>
+                                <Typography variant="body2" sx={{ color: '#1a1a1a' }}>
                                   Approved Amount: ${message.data.amount.toLocaleString()}
                                 </Typography>
-                                <Typography variant="body2" sx={{ color: '#000000' }}>
+                                <Typography variant="body2" sx={{ color: '#1a1a1a' }}>
                                   Est. Monthly Payment: ${message.data.monthlyPayment}
                                 </Typography>
                               </Box>
@@ -397,7 +397,7 @@ const ImplantChatbot: React.FC = () => {
                       <Avatar sx={{ bgcolor: '#e3e3e3', mx: 1, width: 32, height: 32 }}>
                         <SmartToy />
                       </Avatar>
-                      <Box sx={{ bgcolor: 'grey.100', p: 2, borderRadius: 2 }}>
+                      <Box sx={{ bgcolor: '#666666', p: 2, borderRadius: 2 }}>
                         <Typography variant="body2" color="text.secondary">
                           Typing...
                         </Typography>
@@ -467,7 +467,7 @@ const ImplantChatbot: React.FC = () => {
                     sendJulieMessage("I'm interested in dental implants and have questions about the process")
                   }, 500)
                 }}
-                sx={{ px: 3 }}
+                sx={{ px: 3, bgcolor: '#e3e3e3', color: '#1a1a1a', '&:hover': { bgcolor: '#999999' } }}
               >
                 Chat with Julie about Implants
               </Button>
@@ -478,7 +478,7 @@ const ImplantChatbot: React.FC = () => {
                   const element = document.getElementById('implant-financing-wizard')
                   element?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                sx={{ px: 3 }}
+                sx={{ px: 3, borderColor: '#999999', color: '#e3e3e3', '&:hover': { borderColor: '#e3e3e3', bgcolor: 'rgba(227, 227, 227, 0.1)' } }}
               >
                 Get Pre-Qualified
               </Button>
@@ -503,7 +503,7 @@ const ImplantChatbot: React.FC = () => {
           </Box>
         </DialogTitle>
         <DialogContent>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+          <Typography variant="body2" sx={{ mb: 3, color: 'rgba(255, 255, 255, 0.8)' }}>
             This is a soft credit check and won't affect your credit score.
           </Typography>
           
@@ -519,9 +519,12 @@ const ImplantChatbot: React.FC = () => {
                 max={150000}
                 step={5000}
                 sx={{
-                  color: '#D4AF37',
+                  color: '#e3e3e3',
                   '& .MuiSlider-mark': {
-                    bgcolor: '#999999'
+                    bgcolor: '#666666'
+                  },
+                  '& .MuiSlider-markLabel': {
+                    color: '#e3e3e3'
                   }
                 }}
               />
@@ -538,9 +541,12 @@ const ImplantChatbot: React.FC = () => {
                 max={850}
                 step={10}
                 sx={{
-                  color: '#D4AF37',
+                  color: '#e3e3e3',
                   '& .MuiSlider-mark': {
-                    bgcolor: '#999999'
+                    bgcolor: '#666666'
+                  },
+                  '& .MuiSlider-markLabel': {
+                    color: '#e3e3e3'
                   }
                 }}
               />
@@ -548,7 +554,7 @@ const ImplantChatbot: React.FC = () => {
             
             <Box>
               <FormControl fullWidth sx={{
-                bgcolor: '#333333',
+                bgcolor: '#666666',
                 '& .MuiInputBase-input': {
                   color: '#FFFFFF'
                 },
@@ -563,7 +569,7 @@ const ImplantChatbot: React.FC = () => {
                     borderColor: '#e3e3e3'
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#D4AF37'
+                    borderColor: '#e3e3e3'
                   }
                 }
               }}>

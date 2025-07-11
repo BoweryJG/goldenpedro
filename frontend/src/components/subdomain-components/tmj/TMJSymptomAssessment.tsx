@@ -182,7 +182,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
             variant="h3"
             component="h2"
             textAlign="center"
-            sx={{ mb: 4, color: 'primary.main' }}
+            sx={{ mb: 4, color: '#D4AF37' }}
           >
             Your TMJ Assessment Results
           </Typography>
@@ -210,7 +210,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
 
             <Typography
               variant="h6"
-              sx={{ mb: 3, textAlign: 'center', color: 'primary.main' }}
+              sx={{ mb: 3, textAlign: 'center', color: '#D4AF37' }}
             >
               Recommended Action: {recommendation.action}
             </Typography>
@@ -221,7 +221,15 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                 size="large"
                 startIcon={<Chat />}
                 onClick={handleScheduleConsultation}
-                sx={{ mr: 2, mb: 2 }}
+                sx={{ 
+                  mr: 2, 
+                  mb: 2,
+                  bgcolor: '#D4AF37',
+                  color: '#1a1a1a',
+                  '&:hover': {
+                    bgcolor: '#B8962F'
+                  }
+                }}
               >
                 Chat with Julie to Schedule
               </Button>
@@ -229,7 +237,15 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                 variant="outlined"
                 size="large"
                 onClick={restartAssessment}
-                sx={{ mb: 2 }}
+                sx={{ 
+                  mb: 2,
+                  borderColor: '#D4AF37',
+                  color: '#D4AF37',
+                  '&:hover': {
+                    borderColor: '#B8962F',
+                    bgcolor: 'rgba(212, 175, 55, 0.1)'
+                  }
+                }}
               >
                 Retake Assessment
               </Button>
@@ -238,7 +254,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
 
           <Typography
             variant="h5"
-            sx={{ mb: 3, color: 'primary.main' }}
+            sx={{ mb: 3, color: '#D4AF37' }}
           >
             Common TMJ Symptoms We Treat:
           </Typography>
@@ -251,7 +267,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
             {symptoms.map((symptom, index) => (
               <Card key={index} sx={{ height: '100%', borderRadius: 2 }}>
                 <CardContent>
-                  <Typography variant="h6" sx={{ mb: 1, color: 'primary.main' }}>
+                  <Typography variant="h6" sx={{ mb: 1, color: '#D4AF37' }}>
                     {symptom.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -281,7 +297,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
           variant="h3"
           component="h2"
           textAlign="center"
-          sx={{ mb: 2, color: 'primary.main' }}
+          sx={{ mb: 2, color: '#D4AF37' }}
         >
           TMJ Symptom Assessment
         </Typography>
@@ -310,9 +326,10 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
             sx={{ 
               height: 8, 
               borderRadius: 4,
-              bgcolor: 'grey.200',
+              bgcolor: '#e0e0e0',
               '& .MuiLinearProgress-bar': {
                 borderRadius: 4,
+                bgcolor: '#D4AF37'
               }
             }} 
           />
@@ -331,7 +348,7 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                 <Typography
                   variant="h5"
                   component="h3"
-                  sx={{ mb: 3, color: 'primary.main' }}
+                  sx={{ mb: 3, color: '#D4AF37' }}
                 >
                   {currentQuestion.question}
                 </Typography>
@@ -345,14 +362,14 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                       <FormControlLabel
                         key={option}
                         value={option}
-                        control={<Radio />}
+                        control={<Radio sx={{ color: '#D4AF37', '&.Mui-checked': { color: '#D4AF37' } }} />}
                         label={option}
                         sx={{
                           mb: 1,
                           p: 1,
                           borderRadius: 2,
                           '&:hover': {
-                            bgcolor: 'grey.50'
+                            bgcolor: '#f5f5f5'
                           }
                         }}
                       />
@@ -365,6 +382,18 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                     variant="outlined"
                     onClick={prevStep}
                     disabled={currentStep === 0}
+                    sx={{
+                      borderColor: '#D4AF37',
+                      color: '#D4AF37',
+                      '&:hover': {
+                        borderColor: '#B8962F',
+                        bgcolor: 'rgba(212, 175, 55, 0.1)'
+                      },
+                      '&:disabled': {
+                        borderColor: '#e0e0e0',
+                        color: '#9e9e9e'
+                      }
+                    }}
                   >
                     Previous
                   </Button>
@@ -373,6 +402,17 @@ const TMJSymptomAssessment: React.FC<TMJSymptomAssessmentProps> = ({ symptoms })
                     variant="contained"
                     onClick={nextStep}
                     disabled={!responses[currentQuestion.id]}
+                    sx={{
+                      bgcolor: '#D4AF37',
+                      color: '#1a1a1a',
+                      '&:hover': {
+                        bgcolor: '#B8962F'
+                      },
+                      '&:disabled': {
+                        bgcolor: '#e0e0e0',
+                        color: '#9e9e9e'
+                      }
+                    }}
                   >
                     {currentStep === questions.length - 1 ? 'Get Results' : 'Next'}
                   </Button>

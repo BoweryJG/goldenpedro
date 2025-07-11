@@ -81,7 +81,7 @@ const FacialCostCalculator: React.FC = () => {
 
 
   return (
-    <Box sx={{ py: 8, background: 'linear-gradient(135deg, #FEFEFE 0%, #F9F7F4 100%)' }}>
+    <Box sx={{ py: 8, background: 'linear-gradient(135deg, #1a1a1a 0%, #000000 100%)' }}>
       <Container maxWidth="xl">
         <Box textAlign="center" mb={6}>
           <Typography variant="h2" gutterBottom color="primary">
@@ -115,10 +115,10 @@ const FacialCostCalculator: React.FC = () => {
                       sx={{
                         cursor: 'pointer',
                         border: selectedTreatments.includes(treatment.id) 
-                          ? '2px solid #C8A882' 
+                          ? '2px solid #D4AF37' 
                           : '1px solid #e0e0e0',
                         backgroundColor: selectedTreatments.includes(treatment.id) 
-                          ? 'rgba(200, 168, 130, 0.1)' 
+                          ? 'rgba(212, 175, 55, 0.1)' 
                           : 'transparent',
                         transition: 'all 0.3s ease'
                       }}
@@ -155,7 +155,7 @@ const FacialCostCalculator: React.FC = () => {
               </Typography>
               <Stack spacing={2}>
                 {facialPackages.map(pkg => (
-                  <Card key={pkg.id} variant="outlined" sx={{ backgroundColor: 'rgba(46, 125, 50, 0.05)' }}>
+                  <Card key={pkg.id} variant="outlined" sx={{ backgroundColor: 'rgba(212, 175, 55, 0.05)', borderColor: '#999999' }}>
                     <CardContent sx={{ p: 2 }}>
                       <Box display="flex" justifyContent="space-between" alignItems="center">
                         <Box>
@@ -263,7 +263,7 @@ const FacialCostCalculator: React.FC = () => {
                       </Select>
                     </FormControl>
 
-                    <Box sx={{ p: 3, backgroundColor: 'rgba(200, 168, 130, 0.1)', borderRadius: 2, mb: 3 }}>
+                    <Box sx={{ p: 3, backgroundColor: 'rgba(212, 175, 55, 0.1)', borderRadius: 2, mb: 3 }}>
                       <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
                         <Typography variant="h6">
                           Monthly Payment:
@@ -321,20 +321,20 @@ const FacialCostCalculator: React.FC = () => {
               )}
 
               {/* Quick Contact */}
-              <Card sx={{ p: 4, background: 'linear-gradient(135deg, #C8A882 0%, #8B6F8B 100%)', color: 'white' }}>
+              <Card sx={{ p: 4, background: 'linear-gradient(45deg, #FFFFFF 0%, #D4AF37 50%, #FFFFFF 100%)', color: '#000000' }}>
                 <Typography variant="h6" gutterBottom>
                   Ready to Schedule?
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 3, opacity: 0.9 }}>
+                <Typography variant="body2" sx={{ mb: 3, opacity: 0.8 }}>
                   Book your consultation to discuss your personalized treatment plan
                 </Typography>
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                   <Button
                     variant="contained"
                     sx={{ 
-                      backgroundColor: 'white', 
-                      color: '#C8A882',
-                      '&:hover': { backgroundColor: '#f5f5f5' }
+                      backgroundColor: '#000000', 
+                      color: '#000000',
+                      '&:hover': { backgroundColor: '#1a1a1a' }
                     }}
                   >
                     Book Consultation
@@ -342,9 +342,9 @@ const FacialCostCalculator: React.FC = () => {
                   <Button
                     variant="outlined"
                     sx={{ 
-                      borderColor: 'white', 
-                      color: 'white',
-                      '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' }
+                      borderColor: '#000000', 
+                      color: '#000000',
+                      '&:hover': { backgroundColor: 'rgba(0,0,0,0.1)' }
                     }}
                   >
                     Call (555) 123-4567

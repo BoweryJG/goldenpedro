@@ -111,9 +111,9 @@ const TMJDashboard: React.FC = () => {
   };
 
   const getPainColor = (level: number) => {
-    if (level <= 3) return '#4CAF50';
-    if (level <= 6) return '#FF9800';
-    return '#F44336';
+    if (level <= 3) return '#D4AF37';
+    if (level <= 6) return '#FFD700';
+    return '#808080';
   };
 
   const getTrendIcon = (trend: string) => {
@@ -181,7 +181,7 @@ const TMJDashboard: React.FC = () => {
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" sx={{ 
         mb: 3, 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontWeight: 'bold'
@@ -197,8 +197,8 @@ const TMJDashboard: React.FC = () => {
               value={Math.round(10 - metrics.averagePainLevel)}
               max={10}
               label="Pain Relief"
-              icon={<Healing sx={{ color: '#4CAF50' }} />}
-              color="#4CAF50"
+              icon={<Healing sx={{ color: '#D4AF37' }} />}
+              color="#D4AF37"
             />
           </motion.div>
         </Grid>
@@ -208,8 +208,8 @@ const TMJDashboard: React.FC = () => {
               value={metrics.treatmentCompliance}
               max={100}
               label="Compliance %"
-              icon={<Psychology sx={{ color: '#2196F3' }} />}
-              color="#2196F3"
+              icon={<Psychology sx={{ color: '#808080' }} />}
+              color="#808080"
             />
           </motion.div>
         </Grid>
@@ -230,8 +230,8 @@ const TMJDashboard: React.FC = () => {
               value={metrics.patientSatisfaction}
               max={5}
               label="Satisfaction"
-              icon={<Assessment sx={{ color: '#FF9800' }} />}
-              color="#FF9800"
+              icon={<Assessment sx={{ color: '#FFD700' }} />}
+              color="#FFD700"
             />
           </motion.div>
         </Grid>
@@ -254,8 +254,8 @@ const TMJDashboard: React.FC = () => {
               label={metrics.painTrend}
               size="small"
               sx={{ 
-                backgroundColor: metrics.painTrend === 'improving' ? 'rgba(76, 175, 80, 0.2)' : 
-                                metrics.painTrend === 'worsening' ? 'rgba(244, 67, 54, 0.2)' : 
+                backgroundColor: metrics.painTrend === 'improving' ? 'rgba(212, 175, 55, 0.2)' : 
+                                metrics.painTrend === 'worsening' ? 'rgba(128, 128, 128, 0.2)' : 
                                 'rgba(255, 255, 255, 0.1)',
                 color: '#fff'
               }}
@@ -329,13 +329,13 @@ const TMJDashboard: React.FC = () => {
                     height: 40,
                     borderRadius: '50%',
                     background: milestone.completed 
-                      ? 'linear-gradient(135deg, #4CAF50, #45a049)' 
+                      ? 'linear-gradient(135deg, #D4AF37, #FFD700)' 
                       : 'rgba(255,255,255,0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     boxShadow: milestone.completed 
-                      ? '0 4px 12px rgba(76, 175, 80, 0.4)' 
+                      ? '0 4px 12px rgba(212, 175, 55, 0.4)' 
                       : 'none',
                     zIndex: 1
                   }}
@@ -362,7 +362,7 @@ const TMJDashboard: React.FC = () => {
                       width: 2,
                       height: 40,
                       background: milestone.completed 
-                        ? 'linear-gradient(to bottom, #4CAF50, rgba(76, 175, 80, 0.3))' 
+                        ? 'linear-gradient(to bottom, #D4AF37, rgba(212, 175, 55, 0.3))' 
                         : 'rgba(255,255,255,0.1)'
                     }}
                   />
@@ -377,8 +377,8 @@ const TMJDashboard: React.FC = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #667eea, #764ba2)',
-            boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)'
+            background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+            boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)'
           }}>
             <Box sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -401,8 +401,8 @@ const TMJDashboard: React.FC = () => {
         
         <Grid item xs={12} md={6}>
           <Card sx={{ 
-            background: 'linear-gradient(135deg, #f093fb, #f5576c)',
-            boxShadow: '0 10px 30px rgba(240, 147, 251, 0.3)'
+            background: 'linear-gradient(135deg, #F7E7CE, #D4AF37)',
+            boxShadow: '0 10px 30px rgba(247, 231, 206, 0.3)'
           }}>
             <Box sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

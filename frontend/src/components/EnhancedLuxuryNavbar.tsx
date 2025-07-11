@@ -25,36 +25,36 @@ const centerConfig = {
   tmj: {
     name: 'TMJ Excellence',
     shortName: 'TMJ',
-    gradient: 'linear-gradient(135deg, #5E60CE 0%, #5390D9 100%)',
-    color: '#5E60CE',
+    gradient: 'linear-gradient(135deg, #D4AF37 0%, #f5d76e 100%)',
+    color: '#D4AF37',
     icon: '🦷',
   },
   implants: {
     name: 'Implant Artistry',
     shortName: 'Implants',
-    gradient: 'linear-gradient(135deg, #7209B7 0%, #B5179E 100%)',
-    color: '#7209B7',
+    gradient: 'linear-gradient(135deg, #e3e3e3 0%, #999999 50%, #666666 100%)',
+    color: '#999999',
     icon: '⚙️',
   },
   robotic: {
     name: 'Robotic Surgery',
     shortName: 'Robotic',
-    gradient: 'linear-gradient(135deg, #006BA2 0%, #0496FF 100%)',
-    color: '#006BA2',
+    gradient: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #3d3d3d 100%)',
+    color: '#1a1a1a',
     icon: '🤖',
   },
   medspa: {
     name: 'MedSpa Elite',
     shortName: 'MedSpa',
-    gradient: 'linear-gradient(135deg, #F72585 0%, #FF006E 100%)',
-    color: '#F72585',
+    gradient: 'linear-gradient(135deg, #F7E7CE 0%, #FFD700 50%, #F7E7CE 100%)',
+    color: '#D4AF37',
     icon: '✨',
   },
   aboutface: {
     name: 'AboutFace',
     shortName: 'AboutFace',
-    gradient: 'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
-    color: '#3A0CA3',
+    gradient: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%)',
+    color: '#D4AF37',
     icon: '😊',
   },
 };
@@ -145,21 +145,21 @@ const EnhancedLuxuryNavbar: React.FC = () => {
           backdropFilter: 'blur(16px) saturate(150%)',
           WebkitBackdropFilter: 'blur(16px) saturate(150%)',
           borderBottom: scrolled 
-            ? '4px solid rgba(102, 126, 234, 0.6)' 
-            : '4px solid rgba(102, 126, 234, 0.5)',
+            ? '4px solid rgba(212, 175, 55, 0.6)' 
+            : '4px solid rgba(212, 175, 55, 0.5)',
           borderLeft: scrolled
             ? '4px solid rgba(102, 126, 234, 0.6)'
             : '4px solid rgba(102, 126, 234, 0.5)',
           borderRight: scrolled
             ? '4px solid rgba(102, 126, 234, 0.6)'
             : '4px solid rgba(102, 126, 234, 0.5)',
-          borderTop: '2px solid rgba(102, 126, 234, 0.3)',
+          borderTop: '2px solid rgba(212, 175, 55, 0.3)',
           borderRadius: '0 0 16px 16px',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           zIndex: -1,
           boxShadow: scrolled 
-            ? '0 8px 32px rgba(102, 126, 234, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5), -4px 0 16px rgba(102, 126, 234, 0.15), 4px 0 16px rgba(102, 126, 234, 0.15)'
-            : '0 4px 16px rgba(102, 126, 234, 0.15), 0 0 0 1px rgba(102, 126, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), -3px 0 12px rgba(102, 126, 234, 0.1), 3px 0 12px rgba(102, 126, 234, 0.1)',
+            ? '0 8px 32px rgba(212, 175, 55, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5), -4px 0 16px rgba(212, 175, 55, 0.15), 4px 0 16px rgba(212, 175, 55, 0.15)'
+            : '0 4px 16px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), -3px 0 12px rgba(212, 175, 55, 0.1), 3px 0 12px rgba(212, 175, 55, 0.1)',
           // Add enhanced side shadows for visual separation
           '&::after': {
             content: '""',
@@ -169,8 +169,8 @@ const EnhancedLuxuryNavbar: React.FC = () => {
             left: 0,
             right: 0,
             boxShadow: scrolled
-              ? 'inset 20px 0 40px -20px rgba(102, 126, 234, 0.15), inset -20px 0 40px -20px rgba(102, 126, 234, 0.15), inset 2px 0 0 rgba(102, 126, 234, 0.2), inset -2px 0 0 rgba(102, 126, 234, 0.2)'
-              : 'inset 20px 0 40px -20px rgba(102, 126, 234, 0.1), inset -20px 0 40px -20px rgba(102, 126, 234, 0.1), inset 1px 0 0 rgba(102, 126, 234, 0.15), inset -1px 0 0 rgba(102, 126, 234, 0.15)',
+              ? 'inset 20px 0 40px -20px rgba(212, 175, 55, 0.15), inset -20px 0 40px -20px rgba(212, 175, 55, 0.15), inset 2px 0 0 rgba(212, 175, 55, 0.2), inset -2px 0 0 rgba(212, 175, 55, 0.2)'
+              : 'inset 20px 0 40px -20px rgba(212, 175, 55, 0.1), inset -20px 0 40px -20px rgba(212, 175, 55, 0.1), inset 1px 0 0 rgba(212, 175, 55, 0.15), inset -1px 0 0 rgba(212, 175, 55, 0.15)',
           },
         },
         '&::after': {
@@ -181,7 +181,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
           right: 0,
           height: '3px',
           background: scrolled
-            ? 'linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.4) 50%, transparent 100%)'
+            ? 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.4) 50%, transparent 100%)'
             : 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%)',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           zIndex: 1,
@@ -249,7 +249,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                   height: 2,
                   background: currentCenter 
                     ? centerConfig[currentCenter].gradient
-                    : 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                    : 'linear-gradient(90deg, #D4AF37 0%, #FFD700 100%)',
                   transition: 'width 0.3s ease',
                 },
                 '&:hover::after': {
@@ -264,13 +264,13 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                   borderRadius: '12px',
                   background: currentCenter 
                     ? centerConfig[currentCenter].gradient
-                    : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    : 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: currentCenter
                     ? `0 8px 25px ${centerConfig[currentCenter].color}40, 0 2px 8px rgba(0,0,0,0.1)`
-                    : '0 8px 25px rgba(102, 126, 234, 0.25), 0 2px 8px rgba(0,0,0,0.1)',
+                    : '0 8px 25px rgba(212, 175, 55, 0.25), 0 2px 8px rgba(0,0,0,0.1)',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   position: 'relative',
                   '&::before': {
@@ -280,7 +280,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                     borderRadius: '14px',
                     background: currentCenter 
                       ? centerConfig[currentCenter].gradient
-                      : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      : 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                     opacity: 0,
                     transition: 'opacity 0.3s ease',
                     zIndex: -1,
@@ -290,7 +290,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                     transform: 'rotate(-5deg) scale(1.05)',
                     boxShadow: currentCenter
                       ? `0 12px 40px ${centerConfig[currentCenter].color}50, 0 4px 16px rgba(0,0,0,0.15)`
-                      : '0 12px 40px rgba(102, 126, 234, 0.35), 0 4px 16px rgba(0,0,0,0.15)',
+                      : '0 12px 40px rgba(212, 175, 55, 0.35), 0 4px 16px rgba(0,0,0,0.15)',
                     '&::before': {
                       opacity: 0.6,
                     },
@@ -385,7 +385,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                       height: 2,
                       background: currentCenter 
                         ? centerConfig[currentCenter].gradient
-                        : 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                        : 'linear-gradient(90deg, #D4AF37 0%, #FFD700 100%)',
                       transition: 'width 0.3s ease',
                     },
                     '&:hover::before': {
@@ -394,7 +394,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                     ...(location.pathname === item.path && {
                       color: currentCenter 
                         ? centerConfig[currentCenter].color
-                        : '#667eea',
+                        : '#D4AF37',
                       fontWeight: 600,
                       '&::before': {
                         width: '80%',
@@ -442,14 +442,14 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                     '&:hover': {
                       borderColor: currentCenter 
                         ? centerConfig[currentCenter].color
-                        : '#667eea',
+                        : '#D4AF37',
                       color: currentCenter 
                         ? centerConfig[currentCenter].color
-                        : '#667eea',
-                      backgroundColor: 'rgba(102,126,234,0.05)',
+                        : '#D4AF37',
+                      backgroundColor: 'rgba(212,175,55,0.05)',
                     },
                     '&:active': {
-                      backgroundColor: 'rgba(102,126,234,0.15)',
+                      backgroundColor: 'rgba(212,175,55,0.15)',
                       transform: 'scale(0.98)',
                     },
                   }}
@@ -510,7 +510,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                   sx={{
                     background: currentCenter 
                       ? centerConfig[currentCenter].gradient
-                      : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      : 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                     color: '#fff',
                     fontWeight: 600,
                     fontSize: '0.85rem',
@@ -624,7 +624,7 @@ const EnhancedLuxuryNavbar: React.FC = () => {
                     }, 300);
                   }}
                   sx={{
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                     borderRadius: '25px',
                     py: 1.5,
                   }}
@@ -652,8 +652,8 @@ const EnhancedLuxuryNavbar: React.FC = () => {
         /* Subtle depth enhancement */
         .MuiAppBar-root::before {
           box-shadow: 
-            0 0 40px rgba(102, 126, 234, 0.05),
-            0 0 80px rgba(102, 126, 234, 0.03);
+            0 0 40px rgba(212, 175, 55, 0.05),
+            0 0 80px rgba(212, 175, 55, 0.03);
         }
       `}</style>
     </AppBar>

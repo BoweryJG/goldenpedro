@@ -311,11 +311,11 @@ export const VoiceCallButton: React.FC<VoiceCallButtonProps> = ({
                 data-voice-call-button
                 sx={{
                   background: connectionError 
-                    ? 'linear-gradient(135deg, #f44336 0%, #d32f2f 100%)'
-                    : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    ? 'linear-gradient(135deg, #808080 0%, #696969 100%)'
+                    : 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
                   boxShadow: connectionError
-                    ? '0 4px 20px rgba(244, 67, 54, 0.4)'
-                    : '0 4px 20px rgba(118, 75, 162, 0.4)',
+                    ? '0 4px 20px rgba(128, 128, 128, 0.4)'
+                    : '0 4px 20px rgba(212, 175, 55, 0.4)',
                   '&:hover': {
                     transform: 'scale(1.1)',
                   },
@@ -373,7 +373,7 @@ export const VoiceCallButton: React.FC<VoiceCallButtonProps> = ({
           <Box
             sx={{
               p: 2,
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)',
               color: 'white',
               display: 'flex',
               alignItems: 'center',

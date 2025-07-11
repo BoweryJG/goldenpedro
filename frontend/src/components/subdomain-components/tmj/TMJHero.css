@@ -3,7 +3,7 @@
 
 /* Hero TMJ Gradient Background */
 .hero-tmj {
-  background: radial-gradient(circle, #3a3a3a 0%, #1f1f1f 100%);
+  background: radial-gradient(circle at 30% 30%, #3d3d3d 0%, #1a1a1a 40%, #000000 100%);
   position: relative;
   overflow: hidden;
 }
@@ -139,7 +139,7 @@
 /* Button hover effects with GPU acceleration */
 .tmj-primary-button {
   background-color: #D4AF37 !important; /* gold */
-  color: #050708 !important; /* black */
+  color: #1a1a1a !important; /* deep charcoal */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transform: translateZ(0); /* GPU acceleration */
   will-change: transform;
@@ -147,9 +147,9 @@
 
 .tmj-primary-button:hover {
   background-color: #ffffff !important; /* white */
-  color: #050708 !important; /* black */
+  color: #1a1a1a !important; /* deep charcoal */
   transform: translateY(-2px) translateZ(0) !important;
-  box-shadow: 0 8px 24px rgba(194, 174, 123, 0.3) !important; /* gold with opacity */
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3) !important; /* gold with opacity */
 }
 
 .tmj-secondary-button {
@@ -161,10 +161,10 @@
 }
 
 .tmj-secondary-button:hover {
-  background-color: rgba(194, 174, 123, 0.1) !important; /* gold with opacity */
+  background-color: rgba(212, 175, 55, 0.1) !important; /* gold with opacity */
   border-color: #D4AF37 !important; /* gold */
   transform: translateY(-2px) translateZ(0) !important;
-  box-shadow: 0 8px 24px rgba(194, 174, 123, 0.2) !important; /* gold with opacity */
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2) !important; /* gold with opacity */
 }
 
 /* Card styling with glassmorphism */
@@ -179,7 +179,7 @@
 
 /* Stats animation */
 .stat-number {
-  background: linear-gradient(145deg, #f5d76e, #f8c059); /* luxury gold gradient */
+  background: linear-gradient(145deg, #D4AF37, #F5E6C9); /* luxury gold gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
